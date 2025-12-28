@@ -1,17 +1,18 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hello-world",
-  "type": "registry:component",
   "title": "Hello World",
-  "description": "A simple hello world component",
+  "description": "fly-byスタイルのシンプルなHello Worldコンポーネント",
   "registryDependencies": [
-    "button"
+    "fb-button",
+    "fb-text"
   ],
   "files": [
     {
-      "path": "registry/new-york/blocks/hello-world/hello-world.tsx",
-      "content": "export function HelloWorld() {\n  return <h1 className=\"text-2xl font-bold\">Hello World</h1>\n}\n",
+      "path": "registry/fly-by/blocks/hello-world/hello-world.tsx",
+      "content": "import { FbText } from \"@/registry/fly-by/ui/fb-text\"\nimport { FbButton } from \"@/registry/fly-by/ui/fb-button\"\n\nexport function HelloWorld() {\n  return (\n    <div className=\"flex flex-col items-center gap-4 p-8\">\n      <FbText level=\"xxxl\" weight=\"bold\" as=\"h1\">\n        Hello World\n      </FbText>\n      <FbText level=\"m\" density=\"normal\" className=\"text-gray-500\">\n        fly-by デザインシステムへようこそ\n      </FbText>\n      <FbButton appearance=\"solid\" color=\"informative\" size=\"m\">\n        はじめる\n      </FbButton>\n    </div>\n  )\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

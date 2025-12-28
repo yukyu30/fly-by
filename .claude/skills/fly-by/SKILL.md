@@ -1,27 +1,28 @@
 ---
 name: fly-by
-description: Inhouseデザインシステムをベースにしたfly-byデザインシステム。HTMLやReactコンポーネント作成時に使用。プレフィックスは「fb-」。Button、Card、Typography、Spacingなどをclass-basedで実装。濃いめの青をベースカラーとしたYukyu Flavorを採用。「UIを作って」「ボタン追加」「fb-準拠で」などのリクエスト時に適用。
+description: Inhouseデザインシステムをベースにしたfly-byデザインシステム。HTMLやReactコンポーネント作成時に使用。プレフィックスは「fb-」。Button、Card、Typography、Spacingなどをclass-basedで実装。鮮やかな青(#002CED)をベースカラーとしたYukyu Flavorを採用。「UIを作って」「ボタン追加」「fb-準拠で」などのリクエスト時に適用。
 ---
 
 # fly-by Design System
 
-Inhouseをリスペクトした独自デザインシステム。Yukyu Flavor（濃いめの青）を基調とする。
+Inhouseをリスペクトした独自デザインシステム。Yukyu Flavor（鮮やかな青 #002CED）を基調とする。
 
 ## 基本原則
 
 - **プレフィックス**: `fb-` （例: `fb-button`, `fb-card`）
 - **4pxグリッド**: すべてのサイズは4pxの倍数
 - **Class-based**: `fb-{component} -{modifier}-{value}` 形式
-- **Yukyu Flavor**: 濃いめの青（Deep Blue）をベースカラーに
+- **Yukyu Flavor**: 鮮やかな青（#002CED）をベースカラーに
 
 ## Yukyu Flavor カラーパレット
 
 | 名前 | 用途 | HEX |
 |------|------|-----|
-| Deep Blue 500 | 基準色 | #1a365d |
-| Deep Blue 600 | ボタン・アクション | #153e75 |
-| Deep Blue 700 | ホバー | #1e4a8a |
-| Deep Blue 50 | 背景（薄い） | #e8f0fe |
+| Primary 50 | 背景（薄い） | #e6ebfd |
+| Primary 100 | ホバー背景 | #ccd7fb |
+| Primary 500 | 基準色・ボタン | #002CED |
+| Primary 600 | ホバー | #0025c4 |
+| Primary 700 | アクティブ | #001e9b |
 
 ## コンポーネント詳細
 
@@ -50,7 +51,7 @@ Inhouseをリスペクトした独自デザインシステム。Yukyu Flavor（�
 | Color | 意味 | Yukyu Flavor |
 |-------|------|--------------|
 | neutral | 汎用 | Gray |
-| informative | 情報・アクション | Deep Blue |
+| informative | 情報・アクション | #002CED |
 | positive | 成功・完了 | Green |
 | negative | 削除・警告 | Red |
 

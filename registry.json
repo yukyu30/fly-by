@@ -116,15 +116,24 @@
         },
         {
           "path": "registry/fly-by/blocks/example-login/example-login.css",
-          "type": "registry:file"
+          "type": "registry:file",
+          "target": "components/example-login.css"
         }
       ],
       "cssVars": {
-        "theme": {
-          "--fb-deep-blue-50": "#e8f0fe",
-          "--fb-deep-blue-500": "#1a365d",
-          "--fb-deep-blue-600": "#153e75",
-          "--fb-deep-blue-700": "#1e4a8a"
+        "light": {
+          "--fb-primary-50": "#e6ebfd",
+          "--fb-primary-100": "#ccd7fb",
+          "--fb-primary-500": "#002CED",
+          "--fb-primary-600": "#0025c4",
+          "--fb-primary-700": "#001e9b"
+        },
+        "dark": {
+          "--fb-primary-50": "#001049",
+          "--fb-primary-100": "#001772",
+          "--fb-primary-500": "#3361ef",
+          "--fb-primary-600": "#002CED",
+          "--fb-primary-700": "#0025c4"
         }
       }
     }
