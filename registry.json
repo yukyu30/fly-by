@@ -234,6 +234,149 @@
       ]
     },
     {
+      "name": "fb-tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "fly-byデザインシステムのTooltipコンポーネント。ホバー時にヒントを表示。",
+      "dependencies": ["@radix-ui/react-tooltip"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "fly-byデザインシステムのPopoverコンポーネント。クリックで開くフローティングコンテンツ。",
+      "dependencies": ["@radix-ui/react-popover"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "fly-byデザインシステムのDialogコンポーネント。モーダルダイアログ。",
+      "dependencies": ["@radix-ui/react-dialog", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "fly-byデザインシステムのAlert Dialogコンポーネント。確認ダイアログ。",
+      "dependencies": ["@radix-ui/react-alert-dialog"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "fly-byデザインシステムのSheetコンポーネント。サイドパネル。-side-top/bottom/left/rightをサポート。",
+      "dependencies": ["@radix-ui/react-dialog", "lucide-react", "class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "fly-byデザインシステムのDrawerコンポーネント。ボトムシート。",
+      "dependencies": ["vaul"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "fly-byデザインシステムのDropdown Menuコンポーネント。ドロップダウンメニュー。",
+      "dependencies": ["@radix-ui/react-dropdown-menu", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "description": "fly-byデザインシステムのContext Menuコンポーネント。右クリックメニュー。",
+      "dependencies": ["@radix-ui/react-context-menu", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-context-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "description": "fly-byデザインシステムのHover Cardコンポーネント。ホバーで表示するカード。",
+      "dependencies": ["@radix-ui/react-hover-card"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "fly-byデザインシステムのToastコンポーネント。通知メッセージ。-color-default/informative/positive/negativeをサポート。",
+      "dependencies": ["@radix-ui/react-toast", "lucide-react", "class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-sonner",
+      "type": "registry:ui",
+      "title": "Sonner",
+      "description": "fly-byデザインシステムのSonnerコンポーネント。トースト通知（Sonnerラッパー）。",
+      "dependencies": ["sonner"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-sonner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "hello-world",
       "type": "registry:block",
       "title": "Hello World",
