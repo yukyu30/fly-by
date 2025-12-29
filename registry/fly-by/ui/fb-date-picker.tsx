@@ -61,7 +61,8 @@ function FbDatePicker({
       <FbPopoverTrigger asChild>
         <FbButton
           data-slot="fb-date-picker"
-          variant="outline"
+          appearance="outlined"
+          color="neutral"
           disabled={disabled}
           className={cn(
             "fb-date-picker w-[280px] justify-start text-left font-normal",
@@ -107,7 +108,8 @@ function FbDatePickerWithRange({
           <FbButton
             data-slot="fb-date-picker-range"
             id="date"
-            variant="outline"
+            appearance="outlined"
+            color="neutral"
             disabled={disabled}
             className={cn(
               "fb-date-picker-range w-[300px] justify-start text-left font-normal",

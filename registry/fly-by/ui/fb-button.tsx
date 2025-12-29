@@ -56,7 +56,7 @@ const fbButtonVariants = cva(
       { appearance: "outlined", color: "informative", className: "border-[#002CED] text-[#002CED] hover:bg-[#e6ebfd]" },
       { appearance: "outlined", color: "positive", className: "border-green-600 text-green-600 hover:bg-green-50" },
       { appearance: "outlined", color: "negative", className: "border-red-600 text-red-600 hover:bg-red-50" },
-      { appearance: "outlined", color: "neutral", className: "border-gray-400 text-gray-700 hover:bg-gray-50" },
+      { appearance: "outlined", color: "neutral", className: "border-gray-300 text-gray-700 hover:bg-gray-50" },
       { appearance: "outlined", color: "favorite", className: "border-pink-500 text-pink-500 hover:bg-pink-50" },
       // Flat + Color combinations
       { appearance: "flat", color: "informative", className: "bg-[#e6ebfd] text-[#002CED] hover:bg-[#ccd7fb]" },
