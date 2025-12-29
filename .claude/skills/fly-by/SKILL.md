@@ -1,11 +1,11 @@
 ---
 name: fly-by
-description: Inhouseデザインシステムをベースにしたfly-byデザインシステム。HTMLやReactコンポーネント作成時に使用。プレフィックスは「fb-」。Button、Card、Typography、Spacingなどをclass-basedで実装。鮮やかな青(#002CED)をベースカラーとしたYukyu Flavorを採用。「UIを作って」「ボタン追加」「fb-準拠で」などのリクエスト時に適用。
+description: fly-byデザインシステム。HTMLやReactコンポーネント作成時に使用。プレフィックスは「fb-」。Button、Card、Typography、Spacingなどをclass-basedで実装。鮮やかな青(#002CED)をベースカラーとしたYukyu Flavorを採用。「UIを作って」「ボタン追加」「fb-準拠で」などのリクエスト時に適用。
 ---
 
 # fly-by Design System
 
-Inhouseをリスペクトした独自デザインシステム。Yukyu Flavor（鮮やかな青 #002CED）を基調とする。
+独自デザインシステム。Yukyu Flavor（鮮やかな青 #002CED）を基調とする。
 
 ## 基本原則
 

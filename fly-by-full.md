@@ -2,7 +2,7 @@
 
 ## 概要
 
-**fly-by**は、Inhouseデザインシステムをベースにした、モダンでクラスベースのReactコンポーネントライブラリです。HTMLやReactコンポーネント作成時に使用され、一貫性のあるUIを迅速に構築できます。
+**fly-by**は、モダンでクラスベースのReactコンポーネントライブラリです。HTMLやReactコンポーネント作成時に使用され、一貫性のあるUIを迅速に構築できます。
 
 ### 主な特徴
 
@@ -646,4 +646,4 @@ import { FbCard } from "@/registry/fly-by/ui/fb-card"
 
 fly-byデザインシステムは、Yukyu Flavorの鮮やかな青を中心とした、一貫性のある美しいUIを構築するための包括的なコンポーネントライブラリです。クラスベースの設計により、型安全性と拡張性を保ちながら、迅速な開発を可能にします。
 
-**公式リポジトリ**: https://github.com/yukyu30/yukyui
+**公式リポジトリ**: https://github.com/yukyu30/fly-by
