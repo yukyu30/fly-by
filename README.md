@@ -1,6 +1,20 @@
-# fly-by Design System
+<p align="center">
+  <img src="public/fly-by-logo.png" alt="fly-by Design System" width="400" />
+</p>
 
-Yukyu Flavor（鮮やかな青 #002CED）を基調とする shadcn/ui 互換のコンポーネントライブラリ。
+<h1 align="center">fly-by Design System</h1>
+
+<p align="center">
+  <strong>Yukyu Flavor</strong>（鮮やかな青 #002CED）を基調とする shadcn/ui 互換のコンポーネントライブラリ。
+</p>
+
+<p align="center">
+  <a href="#usage--使い方">使い方</a> •
+  <a href="#component-list--コンポーネント一覧">コンポーネント一覧</a> •
+  <a href="#design-principles--デザイン原則">デザイン原則</a>
+</p>
+
+---
 
 ## Usage / 使い方
 
