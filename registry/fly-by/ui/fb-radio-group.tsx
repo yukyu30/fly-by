@@ -43,10 +43,10 @@ const fbRadioGroupItemVariants = cva(
         l: "-size-l h-6 w-6",
       },
       color: {
-        neutral: "-color-neutral border-gray-400 data-[state=checked]:border-gray-600 dark:border-gray-500 dark:data-[state=checked]:border-gray-400",
-        informative: "-color-informative border-gray-400 data-[state=checked]:border-[#002CED] dark:border-gray-500 dark:data-[state=checked]:border-[#3361ef]",
-        positive: "-color-positive border-gray-400 data-[state=checked]:border-green-600 dark:border-gray-500 dark:data-[state=checked]:border-green-500",
-        negative: "-color-negative border-gray-400 data-[state=checked]:border-red-600 dark:border-gray-500 dark:data-[state=checked]:border-red-500",
+        neutral: "-color-neutral border-gray-300 data-[state=checked]:border-gray-600 dark:border-gray-600 dark:data-[state=checked]:border-gray-400",
+        informative: "-color-informative border-gray-300 data-[state=checked]:border-[#002CED] dark:border-gray-600 dark:data-[state=checked]:border-[#3361ef]",
+        positive: "-color-positive border-gray-300 data-[state=checked]:border-green-600 dark:border-gray-600 dark:data-[state=checked]:border-green-500",
+        negative: "-color-negative border-gray-300 data-[state=checked]:border-red-600 dark:border-gray-600 dark:data-[state=checked]:border-red-500",
       },
     },
     defaultVariants: {

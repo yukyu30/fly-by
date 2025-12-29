@@ -85,7 +85,7 @@ function FbToastAction({
     <ToastPrimitive.Action
       data-slot="fb-toast-action"
       className={cn(
-        "fb-toast-action inline-flex h-8 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-transparent px-3 text-sm font-medium transition-colors hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-400 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:hover:bg-gray-800",
+        "fb-toast-action inline-flex h-8 shrink-0 items-center justify-center rounded-md border-2 border-gray-300 bg-transparent px-3 text-sm font-medium transition-colors hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-400 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-600 dark:hover:bg-gray-800",
         className
       )}
       {...props}

@@ -49,7 +49,7 @@ const fbBadgeVariants = cva(
       { appearance: "solid", color: "negative", className: "bg-red-600 dark:bg-red-500" },
       { appearance: "solid", color: "favorite", className: "bg-pink-500 dark:bg-pink-400" },
       // Outlined + Color
-      { appearance: "outlined", color: "neutral", className: "border-gray-400 text-gray-700 dark:border-gray-500 dark:text-gray-300" },
+      { appearance: "outlined", color: "neutral", className: "border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-300" },
       { appearance: "outlined", color: "informative", className: "border-[#002CED] text-[#002CED] dark:border-[#3361ef] dark:text-[#3361ef]" },
       { appearance: "outlined", color: "positive", className: "border-green-600 text-green-600 dark:border-green-500 dark:text-green-400" },
       { appearance: "outlined", color: "negative", className: "border-red-600 text-red-600 dark:border-red-500 dark:text-red-400" },

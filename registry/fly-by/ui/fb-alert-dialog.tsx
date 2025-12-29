@@ -153,7 +153,7 @@ function FbAlertDialogCancel({
     <AlertDialogPrimitive.Cancel
       data-slot="fb-alert-dialog-cancel"
       className={cn(
-        "fb-alert-dialog-cancel mt-2 inline-flex h-10 items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800 sm:mt-0",
+        "fb-alert-dialog-cancel mt-2 inline-flex h-10 items-center justify-center rounded-md border-2 border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800 sm:mt-0",
         className
       )}
       {...props}

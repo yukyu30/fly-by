@@ -14,7 +14,7 @@ const fbInputVariants = cva(
   {
     variants: {
       appearance: {
-        outlined: "-appearance-outlined border border-gray-300 bg-transparent focus:border-[#002CED] focus:ring-2 focus:ring-[#002CED]/20 dark:border-gray-600 dark:focus:border-[#002CED]",
+        outlined: "-appearance-outlined border-2 border-gray-300 bg-transparent focus:border-[#002CED] focus:ring-2 focus:ring-[#002CED]/20 dark:border-gray-600 dark:focus:border-[#002CED]",
         filled: "-appearance-filled border border-transparent bg-gray-100 focus:bg-white focus:border-[#002CED] focus:ring-2 focus:ring-[#002CED]/20 dark:bg-gray-800 dark:focus:bg-gray-900",
       },
       size: {

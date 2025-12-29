@@ -51,7 +51,7 @@ function FbNativeSelect({
         data-slot="fb-native-select"
         className={cn(
           fbNativeSelectVariants({ size }),
-          "border-gray-200 focus:ring-gray-400 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-gray-500",
+          "border-gray-300 focus:ring-gray-400 dark:border-gray-600 dark:bg-gray-900 dark:focus:ring-gray-500",
           className
         )}
         {...props}

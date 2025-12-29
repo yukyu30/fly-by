@@ -76,7 +76,7 @@ function FbInputOTPSlot({
     <div
       data-slot="fb-input-otp-slot"
       className={cn(
-        "fb-input-otp-slot relative flex h-9 w-9 items-center justify-center border-y border-r border-gray-200 text-sm shadow-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md dark:border-gray-700",
+        "fb-input-otp-slot relative flex h-9 w-9 items-center justify-center border-2 border-l-0 border-gray-300 text-sm shadow-sm transition-all first:rounded-l-md first:border-l-2 last:rounded-r-md dark:border-gray-600",
         isActive &&
           "z-10 ring-1 ring-gray-400 dark:ring-gray-500",
         className

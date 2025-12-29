@@ -57,7 +57,7 @@ function FbSelectTrigger({
       data-slot="fb-select-trigger"
       className={cn(
         fbSelectTriggerVariants({ size }),
-        "border-gray-200 focus:ring-gray-400 dark:border-gray-700 dark:focus:ring-gray-500",
+        "border-gray-300 focus:ring-gray-400 dark:border-gray-600 dark:focus:ring-gray-500",
         className
       )}
       {...props}
