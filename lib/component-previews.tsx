@@ -7,6 +7,8 @@ import {
   User,
   Search,
   Bell,
+  Inbox,
+  Package,
 } from 'lucide-react';
 
 // Preview components using actual fly-by components
@@ -354,10 +356,23 @@ export const componentPreviews: Record<string, React.ReactNode> = {
     </div>
   ),
   'fb-empty': (
-    <div className="text-center py-8">
-      <div className="text-4xl mb-3">📭</div>
-      <p className="text-sm text-gray-500 mb-1">No data available</p>
-      <p className="text-xs text-gray-400">Try adjusting your filters</p>
+    <div className="fb-empty flex flex-col items-center justify-center text-center py-8 gap-3">
+      <div className="fb-empty-icon flex items-center justify-center">
+        <div className="relative">
+          <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 rounded-full blur-lg opacity-50" />
+          <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center border border-gray-300 dark:border-gray-600">
+            <Inbox className="h-8 w-8 text-gray-400 dark:text-gray-500" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 className="fb-empty-title text-base font-semibold text-gray-900 dark:text-gray-100 mb-1">
+          No data available
+        </h3>
+        <p className="fb-empty-description text-sm text-gray-500 dark:text-gray-400">
+          Try adjusting your filters
+        </p>
+      </div>
     </div>
   ),
   'fb-item': (
@@ -376,8 +391,13 @@ export const componentPreviews: Record<string, React.ReactNode> = {
 
 // Default preview for components without specific preview
 export const defaultPreview = (
-  <div className="text-center py-8 text-gray-500">
-    <div className="text-4xl mb-2">🎨</div>
-    <p className="text-sm">Preview not available</p>
+  <div className="flex flex-col items-center justify-center text-center py-8 gap-3">
+    <div className="relative">
+      <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 rounded-full blur-lg opacity-30" />
+      <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center border border-gray-300 dark:border-gray-600">
+        <Package className="h-7 w-7 text-gray-400 dark:text-gray-500" />
+      </div>
+    </div>
+    <p className="text-sm text-gray-500 dark:text-gray-400">Preview not available</p>
   </div>
 );

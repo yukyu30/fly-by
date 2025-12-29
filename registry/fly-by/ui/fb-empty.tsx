@@ -8,14 +8,14 @@ import { cn } from "@/lib/utils"
  * fly-by Empty
  *
  * 空の状態を表示するコンポーネント。
+ * デフォルトでモダンなグラデーション円形背景のInboxアイコンを表示。
  *
  * クラス構造: fb-empty, fb-empty-icon, fb-empty-title, fb-empty-description, fb-empty-action
  *
  * @example
+ * // デフォルトアイコンを使用
  * <FbEmpty>
- *   <FbEmptyIcon>
- *     <Inbox className="h-12 w-12" />
- *   </FbEmptyIcon>
+ *   <FbEmptyIcon />
  *   <FbEmptyTitle>データがありません</FbEmptyTitle>
  *   <FbEmptyDescription>
  *     まだデータが登録されていません。新しいデータを追加してください。
@@ -23,6 +23,15 @@ import { cn } from "@/lib/utils"
  *   <FbEmptyAction>
  *     <FbButton>データを追加</FbButton>
  *   </FbEmptyAction>
+ * </FbEmpty>
+ *
+ * @example
+ * // カスタムアイコンを使用
+ * <FbEmpty>
+ *   <FbEmptyIcon>
+ *     <Search className="h-12 w-12 text-gray-400" />
+ *   </FbEmptyIcon>
+ *   <FbEmptyTitle>検索結果がありません</FbEmptyTitle>
  * </FbEmpty>
  */
 
@@ -61,16 +70,25 @@ function FbEmptyIcon({
   children,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
+  const defaultIcon = (
+    <div className="relative">
+      <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 rounded-full blur-lg opacity-50" />
+      <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center border border-gray-300 dark:border-gray-600">
+        <Inbox className="h-10 w-10 text-gray-400 dark:text-gray-500" />
+      </div>
+    </div>
+  )
+
   return (
     <div
       data-slot="fb-empty-icon"
       className={cn(
-        "fb-empty-icon flex items-center justify-center text-gray-400 dark:text-gray-500",
+        "fb-empty-icon flex items-center justify-center",
         className
       )}
       {...props}
     >
-      {children || <Inbox className="h-12 w-12" />}
+      {children || defaultIcon}
     </div>
   )
 }
