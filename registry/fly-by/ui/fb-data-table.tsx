@@ -122,7 +122,7 @@ function FbDataTable<TData, TValue>({
         {showColumnToggle && (
           <FbDropdownMenu>
             <FbDropdownMenuTrigger asChild>
-              <FbButton variant="outline" className="ml-auto">
+              <FbButton appearance="outlined" color="neutral" className="ml-auto">
                 列 <ChevronDown className="ml-2 h-4 w-4" />
               </FbButton>
             </FbDropdownMenuTrigger>
@@ -206,16 +206,18 @@ function FbDataTable<TData, TValue>({
           </div>
           <div className="space-x-2">
             <FbButton
-              variant="outline"
-              size="sm"
+              appearance="outlined"
+              color="neutral"
+              size="s"
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
             >
               前へ
             </FbButton>
             <FbButton
-              variant="outline"
-              size="sm"
+              appearance="outlined"
+              color="neutral"
+              size="s"
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
             >
@@ -246,8 +248,9 @@ function FbDataTableColumnHeader<TData, TValue>({
 
   return (
     <FbButton
-      variant="ghost"
-      size="sm"
+      appearance="transparent"
+      color="neutral"
+      size="s"
       className="-ml-3 h-8"
       onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
     >

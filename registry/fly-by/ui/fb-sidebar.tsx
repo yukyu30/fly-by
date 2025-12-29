@@ -283,8 +283,9 @@ function FbSidebarTrigger({
     <FbButton
       data-slot="fb-sidebar-trigger"
       data-sidebar="trigger"
-      variant="ghost"
-      size="icon"
+      appearance="transparent"
+      color="neutral"
+      size="s"
       className={cn("fb-sidebar-trigger h-7 w-7", className)}
       onClick={(event) => {
         onClick?.(event)

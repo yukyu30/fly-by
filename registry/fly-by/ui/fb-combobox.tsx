@@ -76,7 +76,8 @@ function FbCombobox({
       <FbPopoverTrigger asChild>
         <FbButton
           data-slot="fb-combobox"
-          variant="outline"
+          appearance="outlined"
+          color="neutral"
           role="combobox"
           aria-expanded={open}
           disabled={disabled}

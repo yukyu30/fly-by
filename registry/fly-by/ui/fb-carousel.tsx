@@ -208,8 +208,8 @@ function FbCarouselItem({
 
 function FbCarouselPrevious({
   className,
-  variant = "outline",
-  size = "icon",
+  appearance = "outlined",
+  color = "neutral",
   ...props
 }: React.ComponentProps<typeof FbButton>) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
@@ -217,8 +217,9 @@ function FbCarouselPrevious({
   return (
     <FbButton
       data-slot="fb-carousel-previous"
-      variant={variant}
-      size={size}
+      appearance={appearance}
+      color={color}
+      size="s"
       className={cn(
         "fb-carousel-previous absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
@@ -238,8 +239,8 @@ function FbCarouselPrevious({
 
 function FbCarouselNext({
   className,
-  variant = "outline",
-  size = "icon",
+  appearance = "outlined",
+  color = "neutral",
   ...props
 }: React.ComponentProps<typeof FbButton>) {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
@@ -247,8 +248,9 @@ function FbCarouselNext({
   return (
     <FbButton
       data-slot="fb-carousel-next"
-      variant={variant}
-      size={size}
+      appearance={appearance}
+      color={color}
+      size="s"
       className={cn(
         "fb-carousel-next absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
