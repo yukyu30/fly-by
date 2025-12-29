@@ -1,19 +1,32 @@
-"use client"
+'use client';
 
-import * as React from "react"
-import Image from "next/image"
-import { Check, Copy, Terminal, Package, Palette, Grid3X3, User, Search, ChevronRight, ChevronDown, Settings, Bell } from "lucide-react"
+import * as React from 'react';
+import Image from 'next/image';
+import {
+  Check,
+  Copy,
+  Terminal,
+  Package,
+  Palette,
+  Grid3X3,
+  User,
+  Search,
+  ChevronRight,
+  ChevronDown,
+  Settings,
+  Bell,
+} from 'lucide-react';
 
-const BASE_URL = "https://yukyui.vercel.app/r"
+const BASE_URL = 'https://fly-by.design.yukyu.net/r';
 
 function CopyButton({ text }: { text: string }) {
-  const [copied, setCopied] = React.useState(false)
+  const [copied, setCopied] = React.useState(false);
 
   const copy = async () => {
-    await navigator.clipboard.writeText(text)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
+    await navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <button
@@ -27,7 +40,7 @@ function CopyButton({ text }: { text: string }) {
         <Copy className="h-4 w-4 text-gray-500" />
       )}
     </button>
-  )
+  );
 }
 
 function CodeBlock({ code }: { code: string }) {
@@ -40,23 +53,29 @@ function CodeBlock({ code }: { code: string }) {
         <CopyButton text={code} />
       </div>
     </div>
-  )
+  );
 }
 
 interface ComponentShowcaseProps {
-  name: string
-  description: string
-  children: React.ReactNode
+  name: string;
+  description: string;
+  children: React.ReactNode;
 }
 
-function ComponentShowcase({ name, description, children }: ComponentShowcaseProps) {
-  const command = `npx shadcn@latest add "${BASE_URL}/${name}.json"`
+function ComponentShowcase({
+  name,
+  description,
+  children,
+}: ComponentShowcaseProps) {
+  const command = `npx shadcn@latest add "${BASE_URL}/${name}.json"`;
 
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm overflow-hidden">
       <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800">
         <div className="flex items-center justify-between">
-          <span className="text-base font-mono text-[#002CED] font-semibold">{name}</span>
+          <span className="text-base font-mono text-[#002CED] font-semibold">
+            {name}
+          </span>
           <CopyButton text={command} />
         </div>
         <p className="text-sm text-gray-500 mt-1">{description}</p>
@@ -65,56 +84,84 @@ function ComponentShowcase({ name, description, children }: ComponentShowcasePro
         {children}
       </div>
       <div className="px-4 py-2 bg-gray-900 text-gray-100 text-xs font-mono overflow-x-auto">
-        <code>npx shadcn@latest add &quot;{BASE_URL}/{name}.json&quot;</code>
+        <code>
+          npx shadcn@latest add &quot;{BASE_URL}/{name}.json&quot;
+        </code>
       </div>
     </div>
-  )
+  );
 }
 
 // HTML-based button component for previews
-function PreviewButton({ variant = "solid", color = "informative", size = "m", className = "", children }: {
-  variant?: "solid" | "outlined" | "flat"
-  color?: "informative" | "neutral" | "negative" | "positive"
-  size?: "s" | "m"
-  className?: string
-  children: React.ReactNode
+function PreviewButton({
+  variant = 'solid',
+  color = 'informative',
+  size = 'm',
+  className = '',
+  children,
+}: {
+  variant?: 'solid' | 'outlined' | 'flat';
+  color?: 'informative' | 'neutral' | 'negative' | 'positive';
+  size?: 's' | 'm';
+  className?: string;
+  children: React.ReactNode;
 }) {
-  const baseClass = "inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors"
-  const sizeClass = size === "s" ? "h-8 px-3" : "h-9 px-4"
+  const baseClass =
+    'inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-colors';
+  const sizeClass = size === 's' ? 'h-8 px-3' : 'h-9 px-4';
 
-  let colorClass = ""
-  if (variant === "solid") {
-    if (color === "informative") colorClass = "bg-[#002CED] text-white hover:bg-[#0025c4]"
-    else if (color === "positive") colorClass = "bg-green-600 text-white hover:bg-green-700"
-    else if (color === "negative") colorClass = "bg-red-600 text-white hover:bg-red-700"
-    else colorClass = "bg-gray-600 text-white hover:bg-gray-700"
-  } else if (variant === "outlined") {
-    if (color === "informative") colorClass = "border-2 border-[#002CED] text-[#002CED] bg-transparent hover:bg-[#e6ebfd]"
-    else if (color === "negative") colorClass = "border-2 border-red-600 text-red-600 bg-transparent hover:bg-red-50"
-    else colorClass = "border-2 border-gray-300 text-gray-700 bg-transparent hover:bg-gray-50"
+  let colorClass = '';
+  if (variant === 'solid') {
+    if (color === 'informative')
+      colorClass = 'bg-[#002CED] text-white hover:bg-[#0025c4]';
+    else if (color === 'positive')
+      colorClass = 'bg-green-600 text-white hover:bg-green-700';
+    else if (color === 'negative')
+      colorClass = 'bg-red-600 text-white hover:bg-red-700';
+    else colorClass = 'bg-gray-600 text-white hover:bg-gray-700';
+  } else if (variant === 'outlined') {
+    if (color === 'informative')
+      colorClass =
+        'border-2 border-[#002CED] text-[#002CED] bg-transparent hover:bg-[#e6ebfd]';
+    else if (color === 'negative')
+      colorClass =
+        'border-2 border-red-600 text-red-600 bg-transparent hover:bg-red-50';
+    else
+      colorClass =
+        'border-2 border-gray-300 text-gray-700 bg-transparent hover:bg-gray-50';
   } else {
-    colorClass = "bg-gray-100 text-gray-700 hover:bg-gray-200"
+    colorClass = 'bg-gray-100 text-gray-700 hover:bg-gray-200';
   }
 
-  return <button className={`${baseClass} ${sizeClass} ${colorClass} ${className}`}>{children}</button>
+  return (
+    <button className={`${baseClass} ${sizeClass} ${colorClass} ${className}`}>
+      {children}
+    </button>
+  );
 }
 
 // All components with HTML/CSS previews
 const allComponents = [
   {
-    name: "fb-button",
-    description: "ボタン",
+    name: 'fb-button',
+    description: 'ボタン',
     preview: (
       <div className="flex flex-wrap gap-2 items-center justify-center">
-        <PreviewButton variant="solid" color="informative">Primary</PreviewButton>
-        <PreviewButton variant="outlined" color="informative">Outlined</PreviewButton>
-        <PreviewButton variant="flat" color="neutral">Flat</PreviewButton>
+        <PreviewButton variant="solid" color="informative">
+          Primary
+        </PreviewButton>
+        <PreviewButton variant="outlined" color="informative">
+          Outlined
+        </PreviewButton>
+        <PreviewButton variant="flat" color="neutral">
+          Flat
+        </PreviewButton>
       </div>
     ),
   },
   {
-    name: "fb-card",
-    description: "カード",
+    name: 'fb-card',
+    description: 'カード',
     preview: (
       <div className="w-48 rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-md">
         <div className="px-6 py-4 text-center text-sm">Card Content</div>
@@ -122,25 +169,33 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-input",
-    description: "テキスト入力",
+    name: 'fb-input',
+    description: 'テキスト入力',
     preview: (
-      <input className="w-48 rounded-md border border-gray-200 bg-transparent h-9 px-3 text-sm outline-none focus:border-[#002CED] focus:ring-2 focus:ring-[#002CED]/20" placeholder="入力してください" />
+      <input
+        className="w-48 rounded-md border border-gray-200 bg-transparent h-9 px-3 text-sm outline-none focus:border-[#002CED] focus:ring-2 focus:ring-[#002CED]/20"
+        placeholder="入力してください"
+      />
     ),
   },
   {
-    name: "fb-label",
-    description: "ラベル",
+    name: 'fb-label',
+    description: 'ラベル',
     preview: <label className="text-sm font-medium">ラベルテキスト</label>,
   },
   {
-    name: "fb-textarea",
-    description: "テキストエリア",
-    preview: <textarea className="w-48 h-20 rounded-md border border-gray-200 bg-transparent px-3 py-2 text-sm outline-none resize-none focus:border-[#002CED]" placeholder="テキストを入力..." />,
+    name: 'fb-textarea',
+    description: 'テキストエリア',
+    preview: (
+      <textarea
+        className="w-48 h-20 rounded-md border border-gray-200 bg-transparent px-3 py-2 text-sm outline-none resize-none focus:border-[#002CED]"
+        placeholder="テキストを入力..."
+      />
+    ),
   },
   {
-    name: "fb-text",
-    description: "テキスト",
+    name: 'fb-text',
+    description: 'テキスト',
     preview: (
       <div className="space-y-1 text-center">
         <p className="text-lg leading-tight">Large Text</p>
@@ -150,8 +205,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-separator",
-    description: "区切り線",
+    name: 'fb-separator',
+    description: '区切り線',
     preview: (
       <div className="w-48 space-y-2">
         <p className="text-sm">Above</p>
@@ -161,19 +216,25 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-badge",
-    description: "バッジ",
+    name: 'fb-badge',
+    description: 'バッジ',
     preview: (
       <div className="flex flex-wrap gap-2 justify-center">
-        <span className="inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium bg-[#e6ebfd] text-[#002CED]">New</span>
-        <span className="inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium bg-green-600 text-white">Success</span>
-        <span className="inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium border-2 border-red-600 text-red-600">Error</span>
+        <span className="inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium bg-[#e6ebfd] text-[#002CED]">
+          New
+        </span>
+        <span className="inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium bg-green-600 text-white">
+          Success
+        </span>
+        <span className="inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium border-2 border-red-600 text-red-600">
+          Error
+        </span>
       </div>
     ),
   },
   {
-    name: "fb-spinner",
-    description: "スピナー",
+    name: 'fb-spinner',
+    description: 'スピナー',
     preview: (
       <div className="flex gap-4 items-center">
         <div className="h-4 w-4 border-2 border-[#002CED] border-t-transparent rounded-full animate-spin" />
@@ -183,8 +244,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-skeleton",
-    description: "スケルトン",
+    name: 'fb-skeleton',
+    description: 'スケルトン',
     preview: (
       <div className="space-y-2 w-48">
         <div className="h-4 w-full bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
@@ -194,84 +255,119 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-kbd",
-    description: "キーボード",
+    name: 'fb-kbd',
+    description: 'キーボード',
     preview: (
       <div className="flex gap-1 items-center">
-        <kbd className="inline-flex items-center justify-center h-6 px-2 rounded border border-gray-300 bg-gray-100 text-xs font-mono">⌘</kbd>
-        <kbd className="inline-flex items-center justify-center h-6 px-2 rounded border border-gray-300 bg-gray-100 text-xs font-mono">K</kbd>
+        <kbd className="inline-flex items-center justify-center h-6 px-2 rounded border border-gray-300 bg-gray-100 text-xs font-mono">
+          ⌘
+        </kbd>
+        <kbd className="inline-flex items-center justify-center h-6 px-2 rounded border border-gray-300 bg-gray-100 text-xs font-mono">
+          K
+        </kbd>
       </div>
     ),
   },
   {
-    name: "fb-avatar",
-    description: "アバター",
+    name: 'fb-avatar',
+    description: 'アバター',
     preview: (
       <div className="flex gap-2 items-center">
-        <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-medium text-gray-600">U</div>
-        <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-sm font-medium text-gray-600">YF</div>
-        <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-base font-medium text-gray-600">FB</div>
+        <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-medium text-gray-600">
+          U
+        </div>
+        <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-sm font-medium text-gray-600">
+          YF
+        </div>
+        <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-base font-medium text-gray-600">
+          FB
+        </div>
       </div>
     ),
   },
   {
-    name: "fb-aspect-ratio",
-    description: "アスペクト比",
+    name: 'fb-aspect-ratio',
+    description: 'アスペクト比',
     preview: (
-      <div className="w-32 bg-gray-100 dark:bg-gray-800 rounded overflow-hidden" style={{ aspectRatio: "16/9" }}>
-        <div className="w-full h-full flex items-center justify-center text-xs text-gray-500">16:9</div>
+      <div
+        className="w-32 bg-gray-100 dark:bg-gray-800 rounded overflow-hidden"
+        style={{ aspectRatio: '16/9' }}
+      >
+        <div className="w-full h-full flex items-center justify-center text-xs text-gray-500">
+          16:9
+        </div>
       </div>
     ),
   },
   {
-    name: "fb-progress",
-    description: "プログレスバー",
+    name: 'fb-progress',
+    description: 'プログレスバー',
     preview: (
       <div className="w-48 space-y-2">
-        <div className="h-2 bg-gray-200 rounded-full overflow-hidden"><div className="h-full w-3/5 bg-[#002CED] rounded-full" /></div>
-        <div className="h-2 bg-gray-200 rounded-full overflow-hidden"><div className="h-full w-4/5 bg-green-600 rounded-full" /></div>
+        <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div className="h-full w-3/5 bg-[#002CED] rounded-full" />
+        </div>
+        <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div className="h-full w-4/5 bg-green-600 rounded-full" />
+        </div>
       </div>
     ),
   },
   {
-    name: "fb-toggle",
-    description: "トグル",
+    name: 'fb-toggle',
+    description: 'トグル',
     preview: (
       <div className="flex gap-2">
-        <button className="h-9 w-9 rounded-md flex items-center justify-center bg-gray-200 text-gray-900 font-bold">B</button>
-        <button className="h-9 w-9 rounded-md flex items-center justify-center bg-transparent hover:bg-gray-100 italic">I</button>
+        <button className="h-9 w-9 rounded-md flex items-center justify-center bg-gray-200 text-gray-900 font-bold">
+          B
+        </button>
+        <button className="h-9 w-9 rounded-md flex items-center justify-center bg-transparent hover:bg-gray-100 italic">
+          I
+        </button>
       </div>
     ),
   },
   {
-    name: "fb-checkbox",
-    description: "チェックボックス",
+    name: 'fb-checkbox',
+    description: 'チェックボックス',
     preview: (
       <div className="flex gap-4 items-center">
         <div className="h-5 w-5 rounded border-2 border-gray-400" />
-        <div className="h-5 w-5 rounded border-2 border-[#002CED] bg-[#002CED] flex items-center justify-center"><Check className="h-3 w-3 text-white" /></div>
-        <div className="h-5 w-5 rounded border-2 border-green-600 bg-green-600 flex items-center justify-center"><Check className="h-3 w-3 text-white" /></div>
+        <div className="h-5 w-5 rounded border-2 border-[#002CED] bg-[#002CED] flex items-center justify-center">
+          <Check className="h-3 w-3 text-white" />
+        </div>
+        <div className="h-5 w-5 rounded border-2 border-green-600 bg-green-600 flex items-center justify-center">
+          <Check className="h-3 w-3 text-white" />
+        </div>
       </div>
     ),
   },
   {
-    name: "fb-switch",
-    description: "スイッチ",
+    name: 'fb-switch',
+    description: 'スイッチ',
     preview: (
       <div className="flex gap-4 items-center">
-        <div className="h-6 w-11 rounded-full bg-gray-300 p-0.5"><div className="h-5 w-5 rounded-full bg-white shadow" /></div>
-        <div className="h-6 w-11 rounded-full bg-[#002CED] p-0.5 flex justify-end"><div className="h-5 w-5 rounded-full bg-white shadow" /></div>
-        <div className="h-6 w-11 rounded-full bg-green-600 p-0.5 flex justify-end"><div className="h-5 w-5 rounded-full bg-white shadow" /></div>
+        <div className="h-6 w-11 rounded-full bg-gray-300 p-0.5">
+          <div className="h-5 w-5 rounded-full bg-white shadow" />
+        </div>
+        <div className="h-6 w-11 rounded-full bg-[#002CED] p-0.5 flex justify-end">
+          <div className="h-5 w-5 rounded-full bg-white shadow" />
+        </div>
+        <div className="h-6 w-11 rounded-full bg-green-600 p-0.5 flex justify-end">
+          <div className="h-5 w-5 rounded-full bg-white shadow" />
+        </div>
       </div>
     ),
   },
   {
-    name: "fb-radio-group",
-    description: "ラジオグループ",
+    name: 'fb-radio-group',
+    description: 'ラジオグループ',
     preview: (
       <div className="flex gap-4 items-center">
         <div className="flex items-center gap-2">
-          <div className="h-4 w-4 rounded-full border-2 border-[#002CED] flex items-center justify-center"><div className="h-2 w-2 rounded-full bg-[#002CED]" /></div>
+          <div className="h-4 w-4 rounded-full border-2 border-[#002CED] flex items-center justify-center">
+            <div className="h-2 w-2 rounded-full bg-[#002CED]" />
+          </div>
           <span className="text-sm">Option 1</span>
         </div>
         <div className="flex items-center gap-2">
@@ -282,38 +378,62 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-tooltip",
-    description: "ツールチップ",
-    preview: <PreviewButton variant="outlined" color="informative">Hover me</PreviewButton>,
+    name: 'fb-tooltip',
+    description: 'ツールチップ',
+    preview: (
+      <PreviewButton variant="outlined" color="informative">
+        Hover me
+      </PreviewButton>
+    ),
   },
   {
-    name: "fb-popover",
-    description: "ポップオーバー",
-    preview: <PreviewButton variant="outlined" color="informative">Open Popover</PreviewButton>,
+    name: 'fb-popover',
+    description: 'ポップオーバー',
+    preview: (
+      <PreviewButton variant="outlined" color="informative">
+        Open Popover
+      </PreviewButton>
+    ),
   },
   {
-    name: "fb-dialog",
-    description: "ダイアログ",
-    preview: <PreviewButton variant="outlined" color="informative">Open Dialog</PreviewButton>,
+    name: 'fb-dialog',
+    description: 'ダイアログ',
+    preview: (
+      <PreviewButton variant="outlined" color="informative">
+        Open Dialog
+      </PreviewButton>
+    ),
   },
   {
-    name: "fb-alert-dialog",
-    description: "アラートダイアログ",
-    preview: <PreviewButton variant="outlined" color="negative">Delete</PreviewButton>,
+    name: 'fb-alert-dialog',
+    description: 'アラートダイアログ',
+    preview: (
+      <PreviewButton variant="outlined" color="negative">
+        Delete
+      </PreviewButton>
+    ),
   },
   {
-    name: "fb-sheet",
-    description: "シート",
-    preview: <PreviewButton variant="outlined" color="informative">Open Sheet</PreviewButton>,
+    name: 'fb-sheet',
+    description: 'シート',
+    preview: (
+      <PreviewButton variant="outlined" color="informative">
+        Open Sheet
+      </PreviewButton>
+    ),
   },
   {
-    name: "fb-drawer",
-    description: "ドロワー",
-    preview: <PreviewButton variant="outlined" color="informative">Open Drawer</PreviewButton>,
+    name: 'fb-drawer',
+    description: 'ドロワー',
+    preview: (
+      <PreviewButton variant="outlined" color="informative">
+        Open Drawer
+      </PreviewButton>
+    ),
   },
   {
-    name: "fb-dropdown-menu",
-    description: "ドロップダウンメニュー",
+    name: 'fb-dropdown-menu',
+    description: 'ドロップダウンメニュー',
     preview: (
       <PreviewButton variant="flat" color="neutral">
         <Settings className="h-4 w-4" />
@@ -323,8 +443,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-context-menu",
-    description: "コンテキストメニュー",
+    name: 'fb-context-menu',
+    description: 'コンテキストメニュー',
     preview: (
       <div className="border-2 border-dashed border-gray-300 rounded-lg px-6 py-4 text-sm text-gray-500">
         Right click here
@@ -332,13 +452,15 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-hover-card",
-    description: "ホバーカード",
-    preview: <span className="text-[#002CED] underline cursor-pointer">@username</span>,
+    name: 'fb-hover-card',
+    description: 'ホバーカード',
+    preview: (
+      <span className="text-[#002CED] underline cursor-pointer">@username</span>
+    ),
   },
   {
-    name: "fb-toast",
-    description: "トースト",
+    name: 'fb-toast',
+    description: 'トースト',
     preview: (
       <PreviewButton variant="solid" color="informative">
         <Bell className="h-4 w-4" />
@@ -347,13 +469,17 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-sonner",
-    description: "Sonner",
-    preview: <PreviewButton variant="solid" color="positive">Show Notification</PreviewButton>,
+    name: 'fb-sonner',
+    description: 'Sonner',
+    preview: (
+      <PreviewButton variant="solid" color="positive">
+        Show Notification
+      </PreviewButton>
+    ),
   },
   {
-    name: "fb-accordion",
-    description: "アコーディオン",
+    name: 'fb-accordion',
+    description: 'アコーディオン',
     preview: (
       <div className="w-48 border rounded-lg">
         <div className="flex items-center justify-between px-4 py-3 border-b">
@@ -365,8 +491,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-collapsible",
-    description: "折りたたみ",
+    name: 'fb-collapsible',
+    description: '折りたたみ',
     preview: (
       <div className="flex items-center gap-2">
         <ChevronRight className="h-4 w-4" />
@@ -375,31 +501,54 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-tabs",
-    description: "タブ",
+    name: 'fb-tabs',
+    description: 'タブ',
     preview: (
       <div className="w-48">
         <div className="flex border-b border-gray-200">
-          <button className="px-3 py-2 text-sm border-b-2 border-[#002CED] text-[#002CED]">Tab 1</button>
+          <button className="px-3 py-2 text-sm border-b-2 border-[#002CED] text-[#002CED]">
+            Tab 1
+          </button>
           <button className="px-3 py-2 text-sm text-gray-600">Tab 2</button>
         </div>
       </div>
     ),
   },
   {
-    name: "fb-toggle-group",
-    description: "トグルグループ",
+    name: 'fb-toggle-group',
+    description: 'トグルグループ',
     preview: (
       <div className="flex">
-        <PreviewButton variant="solid" color="informative" size="s" className="rounded-r-none">Left</PreviewButton>
-        <PreviewButton variant="outlined" color="informative" size="s" className="rounded-none border-l-0">Center</PreviewButton>
-        <PreviewButton variant="outlined" color="informative" size="s" className="rounded-l-none border-l-0">Right</PreviewButton>
+        <PreviewButton
+          variant="solid"
+          color="informative"
+          size="s"
+          className="rounded-r-none"
+        >
+          Left
+        </PreviewButton>
+        <PreviewButton
+          variant="outlined"
+          color="informative"
+          size="s"
+          className="rounded-none border-l-0"
+        >
+          Center
+        </PreviewButton>
+        <PreviewButton
+          variant="outlined"
+          color="informative"
+          size="s"
+          className="rounded-l-none border-l-0"
+        >
+          Right
+        </PreviewButton>
       </div>
     ),
   },
   {
-    name: "fb-breadcrumb",
-    description: "パンくずリスト",
+    name: 'fb-breadcrumb',
+    description: 'パンくずリスト',
     preview: (
       <div className="flex items-center gap-2 text-sm">
         <span className="text-gray-500">Home</span>
@@ -411,21 +560,31 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-pagination",
-    description: "ページネーション",
+    name: 'fb-pagination',
+    description: 'ページネーション',
     preview: (
       <div className="flex items-center gap-1">
-        <PreviewButton variant="flat" color="neutral" size="s">←</PreviewButton>
-        <PreviewButton variant="solid" color="informative" size="s">1</PreviewButton>
-        <PreviewButton variant="flat" color="neutral" size="s">2</PreviewButton>
-        <PreviewButton variant="flat" color="neutral" size="s">3</PreviewButton>
-        <PreviewButton variant="flat" color="neutral" size="s">→</PreviewButton>
+        <PreviewButton variant="flat" color="neutral" size="s">
+          ←
+        </PreviewButton>
+        <PreviewButton variant="solid" color="informative" size="s">
+          1
+        </PreviewButton>
+        <PreviewButton variant="flat" color="neutral" size="s">
+          2
+        </PreviewButton>
+        <PreviewButton variant="flat" color="neutral" size="s">
+          3
+        </PreviewButton>
+        <PreviewButton variant="flat" color="neutral" size="s">
+          →
+        </PreviewButton>
       </div>
     ),
   },
   {
-    name: "fb-navigation-menu",
-    description: "ナビゲーションメニュー",
+    name: 'fb-navigation-menu',
+    description: 'ナビゲーションメニュー',
     preview: (
       <div className="flex items-center gap-4 text-sm">
         <span className="text-[#002CED] font-medium">Home</span>
@@ -435,8 +594,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-menubar",
-    description: "メニューバー",
+    name: 'fb-menubar',
+    description: 'メニューバー',
     preview: (
       <div className="flex items-center gap-4 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded text-sm">
         <span>File</span>
@@ -446,8 +605,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-scroll-area",
-    description: "スクロールエリア",
+    name: 'fb-scroll-area',
+    description: 'スクロールエリア',
     preview: (
       <div className="w-32 h-16 border rounded-lg overflow-hidden bg-white dark:bg-gray-900">
         <div className="p-2 text-xs text-gray-500">Scrollable content area</div>
@@ -455,19 +614,23 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-resizable",
-    description: "リサイズ可能",
+    name: 'fb-resizable',
+    description: 'リサイズ可能',
     preview: (
       <div className="flex w-48 h-12 border rounded-lg overflow-hidden">
-        <div className="flex-1 bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">Panel 1</div>
+        <div className="flex-1 bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">
+          Panel 1
+        </div>
         <div className="w-1 bg-gray-300 cursor-col-resize" />
-        <div className="flex-1 bg-gray-50 dark:bg-gray-900 flex items-center justify-center text-xs">Panel 2</div>
+        <div className="flex-1 bg-gray-50 dark:bg-gray-900 flex items-center justify-center text-xs">
+          Panel 2
+        </div>
       </div>
     ),
   },
   {
-    name: "fb-alert",
-    description: "アラート",
+    name: 'fb-alert',
+    description: 'アラート',
     preview: (
       <div className="w-48 rounded-lg border border-[#002CED] bg-[#e6ebfd] p-4">
         <h5 className="text-sm font-medium text-[#002CED]">Info</h5>
@@ -476,8 +639,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-select",
-    description: "セレクト",
+    name: 'fb-select',
+    description: 'セレクト',
     preview: (
       <button className="w-36 h-9 px-3 rounded-md border-2 border-gray-400 text-gray-700 bg-transparent flex items-center justify-between text-sm">
         Select option
@@ -486,8 +649,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-native-select",
-    description: "ネイティブセレクト",
+    name: 'fb-native-select',
+    description: 'ネイティブセレクト',
     preview: (
       <select className="w-36 px-3 py-2 border-2 border-gray-200 dark:border-gray-700 rounded-lg text-sm bg-white dark:bg-gray-900">
         <option>Option 1</option>
@@ -496,19 +659,21 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-command",
-    description: "コマンド",
+    name: 'fb-command',
+    description: 'コマンド',
     preview: (
       <div className="flex items-center gap-2 px-3 py-2 border rounded-lg w-48">
         <Search className="h-4 w-4 text-gray-400" />
         <span className="text-sm text-gray-500">Search...</span>
-        <kbd className="ml-auto inline-flex items-center justify-center h-5 px-1.5 rounded border border-gray-300 bg-gray-100 text-xs font-mono">⌘K</kbd>
+        <kbd className="ml-auto inline-flex items-center justify-center h-5 px-1.5 rounded border border-gray-300 bg-gray-100 text-xs font-mono">
+          ⌘K
+        </kbd>
       </div>
     ),
   },
   {
-    name: "fb-combobox",
-    description: "コンボボックス",
+    name: 'fb-combobox',
+    description: 'コンボボックス',
     preview: (
       <button className="w-36 h-9 px-3 rounded-md border-2 border-gray-400 text-gray-700 bg-transparent flex items-center justify-between text-sm">
         Select...
@@ -517,8 +682,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-slider",
-    description: "スライダー",
+    name: 'fb-slider',
+    description: 'スライダー',
     preview: (
       <div className="w-48">
         <div className="relative h-1.5 bg-gray-200 rounded-full">
@@ -529,64 +694,90 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-input-otp",
-    description: "OTP入力",
+    name: 'fb-input-otp',
+    description: 'OTP入力',
     preview: (
       <div className="flex gap-2">
         {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="w-10 h-12 border-2 rounded-lg flex items-center justify-center text-lg font-mono">
-            {i === 1 ? "1" : ""}
+          <div
+            key={i}
+            className="w-10 h-12 border-2 rounded-lg flex items-center justify-center text-lg font-mono"
+          >
+            {i === 1 ? '1' : ''}
           </div>
         ))}
       </div>
     ),
   },
   {
-    name: "fb-form",
-    description: "フォーム",
+    name: 'fb-form',
+    description: 'フォーム',
     preview: (
       <div className="space-y-2 w-40">
         <label className="text-sm font-medium">Email</label>
-        <input className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 outline-none" placeholder="email@example.com" />
+        <input
+          className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 outline-none"
+          placeholder="email@example.com"
+        />
       </div>
     ),
   },
   {
-    name: "fb-field",
-    description: "フィールド",
+    name: 'fb-field',
+    description: 'フィールド',
     preview: (
       <div className="space-y-1 w-40">
         <label className="text-sm font-medium">Username</label>
-        <input className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 outline-none" placeholder="username" />
+        <input
+          className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 outline-none"
+          placeholder="username"
+        />
         <p className="text-xs text-gray-500">Enter your username</p>
       </div>
     ),
   },
   {
-    name: "fb-input-group",
-    description: "インプットグループ",
+    name: 'fb-input-group',
+    description: 'インプットグループ',
     preview: (
       <div className="flex w-48">
-        <span className="px-3 py-2 bg-gray-100 border border-gray-200 border-r-0 rounded-l-md text-sm">@</span>
-        <input className="flex-1 h-9 px-3 rounded-r-md border border-gray-200 outline-none text-sm" placeholder="username" />
+        <span className="px-3 py-2 bg-gray-100 border border-gray-200 border-r-0 rounded-l-md text-sm">
+          @
+        </span>
+        <input
+          className="flex-1 h-9 px-3 rounded-r-md border border-gray-200 outline-none text-sm"
+          placeholder="username"
+        />
       </div>
     ),
   },
   {
-    name: "fb-button-group",
-    description: "ボタングループ",
+    name: 'fb-button-group',
+    description: 'ボタングループ',
     preview: (
       <div className="flex">
-        <PreviewButton variant="outlined" color="neutral" size="s" className="rounded-r-none">Save</PreviewButton>
-        <PreviewButton variant="outlined" color="neutral" size="s" className="rounded-l-none border-l-0">
+        <PreviewButton
+          variant="outlined"
+          color="neutral"
+          size="s"
+          className="rounded-r-none"
+        >
+          Save
+        </PreviewButton>
+        <PreviewButton
+          variant="outlined"
+          color="neutral"
+          size="s"
+          className="rounded-l-none border-l-0"
+        >
           <ChevronDown className="h-4 w-4" />
         </PreviewButton>
       </div>
     ),
   },
   {
-    name: "fb-item",
-    description: "アイテム",
+    name: 'fb-item',
+    description: 'アイテム',
     preview: (
       <div className="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg cursor-pointer w-40">
         <User className="h-4 w-4 text-gray-500" />
@@ -595,8 +786,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-table",
-    description: "テーブル",
+    name: 'fb-table',
+    description: 'テーブル',
     preview: (
       <table className="w-48 text-sm">
         <thead>
@@ -615,31 +806,42 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-data-table",
-    description: "データテーブル",
+    name: 'fb-data-table',
+    description: 'データテーブル',
     preview: (
       <div className="w-48 text-xs">
         <div className="flex items-center gap-2 mb-2">
-          <input className="flex-1 h-7 px-2 rounded-md border border-gray-200 outline-none text-sm" placeholder="Filter..." />
+          <input
+            className="flex-1 h-7 px-2 rounded-md border border-gray-200 outline-none text-sm"
+            placeholder="Filter..."
+          />
         </div>
-        <div className="border rounded text-center py-2 text-gray-500">Table</div>
+        <div className="border rounded text-center py-2 text-gray-500">
+          Table
+        </div>
       </div>
     ),
   },
   {
-    name: "fb-calendar",
-    description: "カレンダー",
+    name: 'fb-calendar',
+    description: 'カレンダー',
     preview: (
       <div className="p-2 border rounded-lg">
-        <div className="text-center text-sm font-medium mb-2">December 2024</div>
+        <div className="text-center text-sm font-medium mb-2">
+          December 2024
+        </div>
         <div className="grid grid-cols-7 gap-1 text-xs text-center">
-          {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
-            <div key={i} className="text-gray-400">{d}</div>
+          {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((d, i) => (
+            <div key={i} className="text-gray-400">
+              {d}
+            </div>
           ))}
           {[...Array(31)].map((_, i) => (
             <div
               key={i}
-              className={`py-0.5 rounded ${i === 14 ? "bg-[#002CED] text-white" : ""}`}
+              className={`py-0.5 rounded ${
+                i === 14 ? 'bg-[#002CED] text-white' : ''
+              }`}
             >
               {i + 1}
             </div>
@@ -649,8 +851,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-date-picker",
-    description: "日付選択",
+    name: 'fb-date-picker',
+    description: '日付選択',
     preview: (
       <button className="w-40 h-9 px-3 rounded-md border-2 border-gray-400 text-gray-700 bg-transparent flex items-center gap-2 text-sm">
         📅 Pick a date
@@ -658,19 +860,25 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-carousel",
-    description: "カルーセル",
+    name: 'fb-carousel',
+    description: 'カルーセル',
     preview: (
       <div className="flex items-center gap-2">
-        <PreviewButton variant="flat" color="neutral" size="s">←</PreviewButton>
-        <div className="w-24 h-16 bg-gray-100 dark:bg-gray-800 rounded flex items-center justify-center text-xs">Slide 1</div>
-        <PreviewButton variant="flat" color="neutral" size="s">→</PreviewButton>
+        <PreviewButton variant="flat" color="neutral" size="s">
+          ←
+        </PreviewButton>
+        <div className="w-24 h-16 bg-gray-100 dark:bg-gray-800 rounded flex items-center justify-center text-xs">
+          Slide 1
+        </div>
+        <PreviewButton variant="flat" color="neutral" size="s">
+          →
+        </PreviewButton>
       </div>
     ),
   },
   {
-    name: "fb-chart",
-    description: "チャート",
+    name: 'fb-chart',
+    description: 'チャート',
     preview: (
       <div className="flex items-end gap-1 h-16">
         {[40, 60, 30, 80, 50, 70].map((h, i) => (
@@ -684,8 +892,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-empty",
-    description: "空状態",
+    name: 'fb-empty',
+    description: '空状態',
     preview: (
       <div className="text-center py-4">
         <div className="text-3xl mb-2">📭</div>
@@ -694,8 +902,8 @@ const allComponents = [
     ),
   },
   {
-    name: "fb-sidebar",
-    description: "サイドバー",
+    name: 'fb-sidebar',
+    description: 'サイドバー',
     preview: (
       <div className="w-32 p-2 bg-gray-100 dark:bg-gray-800 rounded-lg space-y-1">
         <div className="flex items-center gap-2 px-2 py-1 bg-[#002CED] text-white rounded text-xs">
@@ -707,10 +915,10 @@ const allComponents = [
       </div>
     ),
   },
-]
+];
 
 export default function Home() {
-  const totalComponents = allComponents.length
+  const totalComponents = allComponents.length;
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
@@ -732,7 +940,7 @@ export default function Home() {
               {totalComponents} components
             </span>
             <a
-              href="https://github.com/yukyu30/yukyui"
+              href="https://github.com/yukyu30/fly-by"
               className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -757,7 +965,8 @@ export default function Home() {
             />
           </div>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            <strong className="text-[#002CED]">Yukyu Flavor</strong>（#002CED）を基調とする
+            <strong className="text-[#002CED]">Yukyu Flavor</strong>
+            （#002CED）を基調とする
             <br />
             shadcn/ui 互換のコンポーネントライブラリ。
           </p>
@@ -778,7 +987,10 @@ export default function Home() {
         </section>
 
         {/* Usage - Side by side */}
-        <section className="py-12 border-t border-gray-200 dark:border-gray-800" id="usage">
+        <section
+          className="py-12 border-t border-gray-200 dark:border-gray-800"
+          id="usage"
+        >
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Terminal className="h-6 w-6" />
             使い方
@@ -804,7 +1016,9 @@ export default function Home() {
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 必要なコンポーネントを追加します。
               </p>
-              <CodeBlock code={`npx shadcn@latest add "${BASE_URL}/fb-button.json"`} />
+              <CodeBlock
+                code={`npx shadcn@latest add "${BASE_URL}/fb-button.json"`}
+              />
             </div>
 
             <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl">
@@ -825,7 +1039,10 @@ export default function Home() {
         </section>
 
         {/* Component Showcase - Flat grid */}
-        <section className="py-12 border-t border-gray-200 dark:border-gray-800" id="components">
+        <section
+          className="py-12 border-t border-gray-200 dark:border-gray-800"
+          id="components"
+        >
           <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
             <Package className="h-6 w-6" />
             コンポーネント一覧
@@ -848,7 +1065,10 @@ export default function Home() {
         </section>
 
         {/* Design Principles */}
-        <section className="py-12 border-t border-gray-200 dark:border-gray-800" id="design">
+        <section
+          className="py-12 border-t border-gray-200 dark:border-gray-800"
+          id="design"
+        >
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Palette className="h-6 w-6" />
             デザイン原則
@@ -860,37 +1080,63 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li className="flex items-start gap-2">
                   <span className="text-[#002CED]">•</span>
-                  <span><strong>プレフィックス:</strong> <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">fb-</code></span>
+                  <span>
+                    <strong>プレフィックス:</strong>{' '}
+                    <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">
+                      fb-
+                    </code>
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#002CED]">•</span>
-                  <span><strong>クラス形式:</strong> <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">fb-{"{component}"} -{"{modifier}"}-{"{value}"}</code></span>
+                  <span>
+                    <strong>クラス形式:</strong>{' '}
+                    <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">
+                      fb-{'{component}'} -{'{modifier}'}-{'{value}'}
+                    </code>
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#002CED]">•</span>
-                  <span><strong>data-slot属性:</strong> <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">data-slot=&quot;fb-{"{component}"}&quot;</code></span>
+                  <span>
+                    <strong>data-slot属性:</strong>{' '}
+                    <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">
+                      data-slot=&quot;fb-{'{component}'}&quot;
+                    </code>
+                  </span>
                 </li>
               </ul>
             </div>
 
             <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl">
-              <h3 className="font-semibold mb-4">Yukyu Flavor カラーパレット</h3>
+              <h3 className="font-semibold mb-4">
+                Yukyu Flavor カラーパレット
+              </h3>
               <div className="space-y-2">
                 {[
-                  { name: "Primary 50", hex: "#e6ebfd", usage: "背景（薄い）" },
-                  { name: "Primary 100", hex: "#ccd7fb", usage: "ホバー背景" },
-                  { name: "Primary 500", hex: "#002CED", usage: "基準色・ボタン" },
-                  { name: "Primary 600", hex: "#0025c4", usage: "ホバー" },
-                  { name: "Primary 700", hex: "#001e9b", usage: "アクティブ" },
+                  { name: 'Primary 50', hex: '#e6ebfd', usage: '背景（薄い）' },
+                  { name: 'Primary 100', hex: '#ccd7fb', usage: 'ホバー背景' },
+                  {
+                    name: 'Primary 500',
+                    hex: '#002CED',
+                    usage: '基準色・ボタン',
+                  },
+                  { name: 'Primary 600', hex: '#0025c4', usage: 'ホバー' },
+                  { name: 'Primary 700', hex: '#001e9b', usage: 'アクティブ' },
                 ].map((color) => (
-                  <div key={color.name} className="flex items-center gap-3 text-sm">
+                  <div
+                    key={color.name}
+                    className="flex items-center gap-3 text-sm"
+                  >
                     <div
                       className="w-8 h-8 rounded-md border border-gray-200 dark:border-gray-700"
                       style={{ backgroundColor: color.hex }}
                     />
                     <div>
                       <div className="font-medium">{color.name}</div>
-                      <div className="text-gray-500 text-xs">{color.hex} - {color.usage}</div>
+                      <div className="text-gray-500 text-xs">
+                        {color.hex} - {color.usage}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -906,7 +1152,7 @@ export default function Home() {
           <p>fly-by Design System - Built with shadcn/ui</p>
           <p className="mt-2">
             <a
-              href="https://github.com/yukyu30/yukyui"
+              href="https://github.com/yukyu30/fly-by"
               className="text-[#002CED] hover:underline"
               target="_blank"
               rel="noopener noreferrer"
@@ -917,5 +1163,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
