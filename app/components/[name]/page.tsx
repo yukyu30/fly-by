@@ -4,8 +4,9 @@ import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import { ArrowLeft, Copy, Check, Package, Terminal } from 'lucide-react';
+import { ArrowLeft, Copy, Check, Package, Terminal, Eye } from 'lucide-react';
 import { getComponent } from '@/lib/registry';
+import { componentPreviews, defaultPreview } from '@/lib/component-previews';
 import { FbButton } from '@/registry/fly-by/ui/fb-button';
 import { FbBadge } from '@/registry/fly-by/ui/fb-badge';
 import { FbCard } from '@/registry/fly-by/ui/fb-card';
@@ -127,6 +128,19 @@ export default function ComponentPage() {
             <p className="text-gray-600 dark:text-gray-400">{component.description}</p>
           )}
         </div>
+
+        {/* Preview */}
+        <FbCard elevation={1} className="mb-8">
+          <div className="p-6">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Eye className="h-5 w-5" />
+              プレビュー
+            </h3>
+            <div className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[200px]">
+              {componentPreviews[name] || defaultPreview}
+            </div>
+          </div>
+        </FbCard>
 
         {/* Installation */}
         <FbCard elevation={1} className="mb-8">
