@@ -91,7 +91,7 @@ function PreviewButton({ variant = "solid", color = "informative", size = "m", c
   } else if (variant === "outlined") {
     if (color === "informative") colorClass = "border-2 border-[#002CED] text-[#002CED] bg-transparent hover:bg-[#e6ebfd]"
     else if (color === "negative") colorClass = "border-2 border-red-600 text-red-600 bg-transparent hover:bg-red-50"
-    else colorClass = "border-2 border-gray-400 text-gray-700 bg-transparent hover:bg-gray-50"
+    else colorClass = "border-2 border-gray-300 text-gray-700 bg-transparent hover:bg-gray-50"
   } else {
     colorClass = "bg-gray-100 text-gray-700 hover:bg-gray-200"
   }
@@ -125,7 +125,7 @@ const allComponents = [
     name: "fb-input",
     description: "テキスト入力",
     preview: (
-      <input className="w-48 rounded-md border border-gray-300 bg-transparent h-9 px-3 text-sm outline-none focus:border-[#002CED] focus:ring-2 focus:ring-[#002CED]/20" placeholder="入力してください" />
+      <input className="w-48 rounded-md border border-gray-200 bg-transparent h-9 px-3 text-sm outline-none focus:border-[#002CED] focus:ring-2 focus:ring-[#002CED]/20" placeholder="入力してください" />
     ),
   },
   {
@@ -136,7 +136,7 @@ const allComponents = [
   {
     name: "fb-textarea",
     description: "テキストエリア",
-    preview: <textarea className="w-48 h-20 rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm outline-none resize-none focus:border-[#002CED]" placeholder="テキストを入力..." />,
+    preview: <textarea className="w-48 h-20 rounded-md border border-gray-200 bg-transparent px-3 py-2 text-sm outline-none resize-none focus:border-[#002CED]" placeholder="テキストを入力..." />,
   },
   {
     name: "fb-text",
@@ -547,7 +547,7 @@ const allComponents = [
     preview: (
       <div className="space-y-2 w-40">
         <label className="text-sm font-medium">Email</label>
-        <input className="w-full h-8 px-2 text-sm rounded-md border border-gray-300 outline-none" placeholder="email@example.com" />
+        <input className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 outline-none" placeholder="email@example.com" />
       </div>
     ),
   },
@@ -557,7 +557,7 @@ const allComponents = [
     preview: (
       <div className="space-y-1 w-40">
         <label className="text-sm font-medium">Username</label>
-        <input className="w-full h-8 px-2 text-sm rounded-md border border-gray-300 outline-none" placeholder="username" />
+        <input className="w-full h-8 px-2 text-sm rounded-md border border-gray-200 outline-none" placeholder="username" />
         <p className="text-xs text-gray-500">Enter your username</p>
       </div>
     ),
@@ -567,8 +567,8 @@ const allComponents = [
     description: "インプットグループ",
     preview: (
       <div className="flex w-48">
-        <span className="px-3 py-2 bg-gray-100 border border-r-0 rounded-l-md text-sm">@</span>
-        <input className="flex-1 h-9 px-3 rounded-r-md border border-gray-300 outline-none text-sm" placeholder="username" />
+        <span className="px-3 py-2 bg-gray-100 border border-gray-200 border-r-0 rounded-l-md text-sm">@</span>
+        <input className="flex-1 h-9 px-3 rounded-r-md border border-gray-200 outline-none text-sm" placeholder="username" />
       </div>
     ),
   },
@@ -620,7 +620,7 @@ const allComponents = [
     preview: (
       <div className="w-48 text-xs">
         <div className="flex items-center gap-2 mb-2">
-          <input className="flex-1 h-7 px-2 rounded-md border border-gray-300 outline-none text-sm" placeholder="Filter..." />
+          <input className="flex-1 h-7 px-2 rounded-md border border-gray-200 outline-none text-sm" placeholder="Filter..." />
         </div>
         <div className="border rounded text-center py-2 text-gray-500">Table</div>
       </div>
