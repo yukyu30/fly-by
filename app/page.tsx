@@ -14,6 +14,7 @@ import {
   FileText,
 } from 'lucide-react';
 import { getAllComponents } from '@/lib/registry';
+import { componentPreviews, defaultPreview } from '@/lib/component-previews';
 import { FbCard } from '@/registry/fly-by/ui/fb-card';
 import { FbBadge } from '@/registry/fly-by/ui/fb-badge';
 import { FbInput } from '@/registry/fly-by/ui/fb-input';
@@ -247,8 +248,16 @@ export default function Home() {
               <Link key={component.name} href={`/components/${component.name}`}>
                 <FbCard
                   elevation={1}
-                  className="h-full hover:shadow-lg transition-shadow cursor-pointer"
+                  className="h-full hover:shadow-lg transition-shadow cursor-pointer overflow-hidden"
                 >
+                  {/* Preview Area */}
+                  <div className="bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700 p-6 flex items-center justify-center min-h-[140px]">
+                    <div className="scale-75 origin-center">
+                      {componentPreviews[component.name] || defaultPreview}
+                    </div>
+                  </div>
+
+                  {/* Component Info */}
                   <div className="p-4">
                     <div className="flex items-start justify-between mb-2">
                       <h3 className="text-base font-mono text-[#002CED] font-semibold">
