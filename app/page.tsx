@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import { Check, Copy, Terminal, Package, Palette, Grid3X3 } from "lucide-react"
 
 // Component data
@@ -153,10 +154,13 @@ export default function Home() {
       <header className="border-b border-gray-200 dark:border-gray-800 sticky top-0 bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-[#002CED] flex items-center justify-center">
-              <span className="text-white font-bold text-sm">fb</span>
-            </div>
-            <h1 className="text-xl font-bold">fly-by Design System</h1>
+            <Image
+              src="/fly-by-logo.png"
+              alt="fly-by Design System"
+              width={120}
+              height={32}
+              className="h-8 w-auto"
+            />
           </div>
           <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
             <span className="flex items-center gap-1">
@@ -178,13 +182,20 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-4 py-8">
         {/* Hero */}
         <section className="py-12 text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-[#002CED]">fly-by</span> Design System
-          </h2>
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/fly-by-logo.png"
+              alt="fly-by Design System"
+              width={300}
+              height={80}
+              className="h-20 w-auto"
+              priority
+            />
+          </div>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            Inhouse をリスペクトした独自デザインシステム。
+            <strong className="text-[#002CED]">Yukyu Flavor</strong>（#002CED）を基調とする
             <br />
-            Yukyu Flavor（#002CED）を基調とする shadcn/ui 互換のコンポーネントライブラリ。
+            shadcn/ui 互換のコンポーネントライブラリ。
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <div className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
