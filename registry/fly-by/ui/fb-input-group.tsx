@@ -29,13 +29,13 @@ import { cn } from "@/lib/utils"
  */
 
 const fbInputGroupVariants = cva(
-  "fb-input-group flex items-stretch rounded-md border border-gray-200 shadow-sm focus-within:ring-1 focus-within:ring-gray-400 dark:border-gray-700 dark:focus-within:ring-gray-500",
+  "fb-input-group flex items-stretch rounded-md border-2 border-gray-300 shadow-sm focus-within:ring-1 focus-within:ring-gray-400 dark:border-gray-600 dark:focus-within:ring-gray-500",
   {
     variants: {
       size: {
-        s: "[&_input]:h-8 [&_input]:text-xs",
-        m: "[&_input]:h-9 [&_input]:text-sm",
-        l: "[&_input]:h-10 [&_input]:text-base",
+        s: "h-8 [&_input]:h-8 [&_input]:text-xs text-xs",
+        m: "h-9 [&_input]:h-9 [&_input]:text-sm text-sm",
+        l: "h-10 [&_input]:h-10 [&_input]:text-base text-base",
       },
     },
     defaultVariants: {
@@ -70,7 +70,7 @@ function FbInputGroupPrefix({
     <div
       data-slot="fb-input-group-prefix"
       className={cn(
-        "fb-input-group-prefix flex items-center border-r border-gray-200 bg-gray-50 px-3 text-sm text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400",
+        "fb-input-group-prefix flex items-center border-r border-gray-300 bg-gray-50 px-3 text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400",
         className
       )}
       {...props}
@@ -86,7 +86,7 @@ function FbInputGroupSuffix({
     <div
       data-slot="fb-input-group-suffix"
       className={cn(
-        "fb-input-group-suffix flex items-center border-l border-gray-200 bg-gray-50 px-3 text-sm text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400",
+        "fb-input-group-suffix flex items-center border-l border-gray-300 bg-gray-50 px-3 text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400",
         className
       )}
       {...props}
