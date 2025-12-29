@@ -22,7 +22,7 @@ const fbToggleGroupVariants = cva(
     variants: {
       appearance: {
         default: "-appearance-default",
-        outlined: "-appearance-outlined rounded-lg border border-gray-200 p-1 dark:border-gray-700",
+        outlined: "-appearance-outlined rounded-lg border-2 border-gray-300 p-1 dark:border-gray-600",
       },
     },
     defaultVariants: {

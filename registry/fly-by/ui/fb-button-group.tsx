@@ -12,16 +12,16 @@ import { cn } from "@/lib/utils"
  *
  * @example
  * <FbButtonGroup>
- *   <FbButton variant="outline">左</FbButton>
- *   <FbButton variant="outline">中央</FbButton>
- *   <FbButton variant="outline">右</FbButton>
+ *   <FbButton appearance="outlined" color="neutral">左</FbButton>
+ *   <FbButton appearance="outlined" color="neutral">中央</FbButton>
+ *   <FbButton appearance="outlined" color="neutral">右</FbButton>
  * </FbButtonGroup>
  *
  * @example
  * <FbButtonGroup orientation="vertical">
- *   <FbButton variant="outline">上</FbButton>
- *   <FbButton variant="outline">中</FbButton>
- *   <FbButton variant="outline">下</FbButton>
+ *   <FbButton appearance="outlined" color="neutral">上</FbButton>
+ *   <FbButton appearance="outlined" color="neutral">中</FbButton>
+ *   <FbButton appearance="outlined" color="neutral">下</FbButton>
  * </FbButtonGroup>
  */
 
