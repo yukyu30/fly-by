@@ -597,21 +597,137 @@ fly-byは以下のライブラリを使用しています：
 
 ## インストール・セットアップ
 
-fly-byコンポーネントは、shadcn/uiスタイルのレジストリから個別にインストールできます。
+fly-byコンポーネントは、**shadcn/ui互換のカスタムレジストリ**として配布されています。shadcn CLIを使用して、必要なコンポーネントを個別にインストールできます。
+
+### Registry URL
+
+```
+https://fly-by.design.yukyu.net/r
+```
+
+### 方法1: URLで直接インストール
+
+個別のコンポーネントを直接インストール：
+
+```bash
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-button.json"
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-card.json"
+```
+
+### 方法2: components.jsonに登録（推奨）
+
+プロジェクトの`components.json`にfly-byレジストリを追加すると、より簡単にインストールできます：
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "app/globals.css"
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui"
+  }
+}
+```
+
+設定後、コンポーネント名だけでインストール可能：
+
+```bash
+# シンプルな名前でインストール
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-button.json"
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-card.json"
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-input.json"
+
+# 複数まとめてインストール
+npx shadcn@latest add \
+  "https://fly-by.design.yukyu.net/r/fb-button.json" \
+  "https://fly-by.design.yukyu.net/r/fb-card.json" \
+  "https://fly-by.design.yukyu.net/r/fb-input.json"
+```
 
 ### 前提条件
+
+fly-byコンポーネントを使用する前に、以下のパッケージをインストールしてください：
 
 ```bash
 npm install tailwindcss class-variance-authority clsx tailwind-merge
 npm install @radix-ui/react-slot
+npm install lucide-react
 ```
+
+### 利用可能なコンポーネント
+
+60以上のコンポーネントが利用可能です。主なコンポーネント：
+
+| カテゴリ | コンポーネント |
+|---------|---------------|
+| **基本** | fb-button, fb-input, fb-textarea, fb-label, fb-text |
+| **レイアウト** | fb-card, fb-separator, fb-scroll-area, fb-resizable |
+| **フォーム** | fb-checkbox, fb-radio-group, fb-switch, fb-select, fb-combobox |
+| **フィードバック** | fb-alert, fb-toast, fb-spinner, fb-skeleton, fb-progress |
+| **オーバーレイ** | fb-dialog, fb-sheet, fb-popover, fb-tooltip, fb-dropdown-menu |
+| **ナビゲーション** | fb-tabs, fb-accordion, fb-breadcrumb, fb-pagination |
+| **データ表示** | fb-table, fb-data-table, fb-badge, fb-avatar, fb-calendar |
+
+完全なリストは[コンポーネント一覧](#コンポーネント一覧)を参照してください。
 
 ### コンポーネントのインポート
 
+インストール後、通常のReactコンポーネントとしてインポート：
+
 ```tsx
-import { FbButton } from "@/registry/fly-by/ui/fb-button"
-import { FbCard } from "@/registry/fly-by/ui/fb-card"
+import { FbButton } from "@/components/ui/fb-button"
+import { FbCard } from "@/components/ui/fb-card"
+import { FbInput } from "@/components/ui/fb-input"
 ```
+
+### Registry Item構造
+
+fly-byのレジストリアイテムは、shadcn/ui標準のスキーマに準拠：
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fb-button",
+  "type": "registry:ui",
+  "title": "FbButton",
+  "description": "fly-by button component with Yukyu Flavor styling",
+  "dependencies": ["@radix-ui/react-slot"],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/fb-button.tsx",
+      "type": "registry:ui"
+    }
+  ]
+}
+```
+
+### トラブルシューティング
+
+#### コンポーネントが見つからない
+
+レジストリが正しく設定されているか確認：
+
+```bash
+# 直接URLでアクセス
+curl https://fly-by.design.yukyu.net/r/fb-button.json
+```
+
+#### スタイルが適用されない
+
+1. Tailwind CSSが正しくインストールされているか確認
+2. `globals.css`でTailwindがインポートされているか確認：
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
+3. コンポーネントのクラス名が正しくビルドされているか確認
 
 ---
 
@@ -646,4 +762,4 @@ import { FbCard } from "@/registry/fly-by/ui/fb-card"
 
 fly-byデザインシステムは、Yukyu Flavorの鮮やかな青を中心とした、一貫性のある美しいUIを構築するための包括的なコンポーネントライブラリです。クラスベースの設計により、型安全性と拡張性を保ちながら、迅速な開発を可能にします。
 
-**公式リポジトリ**: https://github.com/yukyu30/yukyui
+**公式リポジトリ**: https://github.com/yukyu30/fly-by
