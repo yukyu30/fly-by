@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fb-aspect-ratio",
+  "title": "Aspect Ratio",
+  "description": "fly-byデザインシステムのAspect Ratioコンポーネント。アスペクト比を維持するコンテナ。",
+  "dependencies": [
+    "@radix-ui/react-aspect-ratio"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/fb-aspect-ratio.tsx",
+      "content": "import * as React from \"react\"\nimport * as AspectRatioPrimitive from \"@radix-ui/react-aspect-ratio\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Aspect Ratio\n *\n * クラス構造: fb-aspect-ratio\n *\n * @example\n * <FbAspectRatio ratio={16 / 9}>\n *   <img src=\"/image.jpg\" alt=\"Image\" className=\"object-cover\" />\n * </FbAspectRatio>\n */\n\nexport interface FbAspectRatioProps\n  extends React.ComponentPropsWithoutRef<typeof AspectRatioPrimitive.Root> {}\n\nfunction FbAspectRatio({\n  className,\n  ...props\n}: FbAspectRatioProps) {\n  return (\n    <AspectRatioPrimitive.Root\n      data-slot=\"fb-aspect-ratio\"\n      className={cn(\"fb-aspect-ratio\", className)}\n      {...props}\n    />\n  )\n}\n\nexport { FbAspectRatio }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

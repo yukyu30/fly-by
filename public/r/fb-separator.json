@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fb-separator",
+  "title": "Separator",
+  "description": "fly-byデザインシステムのSeparatorコンポーネント。-orientation-horizontal/verticalをサポート。",
+  "dependencies": [
+    "@radix-ui/react-separator",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/fb-separator.tsx",
+      "content": "import * as React from \"react\"\nimport * as SeparatorPrimitive from \"@radix-ui/react-separator\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Separator\n *\n * クラス構造: fb-separator -orientation-{value}\n *\n * @example\n * <FbSeparator />\n * <FbSeparator orientation=\"vertical\" />\n */\n\nconst fbSeparatorVariants = cva(\n  \"fb-separator shrink-0 bg-gray-200 dark:bg-gray-700\",\n  {\n    variants: {\n      orientation: {\n        horizontal: \"-orientation-horizontal h-px w-full\",\n        vertical: \"-orientation-vertical h-full w-px\",\n      },\n    },\n    defaultVariants: {\n      orientation: \"horizontal\",\n    },\n  }\n)\n\nexport interface FbSeparatorProps\n  extends React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>,\n    VariantProps<typeof fbSeparatorVariants> {}\n\nfunction FbSeparator({\n  className,\n  orientation = \"horizontal\",\n  decorative = true,\n  ...props\n}: FbSeparatorProps) {\n  return (\n    <SeparatorPrimitive.Root\n      data-slot=\"fb-separator\"\n      decorative={decorative}\n      orientation={orientation}\n      className={cn(fbSeparatorVariants({ orientation, className }))}\n      {...props}\n    />\n  )\n}\n\nexport { FbSeparator, fbSeparatorVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

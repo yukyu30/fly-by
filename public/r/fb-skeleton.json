@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fb-skeleton",
+  "title": "Skeleton",
+  "description": "fly-byデザインシステムのSkeletonコンポーネント。コンテンツ読み込み中のプレースホルダー。-shape-rectangle/circle/textをサポート。",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/fb-skeleton.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Skeleton\n *\n * クラス構造: fb-skeleton -shape-{value}\n *\n * @example\n * <FbSkeleton className=\"h-4 w-32\" />\n * <FbSkeleton shape=\"circle\" className=\"h-12 w-12\" />\n */\n\nconst fbSkeletonVariants = cva(\n  \"fb-skeleton animate-pulse bg-gray-200 dark:bg-gray-700\",\n  {\n    variants: {\n      shape: {\n        rectangle: \"-shape-rectangle rounded-md\",\n        circle: \"-shape-circle rounded-full\",\n        text: \"-shape-text rounded h-4\",\n      },\n    },\n    defaultVariants: {\n      shape: \"rectangle\",\n    },\n  }\n)\n\nexport interface FbSkeletonProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof fbSkeletonVariants> {}\n\nfunction FbSkeleton({\n  className,\n  shape,\n  ...props\n}: FbSkeletonProps) {\n  return (\n    <div\n      data-slot=\"fb-skeleton\"\n      aria-hidden=\"true\"\n      className={cn(fbSkeletonVariants({ shape, className }))}\n      {...props}\n    />\n  )\n}\n\nexport { FbSkeleton, fbSkeletonVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

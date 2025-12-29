@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fb-popover",
+  "title": "Popover",
+  "description": "fly-byデザインシステムのPopoverコンポーネント。クリックで開くフローティングコンテンツ。",
+  "dependencies": [
+    "@radix-ui/react-popover"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/fb-popover.tsx",
+      "content": "import * as React from \"react\"\nimport * as PopoverPrimitive from \"@radix-ui/react-popover\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Popover\n *\n * クラス構造: fb-popover, fb-popover-content\n *\n * @example\n * <FbPopover>\n *   <FbPopoverTrigger>Open</FbPopoverTrigger>\n *   <FbPopoverContent>Popover content</FbPopoverContent>\n * </FbPopover>\n */\n\nfunction FbPopover({\n  ...props\n}: React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Root>) {\n  return <PopoverPrimitive.Root data-slot=\"fb-popover\" {...props} />\n}\n\nfunction FbPopoverTrigger({\n  ...props\n}: React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Trigger>) {\n  return <PopoverPrimitive.Trigger data-slot=\"fb-popover-trigger\" {...props} />\n}\n\nfunction FbPopoverAnchor({\n  ...props\n}: React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Anchor>) {\n  return <PopoverPrimitive.Anchor data-slot=\"fb-popover-anchor\" {...props} />\n}\n\nfunction FbPopoverContent({\n  className,\n  align = \"center\",\n  sideOffset = 4,\n  ...props\n}: React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>) {\n  return (\n    <PopoverPrimitive.Portal>\n      <PopoverPrimitive.Content\n        data-slot=\"fb-popover-content\"\n        align={align}\n        sideOffset={sideOffset}\n        className={cn(\n          \"fb-popover-content z-50 w-72 rounded-lg border border-gray-200 bg-white p-4 text-gray-900 shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100\",\n          className\n        )}\n        {...props}\n      />\n    </PopoverPrimitive.Portal>\n  )\n}\n\nexport { FbPopover, FbPopoverTrigger, FbPopoverContent, FbPopoverAnchor }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

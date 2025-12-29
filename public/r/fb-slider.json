@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fb-slider",
+  "title": "Slider",
+  "description": "fly-byデザインシステムのSliderコンポーネント。スライダー。-size-s/m/l、-color-neutral/informative/positive/negativeをサポート。",
+  "dependencies": [
+    "@radix-ui/react-slider",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/fb-slider.tsx",
+      "content": "import * as React from \"react\"\nimport * as SliderPrimitive from \"@radix-ui/react-slider\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Slider\n *\n * クラス構造: fb-slider, fb-slider-track, fb-slider-range, fb-slider-thumb\n *\n * @example\n * <FbSlider defaultValue={[50]} max={100} step={1} />\n *\n * @example\n * // Range slider\n * <FbSlider defaultValue={[25, 75]} max={100} step={1} />\n */\n\nconst fbSliderVariants = cva(\"fb-slider relative flex w-full touch-none select-none items-center\", {\n  variants: {\n    size: {\n      s: \"[&_[data-slot=fb-slider-track]]:h-1 [&_[data-slot=fb-slider-thumb]]:h-3 [&_[data-slot=fb-slider-thumb]]:w-3\",\n      m: \"[&_[data-slot=fb-slider-track]]:h-1.5 [&_[data-slot=fb-slider-thumb]]:h-4 [&_[data-slot=fb-slider-thumb]]:w-4\",\n      l: \"[&_[data-slot=fb-slider-track]]:h-2 [&_[data-slot=fb-slider-thumb]]:h-5 [&_[data-slot=fb-slider-thumb]]:w-5\",\n    },\n    color: {\n      neutral: \"[&_[data-slot=fb-slider-range]]:bg-gray-900 dark:[&_[data-slot=fb-slider-range]]:bg-gray-100\",\n      informative: \"[&_[data-slot=fb-slider-range]]:bg-[#002CED]\",\n      positive: \"[&_[data-slot=fb-slider-range]]:bg-green-600\",\n      negative: \"[&_[data-slot=fb-slider-range]]:bg-red-600\",\n    },\n  },\n  defaultVariants: {\n    size: \"m\",\n    color: \"neutral\",\n  },\n})\n\ninterface FbSliderProps\n  extends React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>,\n    VariantProps<typeof fbSliderVariants> {}\n\nfunction FbSlider({\n  className,\n  size,\n  color,\n  ...props\n}: FbSliderProps) {\n  return (\n    <SliderPrimitive.Root\n      data-slot=\"fb-slider\"\n      className={cn(fbSliderVariants({ size, color }), className)}\n      {...props}\n    >\n      <SliderPrimitive.Track\n        data-slot=\"fb-slider-track\"\n        className=\"fb-slider-track relative w-full grow overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700\"\n      >\n        <SliderPrimitive.Range\n          data-slot=\"fb-slider-range\"\n          className=\"fb-slider-range absolute h-full\"\n        />\n      </SliderPrimitive.Track>\n      {(props.defaultValue || props.value || [0]).map((_, index) => (\n        <SliderPrimitive.Thumb\n          key={index}\n          data-slot=\"fb-slider-thumb\"\n          className=\"fb-slider-thumb block rounded-full border border-gray-200 bg-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:bg-gray-900 dark:focus-visible:ring-gray-500\"\n        />\n      ))}\n    </SliderPrimitive.Root>\n  )\n}\n\nexport { FbSlider, fbSliderVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

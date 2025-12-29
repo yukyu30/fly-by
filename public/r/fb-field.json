@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fb-field",
+  "title": "Field",
+  "description": "fly-byデザインシステムのFieldコンポーネント。シンプルなフォームフィールドラッパー。",
+  "registryDependencies": [
+    "fb-label"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/fb-field.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\nimport { FbLabel } from \"@/registry/fly-by/ui/fb-label\"\n\n/**\n * fly-by Field\n *\n * シンプルなフォームフィールドラッパー。ラベル、説明、エラーメッセージを統合。\n * react-hook-form に依存しない軽量版。\n *\n * クラス構造: fb-field, fb-field-label, fb-field-description, fb-field-error\n *\n * @example\n * <FbField>\n *   <FbFieldLabel>メールアドレス</FbFieldLabel>\n *   <FbInput type=\"email\" />\n *   <FbFieldDescription>連絡先として使用します。</FbFieldDescription>\n * </FbField>\n *\n * @example\n * <FbField error=\"必須項目です\">\n *   <FbFieldLabel>名前</FbFieldLabel>\n *   <FbInput />\n * </FbField>\n */\n\ninterface FbFieldContextValue {\n  id: string\n  hasError: boolean\n}\n\nconst FbFieldContext = React.createContext<FbFieldContextValue | null>(null)\n\nconst useFbField = () => {\n  const context = React.useContext(FbFieldContext)\n  if (!context) {\n    throw new Error(\"useFbField must be used within <FbField>\")\n  }\n  return context\n}\n\ninterface FbFieldProps extends React.HTMLAttributes<HTMLDivElement> {\n  error?: string\n}\n\nfunction FbField({ className, error, children, ...props }: FbFieldProps) {\n  const id = React.useId()\n\n  return (\n    <FbFieldContext.Provider value={{ id, hasError: !!error }}>\n      <div\n        data-slot=\"fb-field\"\n        className={cn(\"fb-field space-y-2\", className)}\n        {...props}\n      >\n        {children}\n        {error && (\n          <p\n            data-slot=\"fb-field-error\"\n            className=\"fb-field-error text-[0.8rem] font-medium text-red-600 dark:text-red-400\"\n          >\n            {error}\n          </p>\n        )}\n      </div>\n    </FbFieldContext.Provider>\n  )\n}\n\nfunction FbFieldLabel({\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<typeof FbLabel>) {\n  const { id, hasError } = useFbField()\n\n  return (\n    <FbLabel\n      data-slot=\"fb-field-label\"\n      htmlFor={id}\n      className={cn(\n        \"fb-field-label\",\n        hasError && \"text-red-600 dark:text-red-400\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction FbFieldDescription({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLParagraphElement>) {\n  return (\n    <p\n      data-slot=\"fb-field-description\"\n      className={cn(\n        \"fb-field-description text-[0.8rem] text-gray-500 dark:text-gray-400\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { FbField, FbFieldLabel, FbFieldDescription, useFbField }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fb-progress",
+  "title": "Progress",
+  "description": "fly-byデザインシステムのProgressコンポーネント。進捗バー。-size-s/m/l/xl、-color-neutral/informative/positive/negative/favoriteをサポート。",
+  "dependencies": [
+    "@radix-ui/react-progress",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/fb-progress.tsx",
+      "content": "import * as React from \"react\"\nimport * as ProgressPrimitive from \"@radix-ui/react-progress\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Progress\n *\n * クラス構造: fb-progress -size-{value} -color-{value}\n *\n * @example\n * <FbProgress value={60} />\n * <FbProgress value={80} color=\"positive\" size=\"l\" />\n */\n\nconst fbProgressVariants = cva(\n  \"fb-progress relative w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700\",\n  {\n    variants: {\n      size: {\n        s: \"-size-s h-1\",\n        m: \"-size-m h-2\",\n        l: \"-size-l h-3\",\n        xl: \"-size-xl h-4\",\n      },\n    },\n    defaultVariants: {\n      size: \"m\",\n    },\n  }\n)\n\nconst fbProgressIndicatorVariants = cva(\n  \"h-full w-full flex-1 transition-all duration-300 ease-in-out\",\n  {\n    variants: {\n      color: {\n        neutral: \"-color-neutral bg-gray-600 dark:bg-gray-400\",\n        informative: \"-color-informative bg-[#002CED] dark:bg-[#3361ef]\",\n        positive: \"-color-positive bg-green-600 dark:bg-green-400\",\n        negative: \"-color-negative bg-red-600 dark:bg-red-400\",\n        favorite: \"-color-favorite bg-pink-500 dark:bg-pink-400\",\n      },\n    },\n    defaultVariants: {\n      color: \"informative\",\n    },\n  }\n)\n\nexport interface FbProgressProps\n  extends Omit<React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>, \"color\">,\n    VariantProps<typeof fbProgressVariants>,\n    VariantProps<typeof fbProgressIndicatorVariants> {}\n\nfunction FbProgress({\n  className,\n  value,\n  size,\n  color,\n  ...props\n}: FbProgressProps) {\n  return (\n    <ProgressPrimitive.Root\n      data-slot=\"fb-progress\"\n      className={cn(fbProgressVariants({ size, className }))}\n      {...props}\n    >\n      <ProgressPrimitive.Indicator\n        data-slot=\"fb-progress-indicator\"\n        className={cn(fbProgressIndicatorVariants({ color }))}\n        style={{ transform: `translateX(-${100 - (value || 0)}%)` }}\n      />\n    </ProgressPrimitive.Root>\n  )\n}\n\nexport { FbProgress, fbProgressVariants, fbProgressIndicatorVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fb-resizable",
+  "title": "Resizable",
+  "description": "fly-byデザインシステムのResizableコンポーネント。リサイズ可能なパネル。",
+  "dependencies": [
+    "react-resizable-panels",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/fb-resizable.tsx",
+      "content": "import * as React from \"react\"\nimport { GripVertical } from \"lucide-react\"\nimport * as ResizablePrimitive from \"react-resizable-panels\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Resizable\n *\n * クラス構造: fb-resizable-panel-group, fb-resizable-panel, fb-resizable-handle\n *\n * @example\n * <FbResizablePanelGroup direction=\"horizontal\">\n *   <FbResizablePanel>Panel 1</FbResizablePanel>\n *   <FbResizableHandle />\n *   <FbResizablePanel>Panel 2</FbResizablePanel>\n * </FbResizablePanelGroup>\n */\n\nfunction FbResizablePanelGroup({\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<typeof ResizablePrimitive.PanelGroup>) {\n  return (\n    <ResizablePrimitive.PanelGroup\n      data-slot=\"fb-resizable-panel-group\"\n      className={cn(\n        \"fb-resizable-panel-group flex h-full w-full data-[panel-group-direction=vertical]:flex-col\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction FbResizablePanel({\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<typeof ResizablePrimitive.Panel>) {\n  return (\n    <ResizablePrimitive.Panel\n      data-slot=\"fb-resizable-panel\"\n      className={cn(\"fb-resizable-panel\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction FbResizableHandle({\n  withHandle,\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<typeof ResizablePrimitive.PanelResizeHandle> & {\n  withHandle?: boolean\n}) {\n  return (\n    <ResizablePrimitive.PanelResizeHandle\n      data-slot=\"fb-resizable-handle\"\n      className={cn(\n        \"fb-resizable-handle relative flex w-px items-center justify-center bg-gray-200 after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 dark:bg-gray-700 [&[data-panel-group-direction=vertical]>div]:rotate-90\",\n        className\n      )}\n      {...props}\n    >\n      {withHandle && (\n        <div className=\"z-10 flex h-4 w-3 items-center justify-center rounded-sm border border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-800\">\n          <GripVertical className=\"h-2.5 w-2.5 text-gray-500 dark:text-gray-400\" />\n        </div>\n      )}\n    </ResizablePrimitive.PanelResizeHandle>\n  )\n}\n\nexport { FbResizablePanelGroup, FbResizablePanel, FbResizableHandle }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
