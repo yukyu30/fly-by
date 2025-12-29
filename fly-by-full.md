@@ -193,6 +193,53 @@ fly-byは5つの主要なカラーバリエーションを提供します。
 
 複数のボタンをグループ化します。
 
+**Props**:
+- `orientation`: `horizontal | vertical` - ボタンの配置方向（デフォルト: `horizontal`）
+
+#### FbSplitButton
+
+メインアクションとドロップダウンメニューを組み合わせたボタンコンポーネント。
+
+**Props**:
+- `appearance`: `flat | outlined | solid | transparent` - 外観（デフォルト: `solid`）
+- `color`: `neutral | informative | positive | negative | favorite` - カラー（デフォルト: `informative`）
+- `size`: `xs | s | m | l | xl` - サイズ（デフォルト: `m`）
+- `onAction`: `() => void` - メインボタンのクリックハンドラー
+- `align`: `start | center | end` - ドロップダウンメニューの位置（デフォルト: `end`）
+
+**サブコンポーネント**:
+- `FbSplitButtonLabel` - メインボタンのラベル
+- `FbSplitButtonMenu` - ドロップダウンメニューのコンテンツ（FbDropdownMenuItemを含む）
+
+**使用例**:
+```tsx
+import {
+  FbSplitButton,
+  FbSplitButtonLabel,
+  FbSplitButtonMenu,
+} from "@/components/ui/fb-split-button"
+import {
+  FbDropdownMenuItem,
+} from "@/components/ui/fb-dropdown-menu"
+
+<FbSplitButton
+  appearance="solid"
+  color="informative"
+  size="m"
+  onAction={() => console.log('保存')}
+>
+  <FbSplitButtonLabel>保存</FbSplitButtonLabel>
+  <FbSplitButtonMenu>
+    <FbDropdownMenuItem onSelect={() => console.log('保存して閉じる')}>
+      保存して閉じる
+    </FbDropdownMenuItem>
+    <FbDropdownMenuItem onSelect={() => console.log('別名で保存')}>
+      別名で保存
+    </FbDropdownMenuItem>
+  </FbSplitButtonMenu>
+</FbSplitButton>
+```
+
 #### FbToggle
 
 トグルボタン。ON/OFFの状態を表現します。
