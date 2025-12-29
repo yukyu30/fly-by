@@ -377,6 +377,136 @@
       ]
     },
     {
+      "name": "fb-accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "fly-byデザインシステムのAccordionコンポーネント。展開・折りたたみ可能なセクション。",
+      "dependencies": ["@radix-ui/react-accordion", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "fly-byデザインシステムのCollapsibleコンポーネント。展開・折りたたみ可能なコンテンツ。",
+      "dependencies": ["@radix-ui/react-collapsible"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "fly-byデザインシステムのTabsコンポーネント。タブ切り替え。-appearance-line/solid/outlineをサポート。",
+      "dependencies": ["@radix-ui/react-tabs", "class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "fly-byデザインシステムのToggle Groupコンポーネント。トグルボタングループ。-appearance-default/outlined、-size-s/m/lをサポート。",
+      "dependencies": ["@radix-ui/react-toggle-group", "class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "fly-byデザインシステムのBreadcrumbコンポーネント。パンくずリスト。",
+      "dependencies": ["@radix-ui/react-slot", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "fly-byデザインシステムのPaginationコンポーネント。ページネーション。",
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-navigation-menu",
+      "type": "registry:ui",
+      "title": "Navigation Menu",
+      "description": "fly-byデザインシステムのNavigation Menuコンポーネント。ナビゲーションメニュー。",
+      "dependencies": ["@radix-ui/react-navigation-menu", "lucide-react", "class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-navigation-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "description": "fly-byデザインシステムのMenubarコンポーネント。デスクトップアプリ風メニューバー。",
+      "dependencies": ["@radix-ui/react-menubar", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-menubar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "fly-byデザインシステムのScroll Areaコンポーネント。カスタムスクロールバー。",
+      "dependencies": ["@radix-ui/react-scroll-area"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fb-resizable",
+      "type": "registry:ui",
+      "title": "Resizable",
+      "description": "fly-byデザインシステムのResizableコンポーネント。リサイズ可能なパネル。",
+      "dependencies": ["react-resizable-panels", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/fly-by/ui/fb-resizable.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "hello-world",
       "type": "registry:block",
       "title": "Hello World",
