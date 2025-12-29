@@ -25,9 +25,9 @@ const fbCardVariants = cva(
     variants: {
       elevation: {
         0: "-elevation-0",
-        1: "-elevation-1 shadow-sm",
-        2: "-elevation-2 shadow-md",
-        3: "-elevation-3 shadow-lg",
+        1: "-elevation-1",
+        2: "-elevation-2",
+        3: "-elevation-3",
       },
     },
     defaultVariants: {

@@ -387,6 +387,397 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
+  'fb-tooltip': (
+    <div className="relative inline-block">
+      <button className="px-3 py-1.5 rounded-md bg-gray-100 text-sm">
+        Hover me
+      </button>
+      <div className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap">
+        Tooltip text
+      </div>
+    </div>
+  ),
+  'fb-popover': (
+    <div className="relative inline-block">
+      <button className="px-3 py-1.5 rounded-md border-2 border-gray-300 text-sm">
+        Open
+      </button>
+      <div className="absolute top-10 left-0 w-48 p-3 bg-white border border-gray-200 rounded-lg shadow-lg">
+        <p className="text-sm text-gray-700">Popover content</p>
+      </div>
+    </div>
+  ),
+  'fb-dialog': (
+    <div className="w-72 p-6 bg-white rounded-lg shadow-xl border border-gray-200">
+      <h3 className="text-lg font-semibold mb-2">Dialog Title</h3>
+      <p className="text-sm text-gray-600 mb-4">This is a modal dialog example.</p>
+      <div className="flex gap-2 justify-end">
+        <button className="px-3 py-1.5 rounded-md text-sm bg-gray-100">Cancel</button>
+        <button className="px-3 py-1.5 rounded-md text-sm bg-[#002CED] text-white">
+          Confirm
+        </button>
+      </div>
+    </div>
+  ),
+  'fb-alert-dialog': (
+    <div className="w-72 p-6 bg-white rounded-lg shadow-xl border border-gray-200">
+      <h3 className="text-lg font-semibold mb-2">Are you sure?</h3>
+      <p className="text-sm text-gray-600 mb-4">This action cannot be undone.</p>
+      <div className="flex gap-2 justify-end">
+        <button className="px-3 py-1.5 rounded-md text-sm bg-gray-100">Cancel</button>
+        <button className="px-3 py-1.5 rounded-md text-sm bg-red-600 text-white">Delete</button>
+      </div>
+    </div>
+  ),
+  'fb-sheet': (
+    <div className="w-80 h-48 bg-white border-l-2 border-gray-200 shadow-xl p-6">
+      <h3 className="text-lg font-semibold mb-2">Sheet Panel</h3>
+      <p className="text-sm text-gray-600">Side panel content goes here.</p>
+    </div>
+  ),
+  'fb-drawer': (
+    <div className="w-80 h-40 bg-white border-t-2 border-gray-200 shadow-xl p-6 rounded-t-2xl">
+      <h3 className="text-lg font-semibold mb-2">Bottom Drawer</h3>
+      <p className="text-sm text-gray-600">Swipe or click to dismiss.</p>
+    </div>
+  ),
+  'fb-context-menu': (
+    <div className="w-48 bg-white border border-gray-200 rounded-lg shadow-lg p-1">
+      <div className="px-2 py-1.5 text-sm hover:bg-gray-100 rounded cursor-pointer">
+        Copy
+      </div>
+      <div className="px-2 py-1.5 text-sm hover:bg-gray-100 rounded cursor-pointer">
+        Paste
+      </div>
+      <div className="h-px bg-gray-200 my-1" />
+      <div className="px-2 py-1.5 text-sm text-red-600 hover:bg-red-50 rounded cursor-pointer">
+        Delete
+      </div>
+    </div>
+  ),
+  'fb-hover-card': (
+    <div className="relative inline-block">
+      <span className="text-sm text-[#002CED] cursor-pointer underline">@username</span>
+      <div className="absolute top-6 left-0 w-64 p-4 bg-white border border-gray-200 rounded-lg shadow-lg">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="h-10 w-10 rounded-full bg-gray-200" />
+          <div>
+            <p className="text-sm font-medium">User Name</p>
+            <p className="text-xs text-gray-500">@username</p>
+          </div>
+        </div>
+        <p className="text-xs text-gray-600">User bio and details</p>
+      </div>
+    </div>
+  ),
+  'fb-sonner': (
+    <div className="w-80 rounded-lg border border-gray-200 bg-white p-4 shadow-lg">
+      <div className="flex items-center gap-2">
+        <Check className="h-4 w-4 text-green-600" />
+        <div className="flex-1">
+          <p className="text-sm font-medium">Success</p>
+          <p className="text-xs text-gray-600">Operation completed</p>
+        </div>
+      </div>
+    </div>
+  ),
+  'fb-collapsible': (
+    <div className="w-64 border rounded-lg">
+      <button className="w-full flex items-center justify-between px-4 py-3 hover:bg-gray-50">
+        <span className="text-sm font-medium">Can I use this?</span>
+        <ChevronDown className="h-4 w-4" />
+      </button>
+      <div className="px-4 py-3 text-sm text-gray-600 border-t">
+        Yes, this component is fully supported.
+      </div>
+    </div>
+  ),
+  'fb-toggle-group': (
+    <div className="inline-flex rounded-lg border border-gray-200">
+      <button className="px-3 py-1.5 text-sm bg-[#002CED] text-white font-bold rounded-l-lg">
+        B
+      </button>
+      <button className="px-3 py-1.5 text-sm hover:bg-gray-100 border-l border-gray-200 italic">
+        I
+      </button>
+      <button className="px-3 py-1.5 text-sm hover:bg-gray-100 border-l border-gray-200 underline rounded-r-lg">
+        U
+      </button>
+    </div>
+  ),
+  'fb-navigation-menu': (
+    <nav className="flex items-center gap-6 px-4 py-2 bg-white border-b border-gray-200">
+      <a href="#" className="text-sm font-medium text-[#002CED]">
+        Home
+      </a>
+      <a href="#" className="text-sm text-gray-600 hover:text-gray-900">
+        Products
+      </a>
+      <a href="#" className="text-sm text-gray-600 hover:text-gray-900">
+        About
+      </a>
+    </nav>
+  ),
+  'fb-menubar': (
+    <div className="flex items-center gap-1 bg-gray-50 border-b border-gray-200 px-2 py-1">
+      <button className="px-2 py-1 text-sm hover:bg-gray-100 rounded">File</button>
+      <button className="px-2 py-1 text-sm hover:bg-gray-100 rounded">Edit</button>
+      <button className="px-2 py-1 text-sm hover:bg-gray-100 rounded">View</button>
+      <button className="px-2 py-1 text-sm hover:bg-gray-100 rounded">Help</button>
+    </div>
+  ),
+  'fb-scroll-area': (
+    <div className="w-48 h-32 border rounded-lg overflow-hidden">
+      <div className="h-full overflow-y-auto p-3 text-sm text-gray-600">
+        <p>Scrollable content area with custom scrollbar styling.</p>
+        <p className="mt-2">Lorem ipsum dolor sit amet...</p>
+        <p className="mt-2">More content here...</p>
+      </div>
+    </div>
+  ),
+  'fb-resizable': (
+    <div className="flex h-32 w-64 border rounded-lg overflow-hidden">
+      <div className="flex-1 bg-gray-50 p-3 text-sm">Panel 1</div>
+      <div className="w-px bg-gray-300 cursor-col-resize" />
+      <div className="flex-1 bg-gray-100 p-3 text-sm">Panel 2</div>
+    </div>
+  ),
+  'fb-combobox': (
+    <div className="w-48">
+      <button className="w-full flex items-center justify-between px-3 py-2 border-2 border-gray-300 rounded-md text-sm">
+        Select item...
+        <ChevronDown className="h-4 w-4" />
+      </button>
+      <div className="mt-1 w-full border border-gray-200 rounded-lg shadow-lg bg-white max-h-32">
+        <input
+          type="text"
+          placeholder="Search..."
+          className="w-full px-3 py-2 text-sm border-b"
+        />
+        <div className="p-1">
+          <div className="px-2 py-1.5 text-sm hover:bg-gray-100 rounded">Option 1</div>
+          <div className="px-2 py-1.5 text-sm hover:bg-gray-100 rounded">Option 2</div>
+        </div>
+      </div>
+    </div>
+  ),
+  'fb-slider': (
+    <div className="w-64 space-y-4">
+      <div className="relative">
+        <div className="h-2 bg-gray-200 rounded-full">
+          <div className="absolute h-2 w-3/5 bg-[#002CED] rounded-full" />
+        </div>
+        <div
+          className="absolute top-0 left-[60%] -translate-x-1/2 -translate-y-1/2 h-4 w-4 bg-white border-2 border-[#002CED] rounded-full cursor-pointer"
+          style={{ top: '0.25rem' }}
+        />
+      </div>
+    </div>
+  ),
+  'fb-input-otp': (
+    <div className="flex gap-2">
+      {[1, 2, 3, 4, 5, 6].map((i) => (
+        <input
+          key={i}
+          type="text"
+          maxLength={1}
+          className="w-10 h-12 text-center border-2 border-gray-300 rounded-lg text-lg font-mono focus:border-[#002CED]"
+          defaultValue={i <= 4 ? i : ''}
+        />
+      ))}
+    </div>
+  ),
+  'fb-form': (
+    <form className="w-64 space-y-4">
+      <div>
+        <label className="text-sm font-medium block mb-1">Email</label>
+        <input
+          type="email"
+          className="w-full px-3 py-2 border-2 border-gray-300 rounded-md text-sm"
+          placeholder="you@example.com"
+        />
+      </div>
+      <button className="w-full px-4 py-2 bg-[#002CED] text-white rounded-md text-sm font-medium">
+        Submit
+      </button>
+    </form>
+  ),
+  'fb-field': (
+    <div className="w-64">
+      <label className="text-sm font-medium block mb-1">Username</label>
+      <input
+        type="text"
+        className="w-full px-3 py-2 border-2 border-gray-300 rounded-md text-sm"
+        placeholder="Enter username"
+      />
+      <p className="text-xs text-gray-500 mt-1">This is your public display name.</p>
+    </div>
+  ),
+  'fb-input-group': (
+    <div className="w-64">
+      <div className="flex items-center border-2 border-gray-300 rounded-md overflow-hidden">
+        <span className="px-3 bg-gray-100 text-sm text-gray-600">https://</span>
+        <input
+          type="text"
+          className="flex-1 px-3 py-2 text-sm outline-none"
+          placeholder="example.com"
+        />
+        <span className="px-3 bg-gray-100 text-sm text-gray-600">.com</span>
+      </div>
+    </div>
+  ),
+  'fb-button-group': (
+    <div className="inline-flex rounded-lg border border-gray-200 overflow-hidden">
+      <button className="px-4 py-2 text-sm bg-[#002CED] text-white">Left</button>
+      <button className="px-4 py-2 text-sm hover:bg-gray-100 border-l border-gray-200">
+        Center
+      </button>
+      <button className="px-4 py-2 text-sm hover:bg-gray-100 border-l border-gray-200">
+        Right
+      </button>
+    </div>
+  ),
+  'fb-data-table': (
+    <div className="w-80 border rounded-lg">
+      <div className="p-3 border-b">
+        <input
+          type="text"
+          placeholder="Search..."
+          className="w-full px-3 py-1.5 border rounded text-sm"
+        />
+      </div>
+      <table className="w-full text-sm">
+        <thead className="border-b bg-gray-50">
+          <tr>
+            <th className="text-left py-2 px-3 font-medium">Name ↑</th>
+            <th className="text-left py-2 px-3 font-medium">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="border-b">
+            <td className="py-2 px-3">John Doe</td>
+            <td className="py-2 px-3">
+              <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded text-xs">
+                Active
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  ),
+  'fb-date-picker': (
+    <div className="relative">
+      <button className="flex items-center gap-2 px-3 py-2 border-2 border-gray-300 rounded-md text-sm">
+        <span>📅</span>
+        <span>Dec 29, 2025</span>
+      </button>
+    </div>
+  ),
+  'fb-carousel': (
+    <div className="w-64 relative">
+      <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+        <span className="text-sm text-gray-500">Slide 1 of 3</span>
+      </div>
+      <div className="flex items-center justify-center gap-2 mt-3">
+        <button className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center text-sm">
+          ‹
+        </button>
+        <div className="flex gap-1">
+          <div className="h-2 w-2 rounded-full bg-[#002CED]" />
+          <div className="h-2 w-2 rounded-full bg-gray-300" />
+          <div className="h-2 w-2 rounded-full bg-gray-300" />
+        </div>
+        <button className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center text-sm">
+          ›
+        </button>
+      </div>
+    </div>
+  ),
+  'fb-chart': (
+    <div className="w-80 h-48 border rounded-lg p-4">
+      <div className="flex items-end justify-between h-full gap-2">
+        <div className="flex-1 bg-[#002CED] rounded-t" style={{ height: '60%' }} />
+        <div className="flex-1 bg-[#002CED] rounded-t" style={{ height: '80%' }} />
+        <div className="flex-1 bg-[#002CED] rounded-t" style={{ height: '45%' }} />
+        <div className="flex-1 bg-[#002CED] rounded-t" style={{ height: '90%' }} />
+        <div className="flex-1 bg-[#002CED] rounded-t" style={{ height: '70%' }} />
+      </div>
+    </div>
+  ),
+  'fb-sidebar': (
+    <div className="w-64 h-64 bg-white border-r border-gray-200 flex flex-col">
+      <div className="p-4 border-b border-gray-200">
+        <h3 className="font-semibold text-sm">Navigation</h3>
+      </div>
+      <nav className="flex-1 p-2">
+        <a
+          href="#"
+          className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#e6ebfd] text-[#002CED] text-sm font-medium"
+        >
+          <span>🏠</span>
+          Home
+        </a>
+        <a
+          href="#"
+          className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 text-sm"
+        >
+          <span>⚙️</span>
+          Settings
+        </a>
+      </nav>
+    </div>
+  ),
+  'hello-world': (
+    <div className="text-center py-6">
+      <h1 className="text-2xl font-bold text-[#002CED] mb-2">Hello World</h1>
+      <p className="text-sm text-gray-600">Welcome to fly-by design system</p>
+    </div>
+  ),
+  'example-form': (
+    <div className="w-80 p-6 border rounded-lg">
+      <h2 className="text-lg font-semibold mb-4">Contact Form</h2>
+      <div className="space-y-3">
+        <input
+          type="text"
+          placeholder="Your name"
+          className="w-full px-3 py-2 border-2 border-gray-300 rounded-md text-sm"
+        />
+        <input
+          type="email"
+          placeholder="your@email.com"
+          className="w-full px-3 py-2 border-2 border-gray-300 rounded-md text-sm"
+        />
+        <textarea
+          placeholder="Your message"
+          className="w-full px-3 py-2 border-2 border-gray-300 rounded-md text-sm h-20 resize-none"
+        />
+        <button className="w-full px-4 py-2 bg-[#002CED] text-white rounded-md text-sm font-medium">
+          Send Message
+        </button>
+      </div>
+    </div>
+  ),
+  'example-login': (
+    <div className="w-80 p-8 bg-white rounded-lg shadow-xl border border-gray-200">
+      <h2 className="text-2xl font-bold text-center mb-6">Sign In</h2>
+      <div className="space-y-4">
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full px-4 py-2 border-2 border-gray-300 rounded-md text-sm"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="w-full px-4 py-2 border-2 border-gray-300 rounded-md text-sm"
+        />
+        <button className="w-full px-4 py-3 bg-[#002CED] text-white rounded-md text-sm font-medium">
+          Sign In
+        </button>
+      </div>
+    </div>
+  ),
 };
 
 // Default preview for components without specific preview
