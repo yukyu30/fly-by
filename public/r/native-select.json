@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "native-select",
+  "title": "Native Select",
+  "description": "fly-byデザインシステムのNative Selectコンポーネント。ネイティブHTML select。-size-s/m/lをサポート。",
+  "dependencies": [
+    "lucide-react",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/native-select.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport { ChevronDown } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Native Select\n *\n * ネイティブHTML selectのラッパー。モバイルフレンドリーで軽量。\n *\n * クラス構造: native-select\n *\n * @example\n * <NativeSelect>\n *   <option value=\"\">選択してください</option>\n *   <option value=\"1\">オプション1</option>\n *   <option value=\"2\">オプション2</option>\n * </NativeSelect>\n */\n\nconst nativeSelectVariants = cva(\n  \"native-select flex w-full cursor-pointer appearance-none items-center rounded-md border-2 bg-transparent shadow-sm ring-offset-white focus:outline-none focus:ring-1 disabled:cursor-not-allowed disabled:opacity-50 dark:ring-offset-gray-950\",\n  {\n    variants: {\n      size: {\n        s: \"h-8 px-2 pr-8 text-xs\",\n        m: \"h-9 px-3 pr-9 text-sm\",\n        l: \"h-10 px-4 pr-10 text-base\",\n      },\n    },\n    defaultVariants: {\n      size: \"m\",\n    },\n  }\n)\n\ninterface NativeSelectProps\n  extends React.SelectHTMLAttributes<HTMLSelectElement>,\n    VariantProps<typeof nativeSelectVariants> {}\n\nfunction NativeSelect({\n  className,\n  size,\n  children,\n  ...props\n}: NativeSelectProps) {\n  return (\n    <div className=\"relative\">\n      <select\n        data-slot=\"native-select\"\n        className={cn(\n          nativeSelectVariants({ size }),\n          \"border-gray-300 focus:ring-gray-400 dark:border-gray-600 dark:bg-gray-900 dark:focus:ring-gray-500\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n      </select>\n      <ChevronDown className=\"pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 opacity-50\" />\n    </div>\n  )\n}\n\nexport { NativeSelect, nativeSelectVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

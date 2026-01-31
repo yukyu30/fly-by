@@ -5,7 +5,7 @@
 ## 構造
 
 ```html
-<button class="fb-button -{modifiers}">
+<button class="button -{modifiers}">
   <span class="_leading"><!-- optional: icon --></span>
   <span class="_body">ラベル</span>
   <span class="_trailing"><!-- optional: icon --></span>
@@ -75,30 +75,30 @@
 
 ### プライマリボタン
 ```html
-<button class="fb-button -appearance-solid -color-informative -size-m">
+<button class="button -appearance-solid -color-informative -size-m">
   <span class="_body">保存する</span>
 </button>
 ```
 
 ### セカンダリボタン
 ```html
-<button class="fb-button -appearance-outlined -color-neutral -size-m">
+<button class="button -appearance-outlined -color-neutral -size-m">
   <span class="_body">キャンセル</span>
 </button>
 ```
 
 ### 削除ボタン
 ```html
-<button class="fb-button -appearance-solid -color-negative -size-s">
+<button class="button -appearance-solid -color-negative -size-s">
   <span class="_body">削除</span>
 </button>
 ```
 
 ### アイコン付き
 ```html
-<button class="fb-button -appearance-flat -color-favorite">
+<button class="button -appearance-flat -color-favorite">
   <span class="_leading">
-    <span class="fb-icon" data-icon="heart"></span>
+    <span class="icon" data-icon="heart"></span>
   </span>
   <span class="_body">お気に入り</span>
 </button>
@@ -106,16 +106,16 @@
 
 ### アイコンのみ
 ```html
-<button class="fb-button -appearance-transparent -color-neutral -shape-circle">
+<button class="button -appearance-transparent -color-neutral -shape-circle">
   <span class="_leading">
-    <span class="fb-icon" data-icon="more_vert"></span>
+    <span class="icon" data-icon="more_vert"></span>
   </span>
 </button>
 ```
 
 ### 全幅ボタン（フォーム送信）
 ```html
-<button class="fb-button -appearance-solid -color-informative -size-l -width-full">
+<button class="button -appearance-solid -color-informative -size-l -width-full">
   <span class="_body">送信する</span>
 </button>
 ```
@@ -123,11 +123,11 @@
 ## ボタンペア
 
 ```html
-<div class="fb-button-group" style="display: flex; gap: 8px;">
-  <button class="fb-button -appearance-outlined -color-neutral -size-m">
+<div class="button-group" style="display: flex; gap: 8px;">
+  <button class="button -appearance-outlined -color-neutral -size-m">
     <span class="_body">キャンセル</span>
   </button>
-  <button class="fb-button -appearance-solid -color-informative -size-m">
+  <button class="button -appearance-solid -color-informative -size-m">
     <span class="_body">保存</span>
   </button>
 </div>

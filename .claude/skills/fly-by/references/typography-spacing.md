@@ -22,7 +22,7 @@ code {
 ### Font Size
 
 ```html
-<p class="fb-text -level-{size}">テキスト</p>
+<p class="text -level-{size}">テキスト</p>
 ```
 
 | Level | サイズ | 用途 |
@@ -39,7 +39,7 @@ code {
 ### Line Height（Density）
 
 ```html
-<p class="fb-text -level-m -density-{density}">テキスト</p>
+<p class="text -level-m -density-{density}">テキスト</p>
 ```
 
 | Density | 説明 | 用途 |
@@ -91,8 +91,8 @@ code {
 
 ### 見出し + 本文
 ```html
-<h2 class="fb-text -level-xl -density-dense">セクション見出し</h2>
-<p class="fb-text -level-m -density-normal" style="margin-top: 8px;">
+<h2 class="text -level-xl -density-dense">セクション見出し</h2>
+<p class="text -level-m -density-normal" style="margin-top: 8px;">
   本文テキストがここに入ります。
 </p>
 ```
@@ -100,16 +100,16 @@ code {
 ### ラベル + 値
 ```html
 <div style="display: flex; gap: 4px; align-items: baseline;">
-  <span class="fb-text -level-xs -density-dense">価格:</span>
-  <span class="fb-text -level-l -density-dense">¥1,980</span>
+  <span class="text -level-xs -density-dense">価格:</span>
+  <span class="text -level-l -density-dense">¥1,980</span>
 </div>
 ```
 
 ### リスト項目
 ```html
 <ul style="display: flex; flex-direction: column; gap: 8px;">
-  <li class="fb-text -level-m -density-normal">項目1</li>
-  <li class="fb-text -level-m -density-normal">項目2</li>
-  <li class="fb-text -level-m -density-normal">項目3</li>
+  <li class="text -level-m -density-normal">項目1</li>
+  <li class="text -level-m -density-normal">項目2</li>
+  <li class="text -level-m -density-normal">項目3</li>
 </ul>
 ```

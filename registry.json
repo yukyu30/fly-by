@@ -4,7 +4,7 @@
   "homepage": "https://fly-by.design.yukyu.net/",
   "items": [
     {
-      "name": "fb-button",
+      "name": "button",
       "type": "registry:ui",
       "title": "Button",
       "description": "fly-byデザインシステムのButtonコンポーネント。-appearance-solid/outlined/flat/transparent、-color-informative/positive/negative/neutral、-size-xs/s/m/l/xlをサポート。",
@@ -14,37 +14,37 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-button.tsx",
+          "path": "registry/fly-by/ui/button.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-card",
+      "name": "card",
       "type": "registry:ui",
       "title": "Card",
       "description": "fly-byデザインシステムのCardコンポーネント。-elevation-0/1/2/3をサポート。_header, _body, _footerスロットを含む。",
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-card.tsx",
+          "path": "registry/fly-by/ui/card.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-input",
+      "name": "input",
       "type": "registry:ui",
       "title": "Input",
       "description": "fly-byデザインシステムのInputコンポーネント。-appearance-outlined/filled、-size-s/m/lをサポート。",
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-input.tsx",
+          "path": "registry/fly-by/ui/input.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-label",
+      "name": "label",
       "type": "registry:ui",
       "title": "Label",
       "description": "fly-byデザインシステムのLabelコンポーネント。フォームフィールドのラベルに使用。",
@@ -53,37 +53,37 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-label.tsx",
+          "path": "registry/fly-by/ui/label.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-textarea",
+      "name": "textarea",
       "type": "registry:ui",
       "title": "Textarea",
       "description": "fly-byデザインシステムのTextareaコンポーネント。複数行テキスト入力に使用。",
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-textarea.tsx",
+          "path": "registry/fly-by/ui/textarea.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-text",
+      "name": "text",
       "type": "registry:ui",
       "title": "Text",
       "description": "fly-byデザインシステムのTextコンポーネント。-level-xxs/xs/s/m/l/xl/xxl/xxxl、-density-dense/normal/looseをサポート。",
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-text.tsx",
+          "path": "registry/fly-by/ui/text.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-separator",
+      "name": "separator",
       "type": "registry:ui",
       "title": "Separator",
       "description": "fly-byデザインシステムのSeparatorコンポーネント。-orientation-horizontal/verticalをサポート。",
@@ -93,13 +93,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-separator.tsx",
+          "path": "registry/fly-by/ui/separator.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-badge",
+      "name": "badge",
       "type": "registry:ui",
       "title": "Badge",
       "description": "fly-byデザインシステムのBadgeコンポーネント。-appearance-flat/solid/outlined、-color-informative/positive/negative/neutral/favorite、-size-s/m/lをサポート。",
@@ -108,13 +108,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-badge.tsx",
+          "path": "registry/fly-by/ui/badge.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-spinner",
+      "name": "spinner",
       "type": "registry:ui",
       "title": "Spinner",
       "description": "fly-byデザインシステムのSpinnerコンポーネント。読み込み中インジケーター。-size-xs/s/m/l/xl、-color-neutral/informative/positive/negative/favoriteをサポート。",
@@ -123,13 +123,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-spinner.tsx",
+          "path": "registry/fly-by/ui/spinner.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-skeleton",
+      "name": "skeleton",
       "type": "registry:ui",
       "title": "Skeleton",
       "description": "fly-byデザインシステムのSkeletonコンポーネント。コンテンツ読み込み中のプレースホルダー。-shape-rectangle/circle/textをサポート。",
@@ -138,13 +138,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-skeleton.tsx",
+          "path": "registry/fly-by/ui/skeleton.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-kbd",
+      "name": "kbd",
       "type": "registry:ui",
       "title": "Kbd",
       "description": "fly-byデザインシステムのKbdコンポーネント。キーボードショートカット表示用。-size-s/m/lをサポート。",
@@ -153,13 +153,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-kbd.tsx",
+          "path": "registry/fly-by/ui/kbd.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-avatar",
+      "name": "avatar",
       "type": "registry:ui",
       "title": "Avatar",
       "description": "fly-byデザインシステムのAvatarコンポーネント。ユーザーアバター表示用。-size-xs/s/m/l/xl、-shape-circle/squareをサポート。",
@@ -169,13 +169,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-avatar.tsx",
+          "path": "registry/fly-by/ui/avatar.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-aspect-ratio",
+      "name": "aspect-ratio",
       "type": "registry:ui",
       "title": "Aspect Ratio",
       "description": "fly-byデザインシステムのAspect Ratioコンポーネント。アスペクト比を維持するコンテナ。",
@@ -184,13 +184,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-aspect-ratio.tsx",
+          "path": "registry/fly-by/ui/aspect-ratio.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-progress",
+      "name": "progress",
       "type": "registry:ui",
       "title": "Progress",
       "description": "fly-byデザインシステムのProgressコンポーネント。進捗バー。-size-s/m/l/xl、-color-neutral/informative/positive/negative/favoriteをサポート。",
@@ -200,13 +200,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-progress.tsx",
+          "path": "registry/fly-by/ui/progress.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-toggle",
+      "name": "toggle",
       "type": "registry:ui",
       "title": "Toggle",
       "description": "fly-byデザインシステムのToggleコンポーネント。オン/オフ切り替えボタン。-appearance-default/outlined、-size-s/m/lをサポート。",
@@ -216,13 +216,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-toggle.tsx",
+          "path": "registry/fly-by/ui/toggle.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-checkbox",
+      "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",
       "description": "fly-byデザインシステムのCheckboxコンポーネント。チェックボックス。-size-s/m/l、-color-neutral/informative/positive/negativeをサポート。",
@@ -233,13 +233,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-checkbox.tsx",
+          "path": "registry/fly-by/ui/checkbox.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-switch",
+      "name": "switch",
       "type": "registry:ui",
       "title": "Switch",
       "description": "fly-byデザインシステムのSwitchコンポーネント。スイッチ。-size-s/m/l、-color-neutral/informative/positive/negativeをサポート。",
@@ -249,13 +249,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-switch.tsx",
+          "path": "registry/fly-by/ui/switch.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-radio-group",
+      "name": "radio-group",
       "type": "registry:ui",
       "title": "Radio Group",
       "description": "fly-byデザインシステムのRadio Groupコンポーネント。ラジオボタングループ。-size-s/m/l、-color-neutral/informative/positive/negativeをサポート。",
@@ -266,13 +266,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-radio-group.tsx",
+          "path": "registry/fly-by/ui/radio-group.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-tooltip",
+      "name": "tooltip",
       "type": "registry:ui",
       "title": "Tooltip",
       "description": "fly-byデザインシステムのTooltipコンポーネント。ホバー時にヒントを表示。",
@@ -281,13 +281,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-tooltip.tsx",
+          "path": "registry/fly-by/ui/tooltip.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-popover",
+      "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
       "description": "fly-byデザインシステムのPopoverコンポーネント。クリックで開くフローティングコンテンツ。",
@@ -296,13 +296,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-popover.tsx",
+          "path": "registry/fly-by/ui/popover.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-dialog",
+      "name": "dialog",
       "type": "registry:ui",
       "title": "Dialog",
       "description": "fly-byデザインシステムのDialogコンポーネント。モーダルダイアログ。",
@@ -312,13 +312,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-dialog.tsx",
+          "path": "registry/fly-by/ui/dialog.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-alert-dialog",
+      "name": "alert-dialog",
       "type": "registry:ui",
       "title": "Alert Dialog",
       "description": "fly-byデザインシステムのAlert Dialogコンポーネント。確認ダイアログ。",
@@ -327,13 +327,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-alert-dialog.tsx",
+          "path": "registry/fly-by/ui/alert-dialog.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-sheet",
+      "name": "sheet",
       "type": "registry:ui",
       "title": "Sheet",
       "description": "fly-byデザインシステムのSheetコンポーネント。サイドパネル。-side-top/bottom/left/rightをサポート。",
@@ -344,13 +344,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-sheet.tsx",
+          "path": "registry/fly-by/ui/sheet.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-drawer",
+      "name": "drawer",
       "type": "registry:ui",
       "title": "Drawer",
       "description": "fly-byデザインシステムのDrawerコンポーネント。ボトムシート。",
@@ -359,13 +359,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-drawer.tsx",
+          "path": "registry/fly-by/ui/drawer.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-dropdown-menu",
+      "name": "dropdown-menu",
       "type": "registry:ui",
       "title": "Dropdown Menu",
       "description": "fly-byデザインシステムのDropdown Menuコンポーネント。ドロップダウンメニュー。",
@@ -375,13 +375,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-dropdown-menu.tsx",
+          "path": "registry/fly-by/ui/dropdown-menu.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-context-menu",
+      "name": "context-menu",
       "type": "registry:ui",
       "title": "Context Menu",
       "description": "fly-byデザインシステムのContext Menuコンポーネント。右クリックメニュー。",
@@ -391,13 +391,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-context-menu.tsx",
+          "path": "registry/fly-by/ui/context-menu.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-hover-card",
+      "name": "hover-card",
       "type": "registry:ui",
       "title": "Hover Card",
       "description": "fly-byデザインシステムのHover Cardコンポーネント。ホバーで表示するカード。",
@@ -406,13 +406,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-hover-card.tsx",
+          "path": "registry/fly-by/ui/hover-card.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-toast",
+      "name": "toast",
       "type": "registry:ui",
       "title": "Toast",
       "description": "fly-byデザインシステムのToastコンポーネント。通知メッセージ。-color-default/informative/positive/negativeをサポート。",
@@ -423,13 +423,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-toast.tsx",
+          "path": "registry/fly-by/ui/toast.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-sonner",
+      "name": "sonner",
       "type": "registry:ui",
       "title": "Sonner",
       "description": "fly-byデザインシステムのSonnerコンポーネント。トースト通知（Sonnerラッパー）。",
@@ -438,13 +438,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-sonner.tsx",
+          "path": "registry/fly-by/ui/sonner.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-accordion",
+      "name": "accordion",
       "type": "registry:ui",
       "title": "Accordion",
       "description": "fly-byデザインシステムのAccordionコンポーネント。展開・折りたたみ可能なセクション。",
@@ -454,13 +454,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-accordion.tsx",
+          "path": "registry/fly-by/ui/accordion.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-collapsible",
+      "name": "collapsible",
       "type": "registry:ui",
       "title": "Collapsible",
       "description": "fly-byデザインシステムのCollapsibleコンポーネント。展開・折りたたみ可能なコンテンツ。",
@@ -469,13 +469,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-collapsible.tsx",
+          "path": "registry/fly-by/ui/collapsible.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-tabs",
+      "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
       "description": "fly-byデザインシステムのTabsコンポーネント。タブ切り替え。-appearance-line/solid/outlineをサポート。",
@@ -485,13 +485,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-tabs.tsx",
+          "path": "registry/fly-by/ui/tabs.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-toggle-group",
+      "name": "toggle-group",
       "type": "registry:ui",
       "title": "Toggle Group",
       "description": "fly-byデザインシステムのToggle Groupコンポーネント。トグルボタングループ。-appearance-default/outlined、-size-s/m/lをサポート。",
@@ -501,13 +501,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-toggle-group.tsx",
+          "path": "registry/fly-by/ui/toggle-group.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-breadcrumb",
+      "name": "breadcrumb",
       "type": "registry:ui",
       "title": "Breadcrumb",
       "description": "fly-byデザインシステムのBreadcrumbコンポーネント。パンくずリスト。",
@@ -517,13 +517,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-breadcrumb.tsx",
+          "path": "registry/fly-by/ui/breadcrumb.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-pagination",
+      "name": "pagination",
       "type": "registry:ui",
       "title": "Pagination",
       "description": "fly-byデザインシステムのPaginationコンポーネント。ページネーション。",
@@ -532,13 +532,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-pagination.tsx",
+          "path": "registry/fly-by/ui/pagination.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-navigation-menu",
+      "name": "navigation-menu",
       "type": "registry:ui",
       "title": "Navigation Menu",
       "description": "fly-byデザインシステムのNavigation Menuコンポーネント。ナビゲーションメニュー。",
@@ -549,13 +549,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-navigation-menu.tsx",
+          "path": "registry/fly-by/ui/navigation-menu.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-menubar",
+      "name": "menubar",
       "type": "registry:ui",
       "title": "Menubar",
       "description": "fly-byデザインシステムのMenubarコンポーネント。デスクトップアプリ風メニューバー。",
@@ -565,13 +565,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-menubar.tsx",
+          "path": "registry/fly-by/ui/menubar.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-scroll-area",
+      "name": "scroll-area",
       "type": "registry:ui",
       "title": "Scroll Area",
       "description": "fly-byデザインシステムのScroll Areaコンポーネント。カスタムスクロールバー。",
@@ -580,13 +580,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-scroll-area.tsx",
+          "path": "registry/fly-by/ui/scroll-area.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-resizable",
+      "name": "resizable",
       "type": "registry:ui",
       "title": "Resizable",
       "description": "fly-byデザインシステムのResizableコンポーネント。リサイズ可能なパネル。",
@@ -596,13 +596,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-resizable.tsx",
+          "path": "registry/fly-by/ui/resizable.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-alert",
+      "name": "alert",
       "type": "registry:ui",
       "title": "Alert",
       "description": "fly-byデザインシステムのAlertコンポーネント。通知・警告メッセージ。-color-neutral/informative/positive/negative/warningをサポート。",
@@ -612,13 +612,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-alert.tsx",
+          "path": "registry/fly-by/ui/alert.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-select",
+      "name": "select",
       "type": "registry:ui",
       "title": "Select",
       "description": "fly-byデザインシステムのSelectコンポーネント。カスタムセレクト。-size-s/m/lをサポート。",
@@ -629,13 +629,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-select.tsx",
+          "path": "registry/fly-by/ui/select.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-native-select",
+      "name": "native-select",
       "type": "registry:ui",
       "title": "Native Select",
       "description": "fly-byデザインシステムのNative Selectコンポーネント。ネイティブHTML select。-size-s/m/lをサポート。",
@@ -645,13 +645,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-native-select.tsx",
+          "path": "registry/fly-by/ui/native-select.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-command",
+      "name": "command",
       "type": "registry:ui",
       "title": "Command",
       "description": "fly-byデザインシステムのCommandコンポーネント。コマンドパレット・検索UI。",
@@ -660,17 +660,17 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-dialog.json"
+        "https://fly-by.design.yukyu.net/r/dialog.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-command.tsx",
+          "path": "registry/fly-by/ui/command.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-combobox",
+      "name": "combobox",
       "type": "registry:ui",
       "title": "Combobox",
       "description": "fly-byデザインシステムのComboboxコンポーネント。検索可能なセレクト。",
@@ -678,19 +678,19 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-button.json",
-        "https://fly-by.design.yukyu.net/r/fb-command.json",
-        "https://fly-by.design.yukyu.net/r/fb-popover.json"
+        "https://fly-by.design.yukyu.net/r/button.json",
+        "https://fly-by.design.yukyu.net/r/command.json",
+        "https://fly-by.design.yukyu.net/r/popover.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-combobox.tsx",
+          "path": "registry/fly-by/ui/combobox.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-slider",
+      "name": "slider",
       "type": "registry:ui",
       "title": "Slider",
       "description": "fly-byデザインシステムのSliderコンポーネント。スライダー。-size-s/m/l、-color-neutral/informative/positive/negativeをサポート。",
@@ -700,13 +700,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-slider.tsx",
+          "path": "registry/fly-by/ui/slider.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-input-otp",
+      "name": "input-otp",
       "type": "registry:ui",
       "title": "Input OTP",
       "description": "fly-byデザインシステムのInput OTPコンポーネント。ワンタイムパスワード入力。",
@@ -716,13 +716,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-input-otp.tsx",
+          "path": "registry/fly-by/ui/input-otp.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-form",
+      "name": "form",
       "type": "registry:ui",
       "title": "Form",
       "description": "fly-byデザインシステムのFormコンポーネント。react-hook-form統合フォーム。",
@@ -732,32 +732,32 @@
         "react-hook-form"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-label.json"
+        "https://fly-by.design.yukyu.net/r/label.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-form.tsx",
+          "path": "registry/fly-by/ui/form.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-field",
+      "name": "field",
       "type": "registry:ui",
       "title": "Field",
       "description": "fly-byデザインシステムのFieldコンポーネント。シンプルなフォームフィールドラッパー。",
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-label.json"
+        "https://fly-by.design.yukyu.net/r/label.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-field.tsx",
+          "path": "registry/fly-by/ui/field.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-input-group",
+      "name": "input-group",
       "type": "registry:ui",
       "title": "Input Group",
       "description": "fly-byデザインシステムのInput Groupコンポーネント。プレフィックス/サフィックス付きInput。-size-s/m/lをサポート。",
@@ -766,13 +766,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-input-group.tsx",
+          "path": "registry/fly-by/ui/input-group.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-button-group",
+      "name": "button-group",
       "type": "registry:ui",
       "title": "Button Group",
       "description": "fly-byデザインシステムのButton Groupコンポーネント。ボタングループ。-orientation-horizontal/verticalをサポート。",
@@ -781,13 +781,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-button-group.tsx",
+          "path": "registry/fly-by/ui/button-group.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-split-button",
+      "name": "split-button",
       "type": "registry:ui",
       "title": "Split Button",
       "description": "fly-byデザインシステムのSplit Buttonコンポーネント。メインアクションとドロップダウンメニューを組み合わせたボタン。",
@@ -796,18 +796,18 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-button.json",
-        "https://fly-by.design.yukyu.net/r/fb-dropdown-menu.json"
+        "https://fly-by.design.yukyu.net/r/button.json",
+        "https://fly-by.design.yukyu.net/r/dropdown-menu.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-split-button.tsx",
+          "path": "registry/fly-by/ui/split-button.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-item",
+      "name": "item",
       "type": "registry:ui",
       "title": "Item",
       "description": "fly-byデザインシステムのItemコンポーネント。汎用リストアイテム。-variant-default/interactive/selected、-size-s/m/lをサポート。",
@@ -817,25 +817,25 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-item.tsx",
+          "path": "registry/fly-by/ui/item.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-table",
+      "name": "table",
       "type": "registry:ui",
       "title": "Table",
       "description": "fly-byデザインシステムのTableコンポーネント。テーブル表示。",
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-table.tsx",
+          "path": "registry/fly-by/ui/table.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-data-table",
+      "name": "data-table",
       "type": "registry:ui",
       "title": "Data Table",
       "description": "fly-byデザインシステムのData Tableコンポーネント。ソート、フィルタ、ページネーション付きテーブル。",
@@ -844,20 +844,20 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-button.json",
-        "https://fly-by.design.yukyu.net/r/fb-dropdown-menu.json",
-        "https://fly-by.design.yukyu.net/r/fb-input.json",
-        "https://fly-by.design.yukyu.net/r/fb-table.json"
+        "https://fly-by.design.yukyu.net/r/button.json",
+        "https://fly-by.design.yukyu.net/r/dropdown-menu.json",
+        "https://fly-by.design.yukyu.net/r/input.json",
+        "https://fly-by.design.yukyu.net/r/table.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-data-table.tsx",
+          "path": "registry/fly-by/ui/data-table.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-calendar",
+      "name": "calendar",
       "type": "registry:ui",
       "title": "Calendar",
       "description": "fly-byデザインシステムのCalendarコンポーネント。日付選択カレンダー。",
@@ -866,17 +866,17 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-button.json"
+        "https://fly-by.design.yukyu.net/r/button.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-calendar.tsx",
+          "path": "registry/fly-by/ui/calendar.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-date-picker",
+      "name": "date-picker",
       "type": "registry:ui",
       "title": "Date Picker",
       "description": "fly-byデザインシステムのDate Pickerコンポーネント。日付選択ポップオーバー。",
@@ -885,19 +885,19 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-button.json",
-        "https://fly-by.design.yukyu.net/r/fb-calendar.json",
-        "https://fly-by.design.yukyu.net/r/fb-popover.json"
+        "https://fly-by.design.yukyu.net/r/button.json",
+        "https://fly-by.design.yukyu.net/r/calendar.json",
+        "https://fly-by.design.yukyu.net/r/popover.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-date-picker.tsx",
+          "path": "registry/fly-by/ui/date-picker.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-carousel",
+      "name": "carousel",
       "type": "registry:ui",
       "title": "Carousel",
       "description": "fly-byデザインシステムのCarouselコンポーネント。スライダー/カルーセル。",
@@ -906,17 +906,17 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-button.json"
+        "https://fly-by.design.yukyu.net/r/button.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-carousel.tsx",
+          "path": "registry/fly-by/ui/carousel.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-chart",
+      "name": "chart",
       "type": "registry:ui",
       "title": "Chart",
       "description": "fly-byデザインシステムのChartコンポーネント。rechartsベースのグラフ表示。",
@@ -925,13 +925,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-chart.tsx",
+          "path": "registry/fly-by/ui/chart.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-empty",
+      "name": "empty",
       "type": "registry:ui",
       "title": "Empty",
       "description": "fly-byデザインシステムのEmptyコンポーネント。空の状態表示。-size-s/m/lをサポート。",
@@ -941,13 +941,13 @@
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-empty.tsx",
+          "path": "registry/fly-by/ui/empty.tsx",
           "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "fb-sidebar",
+      "name": "sidebar",
       "type": "registry:ui",
       "title": "Sidebar",
       "description": "fly-byデザインシステムのSidebarコンポーネント。サイドバーナビゲーション。折りたたみ、レスポンシブ対応。",
@@ -957,14 +957,14 @@
         "class-variance-authority"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-button.json",
-        "https://fly-by.design.yukyu.net/r/fb-separator.json",
-        "https://fly-by.design.yukyu.net/r/fb-sheet.json",
-        "https://fly-by.design.yukyu.net/r/fb-tooltip.json"
+        "https://fly-by.design.yukyu.net/r/button.json",
+        "https://fly-by.design.yukyu.net/r/separator.json",
+        "https://fly-by.design.yukyu.net/r/sheet.json",
+        "https://fly-by.design.yukyu.net/r/tooltip.json"
       ],
       "files": [
         {
-          "path": "registry/fly-by/ui/fb-sidebar.tsx",
+          "path": "registry/fly-by/ui/sidebar.tsx",
           "type": "registry:ui"
         }
       ]
@@ -975,8 +975,8 @@
       "title": "Hello World",
       "description": "fly-byスタイルのシンプルなHello Worldコンポーネント",
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-button.json",
-        "https://fly-by.design.yukyu.net/r/fb-text.json"
+        "https://fly-by.design.yukyu.net/r/button.json",
+        "https://fly-by.design.yukyu.net/r/text.json"
       ],
       "files": [
         {
@@ -994,12 +994,12 @@
         "zod"
       ],
       "registryDependencies": [
-        "https://fly-by.design.yukyu.net/r/fb-button.json",
-        "https://fly-by.design.yukyu.net/r/fb-input.json",
-        "https://fly-by.design.yukyu.net/r/fb-label.json",
-        "https://fly-by.design.yukyu.net/r/fb-textarea.json",
-        "https://fly-by.design.yukyu.net/r/fb-card.json",
-        "https://fly-by.design.yukyu.net/r/fb-text.json"
+        "https://fly-by.design.yukyu.net/r/button.json",
+        "https://fly-by.design.yukyu.net/r/input.json",
+        "https://fly-by.design.yukyu.net/r/label.json",
+        "https://fly-by.design.yukyu.net/r/textarea.json",
+        "https://fly-by.design.yukyu.net/r/card.json",
+        "https://fly-by.design.yukyu.net/r/text.json"
       ],
       "files": [
         {

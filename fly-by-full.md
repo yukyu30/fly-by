@@ -6,7 +6,7 @@
 
 ### 主な特徴
 
-- **プレフィックス**: すべてのコンポーネントとクラスは `fb-` で始まる
+- **命名規則**: shadcn/ui互換形式（例: `button`, `card`）
 - **Yukyu Flavor**: 鮮やかな青（`#002CED`）をベースカラーとしたカラーパレット
 - **クラスベース**: class-variance-authority (CVA)を使用した型安全なバリアント管理
 - **スロット構造**: `_header`, `_body`, `_footer` などの明確な内部スロット
@@ -36,13 +36,13 @@ fly-byは一貫した命名規則を採用しています。
 ### 基本構造
 
 ```
-fb-{component} -{variant}-{value}
+{component} -{variant}-{value}
 ```
 
 **例**:
-- `fb-button -appearance-solid -color-informative -size-m`
-- `fb-card -elevation-1`
-- `fb-text -level-l -density-normal`
+- `button -appearance-solid -color-informative -size-m`
+- `card -elevation-1`
+- `text -level-l -density-normal`
 
 ### スロット
 
@@ -120,14 +120,14 @@ fly-byは5つの主要なカラーバリエーションを提供します。
 
 **使用例**:
 ```tsx
-<FbCard elevation={1}>
-  <FbCardHeader>
-    <FbCardTitle>タイトル</FbCardTitle>
-    <FbCardDescription>説明文</FbCardDescription>
-  </FbCardHeader>
-  <FbCardBody>メインコンテンツ</FbCardBody>
-  <FbCardFooter>フッター</FbCardFooter>
-</FbCard>
+<Card elevation={1}>
+  <CardHeader>
+    <CardTitle>タイトル</CardTitle>
+    <CardDescription>説明文</CardDescription>
+  </CardHeader>
+  <CardBody>メインコンテンツ</CardBody>
+  <CardFooter>フッター</CardFooter>
+</Card>
 ```
 
 #### FbScrollArea
@@ -158,9 +158,9 @@ fly-byは5つの主要なカラーバリエーションを提供します。
 
 **使用例**:
 ```tsx
-<FbText level="l" weight="semibold" as="h2">
+<Text level="l" weight="semibold" as="h2">
   見出しテキスト
-</FbText>
+</Text>
 ```
 
 #### FbLabel
@@ -184,9 +184,9 @@ fly-byは5つの主要なカラーバリエーションを提供します。
 
 **使用例**:
 ```tsx
-<FbButton appearance="solid" color="informative" size="m">
+<Button appearance="solid" color="informative" size="m">
   保存する
-</FbButton>
+</Button>
 ```
 
 #### FbButtonGroup
@@ -217,27 +217,27 @@ import {
   FbSplitButton,
   FbSplitButtonLabel,
   FbSplitButtonMenu,
-} from "@/components/ui/fb-split-button"
+} from '@/components/ui/split-button'
 import {
   FbDropdownMenuItem,
-} from "@/components/ui/fb-dropdown-menu"
+} from '@/components/ui/dropdown-menu'
 
-<FbSplitButton
+<SplitButton
   appearance="solid"
   color="informative"
   size="m"
   onAction={() => console.log('保存')}
 >
-  <FbSplitButtonLabel>保存</FbSplitButtonLabel>
-  <FbSplitButtonMenu>
-    <FbDropdownMenuItem onSelect={() => console.log('保存して閉じる')}>
+  <SplitButtonLabel>保存</SplitButtonLabel>
+  <SplitButtonMenu>
+    <DropdownMenuItem onSelect={() => console.log('保存して閉じる')}>
       保存して閉じる
-    </FbDropdownMenuItem>
-    <FbDropdownMenuItem onSelect={() => console.log('別名で保存')}>
+    </DropdownMenuItem>
+    <DropdownMenuItem onSelect={() => console.log('別名で保存')}>
       別名で保存
-    </FbDropdownMenuItem>
-  </FbSplitButtonMenu>
-</FbSplitButton>
+    </DropdownMenuItem>
+  </SplitButtonMenu>
+</SplitButton>
 ```
 
 #### FbToggle
@@ -262,7 +262,7 @@ import {
 
 **使用例**:
 ```tsx
-<FbInput
+<Input
   appearance="outlined"
   size="m"
   placeholder="メールアドレスを入力"
@@ -340,9 +340,9 @@ OTP（ワンタイムパスワード）入力。
 
 **使用例**:
 ```tsx
-<FbBadge appearance="solid" color="informative">
+<Badge appearance="solid" color="informative">
   New
-</FbBadge>
+</Badge>
 ```
 
 #### FbAlert
@@ -359,10 +359,10 @@ OTP（ワンタイムパスワード）入力。
 
 **使用例**:
 ```tsx
-<FbAlert color="informative">
-  <FbAlertTitle>お知らせ</FbAlertTitle>
-  <FbAlertDescription>重要な情報があります。</FbAlertDescription>
-</FbAlert>
+<Alert color="informative">
+  <AlertTitle>お知らせ</AlertTitle>
+  <AlertDescription>重要な情報があります。</AlertDescription>
+</Alert>
 ```
 
 #### FbToast
@@ -512,20 +512,20 @@ Sonnerライブラリを使ったトースト。
 ### ログインフォーム
 
 ```tsx
-import { FbButton } from "@/registry/fly-by/ui/fb-button"
-import { FbInput } from "@/registry/fly-by/ui/fb-input"
-import { FbCard, FbCardHeader, FbCardTitle, FbCardBody } from "@/registry/fly-by/ui/fb-card"
+import { Button } from '@/registry/fly-by/ui/button'
+import { Input } from '@/registry/fly-by/ui/input'
+import { Card, FbCardHeader, FbCardTitle, FbCardBody } from '@/registry/fly-by/ui/card'
 
 export function LoginForm() {
   return (
-    <FbCard elevation={2}>
-      <FbCardHeader>
-        <FbCardTitle>ログイン</FbCardTitle>
-      </FbCardHeader>
-      <FbCardBody>
+    <Card elevation={2}>
+      <CardHeader>
+        <CardTitle>ログイン</CardTitle>
+      </CardHeader>
+      <CardBody>
         <form className="space-y-4">
           <div>
-            <FbInput
+            <Input
               type="email"
               placeholder="メールアドレス"
               appearance="outlined"
@@ -533,24 +533,24 @@ export function LoginForm() {
             />
           </div>
           <div>
-            <FbInput
+            <Input
               type="password"
               placeholder="パスワード"
               appearance="outlined"
               size="m"
             />
           </div>
-          <FbButton
+          <Button
             type="submit"
             appearance="solid"
             color="informative"
             width="full"
           >
             ログイン
-          </FbButton>
+          </Button>
         </form>
-      </FbCardBody>
-    </FbCard>
+      </CardBody>
+    </Card>
   )
 }
 ```
@@ -558,31 +558,31 @@ export function LoginForm() {
 ### アラート表示
 
 ```tsx
-import { FbAlert, FbAlertTitle, FbAlertDescription } from "@/registry/fly-by/ui/fb-alert"
+import { Alert, FbAlertTitle, FbAlertDescription } from '@/registry/fly-by/ui/alert'
 
 export function NotificationExample() {
   return (
     <div className="space-y-4">
-      <FbAlert color="informative">
-        <FbAlertTitle>情報</FbAlertTitle>
-        <FbAlertDescription>
+      <Alert color="informative">
+        <AlertTitle>情報</AlertTitle>
+        <AlertDescription>
           新しい機能が追加されました。
-        </FbAlertDescription>
-      </FbAlert>
+        </AlertDescription>
+      </Alert>
 
-      <FbAlert color="positive">
-        <FbAlertTitle>成功</FbAlertTitle>
-        <FbAlertDescription>
+      <Alert color="positive">
+        <AlertTitle>成功</AlertTitle>
+        <AlertDescription>
           データが正常に保存されました。
-        </FbAlertDescription>
-      </FbAlert>
+        </AlertDescription>
+      </Alert>
 
-      <FbAlert color="negative">
-        <FbAlertTitle>エラー</FbAlertTitle>
-        <FbAlertDescription>
+      <Alert color="negative">
+        <AlertTitle>エラー</AlertTitle>
+        <AlertDescription>
           処理中にエラーが発生しました。
-        </FbAlertDescription>
-      </FbAlert>
+        </AlertDescription>
+      </Alert>
     </div>
   )
 }
@@ -591,22 +591,22 @@ export function NotificationExample() {
 ### ボタングループ
 
 ```tsx
-import { FbButton } from "@/registry/fly-by/ui/fb-button"
-import { FbButtonGroup } from "@/registry/fly-by/ui/fb-button-group"
+import { Button } from '@/registry/fly-by/ui/button'
+import { ButtonGroup } from '@/registry/fly-by/ui/button-group'
 
 export function ActionButtons() {
   return (
-    <FbButtonGroup>
-      <FbButton appearance="outlined" color="neutral">
+    <ButtonGroup>
+      <Button appearance="outlined" color="neutral">
         キャンセル
-      </FbButton>
-      <FbButton appearance="flat" color="informative">
+      </Button>
+      <Button appearance="flat" color="informative">
         下書き保存
-      </FbButton>
-      <FbButton appearance="solid" color="informative">
+      </Button>
+      <Button appearance="solid" color="informative">
         公開する
-      </FbButton>
-    </FbButtonGroup>
+      </Button>
+    </ButtonGroup>
   )
 }
 ```
@@ -614,15 +614,15 @@ export function ActionButtons() {
 ### バッジの使用
 
 ```tsx
-import { FbBadge } from "@/registry/fly-by/ui/fb-badge"
+import { Badge } from '@/registry/fly-by/ui/badge'
 
 export function StatusBadges() {
   return (
     <div className="flex gap-2">
-      <FbBadge color="positive" appearance="solid">公開中</FbBadge>
-      <FbBadge color="neutral" appearance="outlined">下書き</FbBadge>
-      <FbBadge color="informative" appearance="flat">新着</FbBadge>
-      <FbBadge color="negative" appearance="solid">期限切れ</FbBadge>
+      <Badge color="positive" appearance="solid">公開中</Badge>
+      <Badge color="neutral" appearance="outlined">下書き</Badge>
+      <Badge color="informative" appearance="flat">新着</Badge>
+      <Badge color="negative" appearance="solid">期限切れ</Badge>
     </div>
   )
 }
@@ -657,8 +657,8 @@ https://fly-by.design.yukyu.net/r
 個別のコンポーネントを直接インストール：
 
 ```bash
-npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-button.json"
-npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-card.json"
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/button.json"
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/card.json"
 ```
 
 ### 方法2: components.jsonに登録（推奨）
@@ -685,15 +685,15 @@ npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-card.json"
 
 ```bash
 # シンプルな名前でインストール
-npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-button.json"
-npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-card.json"
-npx shadcn@latest add "https://fly-by.design.yukyu.net/r/fb-input.json"
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/button.json"
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/card.json"
+npx shadcn@latest add "https://fly-by.design.yukyu.net/r/input.json"
 
 # 複数まとめてインストール
 npx shadcn@latest add \
-  "https://fly-by.design.yukyu.net/r/fb-button.json" \
-  "https://fly-by.design.yukyu.net/r/fb-card.json" \
-  "https://fly-by.design.yukyu.net/r/fb-input.json"
+  "https://fly-by.design.yukyu.net/r/button.json" \
+  "https://fly-by.design.yukyu.net/r/card.json" \
+  "https://fly-by.design.yukyu.net/r/input.json"
 ```
 
 ### 前提条件
@@ -727,9 +727,9 @@ npm install lucide-react
 インストール後、通常のReactコンポーネントとしてインポート：
 
 ```tsx
-import { FbButton } from "@/components/ui/fb-button"
-import { FbCard } from "@/components/ui/fb-card"
-import { FbInput } from "@/components/ui/fb-input"
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
 ```
 
 ### Registry Item構造
@@ -739,7 +739,7 @@ fly-byのレジストリアイテムは、shadcn/ui標準のスキーマに準�
 ```json
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "fb-button",
+  "name": "button",
   "type": "registry:ui",
   "title": "FbButton",
   "description": "fly-by button component with Yukyu Flavor styling",
@@ -747,7 +747,7 @@ fly-byのレジストリアイテムは、shadcn/ui標準のスキーマに準�
   "registryDependencies": [],
   "files": [
     {
-      "path": "ui/fb-button.tsx",
+      "path": "ui/button.tsx",
       "type": "registry:ui"
     }
   ]
@@ -762,7 +762,7 @@ fly-byのレジストリアイテムは、shadcn/ui標準のスキーマに準�
 
 ```bash
 # 直接URLでアクセス
-curl https://fly-by.design.yukyu.net/r/fb-button.json
+curl https://fly-by.design.yukyu.net/r/button.json
 ```
 
 #### スタイルが適用されない

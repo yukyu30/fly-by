@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton",
+  "title": "Skeleton",
+  "description": "fly-byデザインシステムのSkeletonコンポーネント。コンテンツ読み込み中のプレースホルダー。-shape-rectangle/circle/textをサポート。",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/skeleton.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Skeleton\n *\n * クラス構造: skeleton -shape-{value}\n *\n * @example\n * <Skeleton className=\"h-4 w-32\" />\n * <Skeleton shape=\"circle\" className=\"h-12 w-12\" />\n */\n\nconst skeletonVariants = cva(\n  \"skeleton animate-pulse bg-gray-200 dark:bg-gray-700\",\n  {\n    variants: {\n      shape: {\n        rectangle: \"-shape-rectangle rounded-md\",\n        circle: \"-shape-circle rounded-full\",\n        text: \"-shape-text rounded h-4\",\n      },\n    },\n    defaultVariants: {\n      shape: \"rectangle\",\n    },\n  }\n)\n\nexport interface SkeletonProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof skeletonVariants> {}\n\nfunction Skeleton({\n  className,\n  shape,\n  ...props\n}: SkeletonProps) {\n  return (\n    <div\n      data-slot=\"skeleton\"\n      aria-hidden=\"true\"\n      className={cn(skeletonVariants({ shape, className }))}\n      {...props}\n    />\n  )\n}\n\nexport { Skeleton, skeletonVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -16,10 +16,10 @@ import {
 } from 'lucide-react';
 import { getAllComponents } from '@/lib/registry';
 import { componentPreviews, defaultPreview } from '@/lib/component-previews';
-import { FbCard } from '@/registry/fly-by/ui/fb-card';
-import { FbBadge } from '@/registry/fly-by/ui/fb-badge';
-import { FbInput } from '@/registry/fly-by/ui/fb-input';
-import { FbButton } from '@/registry/fly-by/ui/fb-button';
+import { Card } from '@/registry/fly-by/ui/card';
+import { Badge } from '@/registry/fly-by/ui/badge';
+import { Input } from '@/registry/fly-by/ui/input';
+import { Button } from '@/registry/fly-by/ui/button';
 
 const BASE_URL = 'https://fly-by.design.yukyu.net/r';
 
@@ -141,37 +141,37 @@ export default function Home() {
             shadcn/ui 互換のコンポーネントライブラリ。
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap mb-8">
-            <FbBadge appearance="flat" color="neutral" size="l" className="px-4 py-1">
+            <Badge appearance="flat" color="neutral" size="l" className="px-4 py-1">
               <Grid3X3 className="h-4 w-4" />
               {allComponents.length} コンポーネント
-            </FbBadge>
-            <FbBadge appearance="flat" color="informative" size="l" className="px-4 py-1">
+            </Badge>
+            <Badge appearance="flat" color="informative" size="l" className="px-4 py-1">
               <Palette className="h-4 w-4" />
               Yukyu Flavor
-            </FbBadge>
-            <FbBadge appearance="flat" color="neutral" size="l" className="px-4 py-1">
+            </Badge>
+            <Badge appearance="flat" color="neutral" size="l" className="px-4 py-1">
               <Terminal className="h-4 w-4" />
               shadcn CLI 対応
-            </FbBadge>
+            </Badge>
           </div>
 
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <a href="/fly-by-full.md">
-              <FbButton appearance="solid" color="informative" size="l">
+              <Button appearance="solid" color="informative" size="l">
                 <FileText className="h-5 w-5" />
                 完全ドキュメントを見る
-              </FbButton>
+              </Button>
             </a>
             <a href="/fly-by.skill" download>
-              <FbButton appearance="outlined" color="informative" size="l">
+              <Button appearance="outlined" color="informative" size="l">
                 <Download className="h-5 w-5" />
                 Claude Skillをダウンロード
-              </FbButton>
+              </Button>
             </a>
             <a href="https://github.com/yukyu30/fly-by" target="_blank" rel="noopener noreferrer">
-              <FbButton appearance="outlined" color="neutral" size="l">
+              <Button appearance="outlined" color="neutral" size="l">
                 GitHub
-              </FbButton>
+              </Button>
             </a>
           </div>
         </section>
@@ -186,7 +186,7 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <FbCard elevation={1}>
+            <Card elevation={1}>
               <div className="p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#002CED]/10 flex items-center justify-center mb-4">
                   <span className="text-[#002CED] font-bold">1</span>
@@ -197,9 +197,9 @@ export default function Home() {
                 </p>
                 <CodeBlock code="npx shadcn@latest init" />
               </div>
-            </FbCard>
+            </Card>
 
-            <FbCard elevation={1}>
+            <Card elevation={1}>
               <div className="p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#002CED]/10 flex items-center justify-center mb-4">
                   <span className="text-[#002CED] font-bold">2</span>
@@ -209,12 +209,12 @@ export default function Home() {
                   必要なコンポーネントを追加します。
                 </p>
                 <CodeBlock
-                  code={`npx shadcn@latest add "${BASE_URL}/fb-button.json"`}
+                  code={`npx shadcn@latest add "${BASE_URL}/button.json"`}
                 />
               </div>
-            </FbCard>
+            </Card>
 
-            <FbCard elevation={1}>
+            <Card elevation={1}>
               <div className="p-6">
                 <div className="w-10 h-10 rounded-lg bg-[#002CED]/10 flex items-center justify-center mb-4">
                   <span className="text-[#002CED] font-bold">3</span>
@@ -224,12 +224,12 @@ export default function Home() {
                   インポートして使用します。
                 </p>
                 <CodeBlock
-                  code={`import { FbButton } from "@/components/ui/fb-button"
+                  code={`import { Button } from "@/components/ui/button"
 
-<FbButton>Click me</FbButton>`}
+<Button>Click me</Button>`}
                 />
               </div>
-            </FbCard>
+            </Card>
           </div>
         </section>
 
@@ -249,7 +249,7 @@ export default function Home() {
 
           {/* Search */}
           <div className="mb-6 max-w-md">
-            <FbInput
+            <Input
               appearance="outlined"
               size="m"
               placeholder="コンポーネントを検索..."
@@ -261,7 +261,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {filteredComponents.map((component) => (
               <Link key={component.name} href={`/components/${component.name}`}>
-                <FbCard
+                <Card
                   elevation={1}
                   className="h-full cursor-pointer overflow-hidden hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
                 >
@@ -284,12 +284,12 @@ export default function Home() {
                       {component.title || component.description || component.name}
                     </p>
                     <div className="flex items-center gap-2">
-                      <FbBadge appearance="outlined" color="neutral" size="s">
+                      <Badge appearance="outlined" color="neutral" size="s">
                         {component.type.replace('registry:', '')}
-                      </FbBadge>
+                      </Badge>
                     </div>
                   </div>
-                </FbCard>
+                </Card>
               </Link>
             ))}
           </div>
@@ -311,7 +311,7 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <FbCard elevation={1}>
+            <Card elevation={1}>
               <div className="p-6">
                 <h3 className="font-semibold mb-4">命名規則</h3>
                 <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
@@ -341,9 +341,9 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-            </FbCard>
+            </Card>
 
-            <FbCard elevation={1}>
+            <Card elevation={1}>
               <div className="p-6">
                 <h3 className="font-semibold mb-4">Yukyu Flavor カラーパレット</h3>
                 <div className="space-y-2">
@@ -376,7 +376,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-            </FbCard>
+            </Card>
           </div>
         </section>
       </main>

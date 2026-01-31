@@ -69,7 +69,7 @@ Vercelは自動的にLet's Encryptを使用してSSL証明書を発行します�
 
 - **メインサイト**: https://fly-by.design.yukyu.net/
 - **ドキュメント**: https://fly-by.design.yukyu.net/fly-by-full.md
-- **コンポーネントレジストリ**: https://fly-by.design.yukyu.net/r/fb-button.json
+- **コンポーネントレジストリ**: https://fly-by.design.yukyu.net/r/button.json
 
 ## 環境変数（必要な場合）
 

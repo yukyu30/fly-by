@@ -4,18 +4,18 @@ import * as React from "react"
 import { z } from "zod"
 
 import {
-  FbCard,
-  FbCardHeader,
-  FbCardTitle,
-  FbCardDescription,
-  FbCardBody,
-  FbCardFooter,
-} from "@/registry/fly-by/ui/fb-card"
-import { FbInput } from "@/registry/fly-by/ui/fb-input"
-import { FbLabel } from "@/registry/fly-by/ui/fb-label"
-import { FbButton } from "@/registry/fly-by/ui/fb-button"
-import { FbTextarea } from "@/registry/fly-by/ui/fb-textarea"
-import { FbText } from "@/registry/fly-by/ui/fb-text"
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardBody,
+  CardFooter,
+} from "@/registry/fly-by/ui/card"
+import { Input } from "@/registry/fly-by/ui/input"
+import { Label } from "@/registry/fly-by/ui/label"
+import { Button } from "@/registry/fly-by/ui/button"
+import { Textarea } from "@/registry/fly-by/ui/textarea"
+import { Text } from "@/registry/fly-by/ui/text"
 
 const exampleFormSchema = z.object({
   name: z.string().min(1, "名前を入力してください"),
@@ -73,25 +73,25 @@ export function ExampleForm() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-sm">
-      <FbCard elevation={1}>
-        <FbCardHeader>
-          <FbCardTitle>お問い合わせ</FbCardTitle>
-          <FbCardDescription>
+      <Card elevation={1}>
+        <CardHeader>
+          <CardTitle>お問い合わせ</CardTitle>
+          <CardDescription>
             ご質問やご要望がございましたら、お気軽にお問い合わせください。
-          </FbCardDescription>
-        </FbCardHeader>
-        <FbCardBody className="flex flex-col gap-6">
+          </CardDescription>
+        </CardHeader>
+        <CardBody className="flex flex-col gap-6">
           <div
             className="group/field grid gap-2"
             data-invalid={!!state.errors?.name}
           >
-            <FbLabel
+            <Label
               htmlFor="name"
               className="group-data-[invalid=true]/field:text-red-600"
             >
               お名前 <span aria-hidden="true">*</span>
-            </FbLabel>
-            <FbInput
+            </Label>
+            <Input
               id="name"
               name="name"
               placeholder="山田 太郎"
@@ -103,22 +103,22 @@ export function ExampleForm() {
               defaultValue={state.defaultValues.name}
             />
             {state.errors?.name && (
-              <FbText level="xs" className="text-red-600">
+              <Text level="xs" className="text-red-600">
                 {state.errors.name}
-              </FbText>
+              </Text>
             )}
           </div>
           <div
             className="group/field grid gap-2"
             data-invalid={!!state.errors?.email}
           >
-            <FbLabel
+            <Label
               htmlFor="email"
               className="group-data-[invalid=true]/field:text-red-600"
             >
               メールアドレス <span aria-hidden="true">*</span>
-            </FbLabel>
-            <FbInput
+            </Label>
+            <Input
               id="email"
               name="email"
               type="email"
@@ -131,22 +131,22 @@ export function ExampleForm() {
               defaultValue={state.defaultValues.email}
             />
             {state.errors?.email && (
-              <FbText level="xs" className="text-red-600">
+              <Text level="xs" className="text-red-600">
                 {state.errors.email}
-              </FbText>
+              </Text>
             )}
           </div>
           <div
             className="group/field grid gap-2"
             data-invalid={!!state.errors?.message}
           >
-            <FbLabel
+            <Label
               htmlFor="message"
               className="group-data-[invalid=true]/field:text-red-600"
             >
               メッセージ <span aria-hidden="true">*</span>
-            </FbLabel>
-            <FbTextarea
+            </Label>
+            <Textarea
               id="message"
               name="message"
               placeholder="お問い合わせ内容をご記入ください..."
@@ -158,14 +158,14 @@ export function ExampleForm() {
               defaultValue={state.defaultValues.message}
             />
             {state.errors?.message && (
-              <FbText level="xs" className="text-red-600">
+              <Text level="xs" className="text-red-600">
                 {state.errors.message}
-              </FbText>
+              </Text>
             )}
           </div>
-        </FbCardBody>
-        <FbCardFooter>
-          <FbButton
+        </CardBody>
+        <CardFooter>
+          <Button
             type="submit"
             appearance="solid"
             color="informative"
@@ -173,9 +173,9 @@ export function ExampleForm() {
             disabled={pending}
           >
             {pending ? "送信中..." : "送信する"}
-          </FbButton>
-        </FbCardFooter>
-      </FbCard>
+          </Button>
+        </CardFooter>
+      </Card>
     </form>
   )
 }

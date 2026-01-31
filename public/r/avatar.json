@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar",
+  "title": "Avatar",
+  "description": "fly-byデザインシステムのAvatarコンポーネント。ユーザーアバター表示用。-size-xs/s/m/l/xl、-shape-circle/squareをサポート。",
+  "dependencies": [
+    "@radix-ui/react-avatar",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/avatar.tsx",
+      "content": "import * as React from \"react\"\nimport * as AvatarPrimitive from \"@radix-ui/react-avatar\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Avatar\n *\n * クラス構造: avatar -size-{value} -shape-{value}\n *\n * @example\n * <Avatar>\n *   <AvatarImage src=\"/avatar.png\" alt=\"User\" />\n *   <AvatarFallback>UN</FbAvatarFallback>\n * </Avatar>\n */\n\nconst avatarVariants = cva(\n  \"avatar relative flex shrink-0 overflow-hidden\",\n  {\n    variants: {\n      size: {\n        xs: \"-size-xs h-6 w-6 text-xs\",\n        s: \"-size-s h-8 w-8 text-xs\",\n        m: \"-size-m h-10 w-10 text-sm\",\n        l: \"-size-l h-12 w-12 text-base\",\n        xl: \"-size-xl h-16 w-16 text-lg\",\n      },\n      shape: {\n        circle: \"-shape-circle rounded-full\",\n        square: \"-shape-square rounded-md\",\n      },\n    },\n    defaultVariants: {\n      size: \"m\",\n      shape: \"circle\",\n    },\n  }\n)\n\nexport interface AvatarProps\n  extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>,\n    VariantProps<typeof avatarVariants> {}\n\nfunction Avatar({\n  className,\n  size,\n  shape,\n  ...props\n}: AvatarProps) {\n  return (\n    <AvatarPrimitive.Root\n      data-slot=\"avatar\"\n      className={cn(avatarVariants({ size, shape, className }))}\n      {...props}\n    />\n  )\n}\n\nfunction FbAvatarImage({\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>) {\n  return (\n    <AvatarPrimitive.Image\n      data-slot=\"avatar-image\"\n      className={cn(\"aspect-square h-full w-full object-cover\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction FbAvatarFallback({\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>) {\n  return (\n    <AvatarPrimitive.Fallback\n      data-slot=\"avatar-fallback\"\n      className={cn(\n        \"flex h-full w-full items-center justify-center bg-gray-200 font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Avatar, FbAvatarImage, FbAvatarFallback, avatarVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

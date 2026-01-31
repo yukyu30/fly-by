@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner",
+  "title": "Spinner",
+  "description": "fly-byデザインシステムのSpinnerコンポーネント。読み込み中インジケーター。-size-xs/s/m/l/xl、-color-neutral/informative/positive/negative/favoriteをサポート。",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/spinner.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Spinner\n *\n * クラス構造: spinner -size-{value} -color-{value}\n *\n * @example\n * <Spinner />\n * <Spinner size=\"l\" color=\"informative\" />\n */\n\nconst spinnerVariants = cva(\n  \"spinner inline-block animate-spin rounded-full border-2 border-current border-t-transparent\",\n  {\n    variants: {\n      size: {\n        xs: \"-size-xs h-3 w-3\",\n        s: \"-size-s h-4 w-4\",\n        m: \"-size-m h-5 w-5\",\n        l: \"-size-l h-6 w-6\",\n        xl: \"-size-xl h-8 w-8\",\n      },\n      color: {\n        neutral: \"-color-neutral text-gray-600 dark:text-gray-400\",\n        informative: \"-color-informative text-[#002CED] dark:text-[#3361ef]\",\n        positive: \"-color-positive text-green-600 dark:text-green-400\",\n        negative: \"-color-negative text-red-600 dark:text-red-400\",\n        favorite: \"-color-favorite text-pink-500 dark:text-pink-400\",\n        current: \"-color-current text-current\",\n      },\n    },\n    defaultVariants: {\n      size: \"m\",\n      color: \"neutral\",\n    },\n  }\n)\n\nexport interface SpinnerProps\n  extends Omit<React.HTMLAttributes<HTMLDivElement>, \"color\">,\n    VariantProps<typeof spinnerVariants> {\n  /** アクセシビリティ用のラベル */\n  label?: string\n}\n\nfunction Spinner({\n  className,\n  size,\n  color,\n  label = \"読み込み中\",\n  ...props\n}: SpinnerProps) {\n  return (\n    <div\n      data-slot=\"spinner\"\n      role=\"status\"\n      aria-label={label}\n      className={cn(spinnerVariants({ size, color, className }))}\n      {...props}\n    >\n      <span className=\"sr-only\">{label}</span>\n    </div>\n  )\n}\n\nexport { Spinner, spinnerVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

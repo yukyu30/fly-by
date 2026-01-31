@@ -1,8 +1,8 @@
 /* fly-by Design System - Login Card Styles */
 /* Yukyu Flavor: #002CED as primary color */
 
-.fb-login-container {
-  /* Yukyu Flavor Colors */
+.login-container {
+  /* Yukyu Flavor Colors (CSS variables maintained) */
   --fb-primary-50: #e6ebfd;
   --fb-primary-100: #ccd7fb;
   --fb-primary-500: #002CED;
@@ -35,7 +35,7 @@
   width: 100%;
 }
 
-.fb-login-card {
+.login-card {
   width: 100%;
   max-width: 400px;
   padding: var(--fb-space-xl);
@@ -44,26 +44,26 @@
   border: 1px solid var(--fb-border-color);
 }
 
-.fb-login-title {
+.login-title {
   margin: 0 0 var(--fb-space-xs) 0;
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--fb-text-color);
 }
 
-.fb-login-subtitle {
+.login-subtitle {
   margin: 0 0 var(--fb-space-l) 0;
   font-size: 0.875rem;
   color: var(--fb-text-light);
 }
 
-.fb-login-form {
+.login-form {
   display: flex;
   flex-direction: column;
   gap: var(--fb-space-m);
 }
 
-.fb-login-error {
+.login-error {
   padding: var(--fb-space-s);
   margin-bottom: var(--fb-space-xs);
   background-color: rgba(239, 68, 68, 0.1);
@@ -73,19 +73,19 @@
   border-radius: 4px;
 }
 
-.fb-form-group {
+.form-group {
   display: flex;
   flex-direction: column;
   gap: var(--fb-space-xs);
 }
 
-.fb-form-group label {
+.form-group label {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--fb-text-color);
 }
 
-.fb-form-group input {
+.form-group input {
   padding: var(--fb-space-s);
   border: 2px solid var(--fb-border-color);
   border-radius: 4px;
@@ -93,20 +93,20 @@
   transition: border-color 0.15s ease;
 }
 
-.fb-form-group input:focus {
+.form-group input:focus {
   outline: none;
   border-color: var(--fb-primary-color);
 }
 
-.fb-form-group input::placeholder {
+.form-group input::placeholder {
   color: var(--fb-text-light);
 }
 
-.fb-form-actions {
+.form-actions {
   margin-top: var(--fb-space-xs);
 }
 
-.fb-login-button {
+.login-button {
   width: 100%;
   padding: var(--fb-space-s);
   background-color: var(--fb-primary-color);
@@ -119,33 +119,33 @@
   transition: background-color 0.15s ease;
 }
 
-.fb-login-button:hover {
+.login-button:hover {
   background-color: var(--fb-primary-hover);
 }
 
-.fb-login-button:focus {
+.login-button:focus {
   outline: none;
   border: 2px solid var(--fb-primary-light);
 }
 
-.fb-form-footer {
+.form-footer {
   display: flex;
   justify-content: center;
   margin-top: var(--fb-space-m);
 }
 
-.fb-forgot-password {
+.forgot-password {
   font-size: 0.875rem;
   color: var(--fb-primary-color);
   text-decoration: none;
 }
 
-.fb-forgot-password:hover {
+.forgot-password:hover {
   text-decoration: underline;
 }
 
 @media (max-width: 480px) {
-  .fb-login-card {
+  .login-card {
     padding: var(--fb-space-l);
   }
 }

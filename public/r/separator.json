@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator",
+  "title": "Separator",
+  "description": "fly-byデザインシステムのSeparatorコンポーネント。-orientation-horizontal/verticalをサポート。",
+  "dependencies": [
+    "@radix-ui/react-separator",
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/separator.tsx",
+      "content": "import * as React from \"react\"\nimport * as SeparatorPrimitive from \"@radix-ui/react-separator\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Separator\n *\n * クラス構造: separator -orientation-{value}\n *\n * @example\n * <Separator />\n * <Separator orientation=\"vertical\" />\n */\n\nconst separatorVariants = cva(\n  \"separator shrink-0 bg-gray-200 dark:bg-gray-700\",\n  {\n    variants: {\n      orientation: {\n        horizontal: \"-orientation-horizontal h-px w-full\",\n        vertical: \"-orientation-vertical h-full w-px\",\n      },\n    },\n    defaultVariants: {\n      orientation: \"horizontal\",\n    },\n  }\n)\n\nexport interface SeparatorProps\n  extends React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>,\n    VariantProps<typeof separatorVariants> {}\n\nfunction Separator({\n  className,\n  orientation = \"horizontal\",\n  decorative = true,\n  ...props\n}: SeparatorProps) {\n  return (\n    <SeparatorPrimitive.Root\n      data-slot=\"separator\"\n      decorative={decorative}\n      orientation={orientation}\n      className={cn(separatorVariants({ orientation, className }))}\n      {...props}\n    />\n  )\n}\n\nexport { Separator, separatorVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

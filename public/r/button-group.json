@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group",
+  "title": "Button Group",
+  "description": "fly-byデザインシステムのButton Groupコンポーネント。ボタングループ。-orientation-horizontal/verticalをサポート。",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/button-group.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Button Group\n *\n * ボタンをグループ化するラッパー。隣接するボタンの角丸を調整。\n *\n * クラス構造: button-group\n *\n * @example\n * <ButtonGroup>\n *   <FbButton appearance=\"outlined\" color=\"neutral\">左</FbButton>\n *   <FbButton appearance=\"outlined\" color=\"neutral\">中央</FbButton>\n *   <FbButton appearance=\"outlined\" color=\"neutral\">右</FbButton>\n * </ButtonGroup>\n *\n * @example\n * <ButtonGroup orientation=\"vertical\">\n *   <FbButton appearance=\"outlined\" color=\"neutral\">上</FbButton>\n *   <FbButton appearance=\"outlined\" color=\"neutral\">中</FbButton>\n *   <FbButton appearance=\"outlined\" color=\"neutral\">下</FbButton>\n * </ButtonGroup>\n */\n\nconst buttonGroupVariants = cva(\"button-group inline-flex\", {\n  variants: {\n    orientation: {\n      horizontal: [\n        \"flex-row\",\n        \"[&>button]:rounded-none\",\n        \"[&>button:first-child]:rounded-l-md\",\n        \"[&>button:last-child]:rounded-r-md\",\n        \"[&>button:not(:first-child)]:-ml-px\",\n      ],\n      vertical: [\n        \"flex-col\",\n        \"[&>button]:rounded-none\",\n        \"[&>button:first-child]:rounded-t-md\",\n        \"[&>button:last-child]:rounded-b-md\",\n        \"[&>button:not(:first-child)]:-mt-px\",\n      ],\n    },\n  },\n  defaultVariants: {\n    orientation: \"horizontal\",\n  },\n})\n\ninterface ButtonGroupProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof buttonGroupVariants> {}\n\nfunction ButtonGroup({\n  className,\n  orientation,\n  ...props\n}: ButtonGroupProps) {\n  return (\n    <div\n      data-slot=\"button-group\"\n      role=\"group\"\n      className={cn(buttonGroupVariants({ orientation }), className)}\n      {...props}\n    />\n  )\n}\n\nexport { ButtonGroup, buttonGroupVariants }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

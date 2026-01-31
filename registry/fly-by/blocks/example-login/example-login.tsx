@@ -2,14 +2,14 @@ import "./example-login.css"
 
 export function ExampleLogin() {
   return (
-    <div className="fb-login-container">
-      <div className="fb-login-card">
-        <h1 className="fb-login-title">ログイン</h1>
-        <p className="fb-login-subtitle">
+    <div className="login-container">
+      <div className="login-card">
+        <h1 className="login-title">ログイン</h1>
+        <p className="login-subtitle">
           アカウントにログインしてください
         </p>
-        <form className="fb-login-form">
-          <div className="fb-form-group">
+        <form className="login-form">
+          <div className="form-group">
             <label htmlFor="field-email">メールアドレス</label>
             <input
               id="field-email"
@@ -18,7 +18,7 @@ export function ExampleLogin() {
               required
             />
           </div>
-          <div className="fb-form-group">
+          <div className="form-group">
             <label htmlFor="field-password">パスワード</label>
             <input
               id="field-password"
@@ -27,13 +27,13 @@ export function ExampleLogin() {
               required
             />
           </div>
-          <div className="fb-form-actions">
-            <button type="submit" className="fb-login-button">
+          <div className="form-actions">
+            <button type="submit" className="login-button">
               ログイン
             </button>
           </div>
-          <div className="fb-form-footer">
-            <a href="#" className="fb-forgot-password">
+          <div className="form-footer">
+            <a href="#" className="forgot-password">
               パスワードをお忘れですか？
             </a>
           </div>

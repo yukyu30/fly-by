@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner",
+  "title": "Sonner",
+  "description": "fly-byデザインシステムのSonnerコンポーネント。トースト通知（Sonnerラッパー）。",
+  "dependencies": [
+    "sonner"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/sonner.tsx",
+      "content": "import { Toaster as Sonner, toast } from \"sonner\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Sonner (Toast notification)\n *\n * Sonnerライブラリのラッパー。fly-byスタイルを適用。\n *\n * @example\n * // App root\n * <Sonner />\n *\n * // Usage\n * import { toast } from \"sonner\"\n * toast(\"Event has been created\")\n * toast.success(\"Success!\")\n * toast.error(\"Error!\")\n */\n\ntype SonnerProps = React.ComponentProps<typeof Sonner>\n\nfunction Sonner({ className, ...props }: SonnerProps) {\n  return (\n    <Sonner\n      data-slot=\"sonner\"\n      className={cn(\"sonner toaster group\", className)}\n      toastOptions={{\n        classNames: {\n          toast:\n            \"group toast group-[.toaster]:bg-white group-[.toaster]:text-gray-900 group-[.toaster]:border-gray-200 group-[.toaster]:shadow-lg dark:group-[.toaster]:bg-gray-900 dark:group-[.toaster]:text-gray-100 dark:group-[.toaster]:border-gray-700\",\n          description: \"group-[.toast]:text-gray-600 dark:group-[.toast]:text-gray-400\",\n          actionButton:\n            \"group-[.toast]:bg-[#002CED] group-[.toast]:text-white dark:group-[.toast]:bg-[#3361ef]\",\n          cancelButton:\n            \"group-[.toast]:bg-gray-100 group-[.toast]:text-gray-600 dark:group-[.toast]:bg-gray-800 dark:group-[.toast]:text-gray-400\",\n          success:\n            \"group-[.toaster]:bg-green-50 group-[.toaster]:text-green-700 group-[.toaster]:border-green-200 dark:group-[.toaster]:bg-green-900 dark:group-[.toaster]:text-green-300 dark:group-[.toaster]:border-green-800\",\n          error:\n            \"group-[.toaster]:bg-red-50 group-[.toaster]:text-red-700 group-[.toaster]:border-red-200 dark:group-[.toaster]:bg-red-900 dark:group-[.toaster]:text-red-300 dark:group-[.toaster]:border-red-800\",\n          info:\n            \"group-[.toaster]:bg-[#e6ebfd] group-[.toaster]:text-[#002CED] group-[.toaster]:border-[#ccd7fb] dark:group-[.toaster]:bg-[#001049] dark:group-[.toaster]:text-[#3361ef] dark:group-[.toaster]:border-[#001772]\",\n          warning:\n            \"group-[.toaster]:bg-yellow-50 group-[.toaster]:text-yellow-700 group-[.toaster]:border-yellow-200 dark:group-[.toaster]:bg-yellow-900 dark:group-[.toaster]:text-yellow-300 dark:group-[.toaster]:border-yellow-800\",\n        },\n      }}\n      {...props}\n    />\n  )\n}\n\nexport { Sonner, toast }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

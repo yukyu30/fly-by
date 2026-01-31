@@ -5,7 +5,7 @@
 ## 構造
 
 ```html
-<div class="fb-card -{modifiers}">
+<div class="card -{modifiers}">
   <div class="_header"><!-- optional --></div>
   <div class="_body">メインコンテンツ</div>
   <div class="_footer"><!-- optional --></div>
@@ -30,7 +30,7 @@
 
 ### 基本カード
 ```html
-<div class="fb-card -elevation-1">
+<div class="card -elevation-1">
   <div class="_body">
     <p>カードのコンテンツがここに入ります。</p>
   </div>
@@ -39,12 +39,12 @@
 
 ### ヘッダー付きカード
 ```html
-<div class="fb-card -elevation-1">
+<div class="card -elevation-1">
   <div class="_header">
-    <h3 class="fb-text -level-l -density-dense">タイトル</h3>
+    <h3 class="text -level-l -density-dense">タイトル</h3>
   </div>
   <div class="_body">
-    <p class="fb-text -level-m -density-normal">
+    <p class="text -level-m -density-normal">
       説明文がここに入ります。
     </p>
   </div>
@@ -53,13 +53,13 @@
 
 ### フッターにアクション
 ```html
-<div class="fb-card -elevation-1">
+<div class="card -elevation-1">
   <div class="_body">
-    <h3 class="fb-text -level-l -density-dense">商品名</h3>
-    <p class="fb-text -level-m -density-normal">商品の説明文</p>
+    <h3 class="text -level-l -density-dense">商品名</h3>
+    <p class="text -level-m -density-normal">商品の説明文</p>
   </div>
   <div class="_footer">
-    <button class="fb-button -appearance-solid -color-informative -size-s">
+    <button class="button -appearance-solid -color-informative -size-s">
       <span class="_body">購入する</span>
     </button>
   </div>
@@ -68,20 +68,20 @@
 
 ### 画像付きカード
 ```html
-<div class="fb-card -elevation-1">
+<div class="card -elevation-1">
   <div class="_media">
     <img src="image.jpg" alt="説明">
   </div>
   <div class="_body">
-    <h3 class="fb-text -level-l -density-dense">タイトル</h3>
-    <p class="fb-text -level-s -density-normal">説明</p>
+    <h3 class="text -level-l -density-dense">タイトル</h3>
+    <p class="text -level-s -density-normal">説明</p>
   </div>
 </div>
 ```
 
 ### インタラクティブカード
 ```html
-<a href="/detail" class="fb-card -elevation-1 -interactive">
+<a href="/detail" class="card -elevation-1 -interactive">
   <div class="_body">クリックで詳細へ</div>
 </a>
 ```
@@ -89,13 +89,13 @@
 ### カードグリッド
 ```html
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
-  <div class="fb-card -elevation-1">
+  <div class="card -elevation-1">
     <div class="_body">カード1</div>
   </div>
-  <div class="fb-card -elevation-1">
+  <div class="card -elevation-1">
     <div class="_body">カード2</div>
   </div>
-  <div class="fb-card -elevation-1">
+  <div class="card -elevation-1">
     <div class="_body">カード3</div>
   </div>
 </div>

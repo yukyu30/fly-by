@@ -13,21 +13,21 @@ import {
 
 // Preview components using actual fly-by components
 export const componentPreviews: Record<string, React.ReactNode> = {
-  'fb-button': (
+  'button': (
     <div className="flex flex-wrap gap-2 items-center">
-      <button className="fb-button -appearance-solid -color-informative -size-m inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-9 px-4 bg-[#002CED] text-white hover:bg-[#0025c4]">
+      <button className="button -appearance-solid -color-informative -size-m inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-9 px-4 bg-[#002CED] text-white hover:bg-[#0025c4]">
         Primary
       </button>
-      <button className="fb-button -appearance-outlined -color-informative -size-m inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-9 px-4 border-2 border-[#002CED] text-[#002CED] bg-transparent hover:bg-[#e6ebfd]">
+      <button className="button -appearance-outlined -color-informative -size-m inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-9 px-4 border-2 border-[#002CED] text-[#002CED] bg-transparent hover:bg-[#e6ebfd]">
         Outlined
       </button>
-      <button className="fb-button -appearance-flat -color-neutral -size-m inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-9 px-4 bg-gray-100 text-gray-700 hover:bg-gray-200">
+      <button className="button -appearance-flat -color-neutral -size-m inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-9 px-4 bg-gray-100 text-gray-700 hover:bg-gray-200">
         Flat
       </button>
     </div>
   ),
-  'fb-card': (
-    <div className="fb-card w-64 rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+  'card': (
+    <div className="card w-64 rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
       <div className="p-6">
         <h3 className="text-lg font-semibold mb-2">Card Title</h3>
         <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -36,79 +36,79 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-input': (
+  'input': (
     <input
-      className="fb-input w-64 rounded-md border-2 border-gray-300 bg-transparent h-9 px-3 text-sm outline-none focus:border-[#002CED] focus:ring-2 focus:ring-[#002CED]/20"
+      className="input w-64 rounded-md border-2 border-gray-300 bg-transparent h-9 px-3 text-sm outline-none focus:border-[#002CED] focus:ring-2 focus:ring-[#002CED]/20"
       placeholder="Enter text..."
       defaultValue="Sample input"
     />
   ),
-  'fb-label': (
-    <label className="fb-label text-sm font-medium text-gray-900 dark:text-gray-100">
+  'label': (
+    <label className="label text-sm font-medium text-gray-900 dark:text-gray-100">
       Form Label
     </label>
   ),
-  'fb-textarea': (
+  'textarea': (
     <textarea
-      className="fb-textarea w-64 h-24 rounded-md border-2 border-gray-300 bg-transparent px-3 py-2 text-sm outline-none resize-none focus:border-[#002CED]"
+      className="textarea w-64 h-24 rounded-md border-2 border-gray-300 bg-transparent px-3 py-2 text-sm outline-none resize-none focus:border-[#002CED]"
       placeholder="Enter text..."
       defaultValue="Sample textarea content"
     />
   ),
-  'fb-text': (
+  'text': (
     <div className="space-y-2">
-      <p className="fb-text -level-xl text-xl">Extra Large Text</p>
-      <p className="fb-text -level-l text-lg">Large Text</p>
-      <p className="fb-text -level-m text-base">Medium Text (Default)</p>
-      <p className="fb-text -level-s text-sm text-gray-600">Small Text</p>
+      <p className="text -level-xl text-xl">Extra Large Text</p>
+      <p className="text -level-l text-lg">Large Text</p>
+      <p className="text -level-m text-base">Medium Text (Default)</p>
+      <p className="text -level-s text-sm text-gray-600">Small Text</p>
     </div>
   ),
-  'fb-separator': (
+  'separator': (
     <div className="w-64 space-y-2">
       <p className="text-sm">Content Above</p>
-      <div className="fb-separator h-px bg-gray-200 dark:bg-gray-700" />
+      <div className="separator h-px bg-gray-200 dark:bg-gray-700" />
       <p className="text-sm">Content Below</p>
     </div>
   ),
-  'fb-badge': (
+  'badge': (
     <div className="flex flex-wrap gap-2">
-      <span className="fb-badge -appearance-flat -color-informative -size-m inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium bg-[#e6ebfd] text-[#002CED]">
+      <span className="badge -appearance-flat -color-informative -size-m inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium bg-[#e6ebfd] text-[#002CED]">
         New
       </span>
-      <span className="fb-badge -appearance-solid -color-positive -size-m inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium bg-green-600 text-white">
+      <span className="badge -appearance-solid -color-positive -size-m inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium bg-green-600 text-white">
         Success
       </span>
-      <span className="fb-badge -appearance-outlined -color-negative -size-m inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium border-2 border-red-600 text-red-600 bg-transparent">
+      <span className="badge -appearance-outlined -color-negative -size-m inline-flex items-center justify-center rounded-full h-6 px-2.5 text-xs font-medium border-2 border-red-600 text-red-600 bg-transparent">
         Error
       </span>
     </div>
   ),
-  'fb-spinner': (
+  'spinner': (
     <div className="flex gap-4 items-center">
       <div className="h-4 w-4 border-2 border-[#002CED] border-t-transparent rounded-full animate-spin" />
       <div className="h-6 w-6 border-2 border-[#002CED] border-t-transparent rounded-full animate-spin" />
       <div className="h-8 w-8 border-2 border-[#002CED] border-t-transparent rounded-full animate-spin" />
     </div>
   ),
-  'fb-skeleton': (
+  'skeleton': (
     <div className="space-y-2 w-64">
       <div className="h-4 w-full bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
       <div className="h-4 w-3/4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
       <div className="h-4 w-1/2 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
     </div>
   ),
-  'fb-kbd': (
+  'kbd': (
     <div className="flex gap-1 items-center">
-      <kbd className="fb-kbd inline-flex items-center justify-center h-6 px-2 rounded border border-gray-300 bg-gray-100 text-xs font-mono">
+      <kbd className="kbd inline-flex items-center justify-center h-6 px-2 rounded border border-gray-300 bg-gray-100 text-xs font-mono">
         ⌘
       </kbd>
       <span className="text-sm">+</span>
-      <kbd className="fb-kbd inline-flex items-center justify-center h-6 px-2 rounded border border-gray-300 bg-gray-100 text-xs font-mono">
+      <kbd className="kbd inline-flex items-center justify-center h-6 px-2 rounded border border-gray-300 bg-gray-100 text-xs font-mono">
         K
       </kbd>
     </div>
   ),
-  'fb-avatar': (
+  'avatar': (
     <div className="flex gap-2 items-center">
       <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-medium text-gray-600">
         U
@@ -121,7 +121,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-aspect-ratio': (
+  'aspect-ratio': (
     <div
       className="w-48 bg-gray-100 dark:bg-gray-800 rounded overflow-hidden"
       style={{ aspectRatio: '16/9' }}
@@ -131,7 +131,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-progress': (
+  'progress': (
     <div className="w-64 space-y-3">
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
         <div className="h-full w-3/5 bg-[#002CED] rounded-full transition-all" />
@@ -141,7 +141,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-toggle': (
+  'toggle': (
     <div className="flex gap-2">
       <button className="h-9 w-9 rounded-md flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-bold">
         B
@@ -151,7 +151,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </button>
     </div>
   ),
-  'fb-checkbox': (
+  'checkbox': (
     <div className="flex gap-4 items-center">
       <div className="h-5 w-5 rounded border-2 border-gray-300" />
       <div className="h-5 w-5 rounded border-2 border-[#002CED] bg-[#002CED] flex items-center justify-center">
@@ -162,7 +162,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-switch': (
+  'switch': (
     <div className="flex gap-4 items-center">
       <div className="h-6 w-11 rounded-full bg-gray-300 p-0.5">
         <div className="h-5 w-5 rounded-full bg-white transition-transform" />
@@ -175,7 +175,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-radio-group': (
+  'radio-group': (
     <div className="flex gap-4 items-center">
       <div className="flex items-center gap-2">
         <div className="h-4 w-4 rounded-full border-2 border-[#002CED] flex items-center justify-center">
@@ -189,20 +189,20 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-select': (
+  'select': (
     <button className="w-48 h-9 px-3 rounded-md border-2 border-gray-300 text-gray-700 bg-transparent flex items-center justify-between text-sm">
       Select option
       <ChevronDown className="h-4 w-4" />
     </button>
   ),
-  'fb-native-select': (
+  'native-select': (
     <select className="w-48 px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-lg text-sm bg-white dark:bg-gray-900">
       <option>Option 1</option>
       <option>Option 2</option>
       <option>Option 3</option>
     </select>
   ),
-  'fb-alert': (
+  'alert': (
     <div className="w-64 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-950">
       <h5 className="text-sm font-medium text-blue-900 dark:text-blue-100 mb-1">
         Information
@@ -212,7 +212,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </p>
     </div>
   ),
-  'fb-accordion': (
+  'accordion': (
     <div className="w-64 border rounded-lg">
       <div className="border-b">
         <div className="flex items-center justify-between px-4 py-3">
@@ -229,7 +229,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-tabs': (
+  'tabs': (
     <div className="w-64">
       <div className="flex border-b border-gray-200">
         <button className="px-4 py-2 text-sm border-b-2 border-[#002CED] text-[#002CED] font-medium">
@@ -245,7 +245,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       <div className="pt-4 text-sm">Tab 1 content</div>
     </div>
   ),
-  'fb-breadcrumb': (
+  'breadcrumb': (
     <div className="flex items-center gap-2 text-sm">
       <span className="text-gray-500 hover:text-gray-900 cursor-pointer">Home</span>
       <ChevronRight className="h-3 w-3 text-gray-400" />
@@ -254,7 +254,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       <span className="text-[#002CED] font-medium">Detail</span>
     </div>
   ),
-  'fb-pagination': (
+  'pagination': (
     <div className="flex items-center gap-1">
       <button className="h-8 px-3 rounded-md bg-gray-100 hover:bg-gray-200 text-sm">
         ←
@@ -269,7 +269,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </button>
     </div>
   ),
-  'fb-table': (
+  'table': (
     <table className="w-64 text-sm border-collapse">
       <thead>
         <tr className="border-b border-gray-200">
@@ -289,7 +289,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </tbody>
     </table>
   ),
-  'fb-calendar': (
+  'calendar': (
     <div className="p-3 border rounded-lg w-64">
       <div className="text-center text-sm font-medium mb-3">December 2024</div>
       <div className="grid grid-cols-7 gap-1 text-xs text-center">
@@ -311,7 +311,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-command': (
+  'command': (
     <div className="w-64 border rounded-lg overflow-hidden">
       <div className="flex items-center gap-2 px-3 py-2 border-b">
         <Search className="h-4 w-4 text-gray-400" />
@@ -333,16 +333,16 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-dropdown-menu': (
+  'dropdown-menu': (
     <div className="relative inline-block">
-      <button className="fb-button -appearance-flat -color-neutral -size-m inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-9 px-4 bg-gray-100 text-gray-700 hover:bg-gray-200">
+      <button className="button -appearance-flat -color-neutral -size-m inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium h-9 px-4 bg-gray-100 text-gray-700 hover:bg-gray-200">
         <Settings className="h-4 w-4" />
         Menu
         <ChevronDown className="h-4 w-4" />
       </button>
     </div>
   ),
-  'fb-toast': (
+  'toast': (
     <div className="w-80 rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-900">
       <div className="flex items-start justify-between">
         <div className="flex-1">
@@ -355,9 +355,9 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-empty': (
-    <div className="fb-empty flex flex-col items-center justify-center text-center py-8 gap-3">
-      <div className="fb-empty-icon flex items-center justify-center">
+  'empty': (
+    <div className="empty flex flex-col items-center justify-center text-center py-8 gap-3">
+      <div className="empty-icon flex items-center justify-center">
         <div className="relative">
           <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 rounded-full blur-lg opacity-50" />
           <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center border border-gray-300 dark:border-gray-600">
@@ -366,16 +366,16 @@ export const componentPreviews: Record<string, React.ReactNode> = {
         </div>
       </div>
       <div>
-        <h3 className="fb-empty-title text-base font-semibold text-gray-900 dark:text-gray-100 mb-1">
+        <h3 className="empty-title text-base font-semibold text-gray-900 dark:text-gray-100 mb-1">
           No data available
         </h3>
-        <p className="fb-empty-description text-sm text-gray-500 dark:text-gray-400">
+        <p className="empty-description text-sm text-gray-500 dark:text-gray-400">
           Try adjusting your filters
         </p>
       </div>
     </div>
   ),
-  'fb-item': (
+  'item': (
     <div className="w-48 space-y-1">
       <div className="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg cursor-pointer">
         <User className="h-4 w-4 text-gray-500" />
@@ -387,7 +387,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-tooltip': (
+  'tooltip': (
     <div className="relative inline-block">
       <button className="px-3 py-1.5 rounded-md bg-gray-100 text-sm">
         Hover me
@@ -397,7 +397,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-popover': (
+  'popover': (
     <div className="relative inline-block">
       <button className="px-3 py-1.5 rounded-md border-2 border-gray-300 text-sm">
         Open
@@ -407,7 +407,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-dialog': (
+  'dialog': (
     <div className="w-72 p-6 bg-white rounded-lg border border-gray-200">
       <h3 className="text-lg font-semibold mb-2">Dialog Title</h3>
       <p className="text-sm text-gray-600 mb-4">This is a modal dialog example.</p>
@@ -419,7 +419,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-alert-dialog': (
+  'alert-dialog': (
     <div className="w-72 p-6 bg-white rounded-lg border border-gray-200">
       <h3 className="text-lg font-semibold mb-2">Are you sure?</h3>
       <p className="text-sm text-gray-600 mb-4">This action cannot be undone.</p>
@@ -429,19 +429,19 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-sheet': (
+  'sheet': (
     <div className="w-80 h-48 bg-white border-l-2 border-gray-200 p-6">
       <h3 className="text-lg font-semibold mb-2">Sheet Panel</h3>
       <p className="text-sm text-gray-600">Side panel content goes here.</p>
     </div>
   ),
-  'fb-drawer': (
+  'drawer': (
     <div className="w-80 h-40 bg-white border-t-2 border-gray-200 p-6 rounded-t-2xl">
       <h3 className="text-lg font-semibold mb-2">Bottom Drawer</h3>
       <p className="text-sm text-gray-600">Swipe or click to dismiss.</p>
     </div>
   ),
-  'fb-context-menu': (
+  'context-menu': (
     <div className="w-48 bg-white border border-gray-200 rounded-lg p-1">
       <div className="px-2 py-1.5 text-sm hover:bg-gray-100 rounded cursor-pointer">
         Copy
@@ -455,7 +455,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-hover-card': (
+  'hover-card': (
     <div className="relative inline-block">
       <span className="text-sm text-[#002CED] cursor-pointer underline">@username</span>
       <div className="absolute top-6 left-0 w-64 p-4 bg-white border border-gray-200 rounded-lg">
@@ -470,7 +470,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-sonner': (
+  'sonner': (
     <div className="w-80 rounded-lg border border-gray-200 bg-white p-4">
       <div className="flex items-center gap-2">
         <Check className="h-4 w-4 text-green-600" />
@@ -481,7 +481,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-collapsible': (
+  'collapsible': (
     <div className="w-64 border rounded-lg">
       <button className="w-full flex items-center justify-between px-4 py-3 hover:bg-gray-50">
         <span className="text-sm font-medium">Can I use this?</span>
@@ -492,7 +492,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-toggle-group': (
+  'toggle-group': (
     <div className="inline-flex rounded-lg border border-gray-200">
       <button className="px-3 py-1.5 text-sm bg-[#002CED] text-white font-bold rounded-l-lg">
         B
@@ -505,7 +505,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </button>
     </div>
   ),
-  'fb-navigation-menu': (
+  'navigation-menu': (
     <nav className="flex items-center gap-6 px-4 py-2 bg-white border-b border-gray-200">
       <span className="text-sm font-medium text-[#002CED] cursor-pointer">
         Home
@@ -518,7 +518,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </span>
     </nav>
   ),
-  'fb-menubar': (
+  'menubar': (
     <div className="flex items-center gap-1 bg-gray-50 border-b border-gray-200 px-2 py-1">
       <button className="px-2 py-1 text-sm hover:bg-gray-100 rounded">File</button>
       <button className="px-2 py-1 text-sm hover:bg-gray-100 rounded">Edit</button>
@@ -526,7 +526,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       <button className="px-2 py-1 text-sm hover:bg-gray-100 rounded">Help</button>
     </div>
   ),
-  'fb-scroll-area': (
+  'scroll-area': (
     <div className="w-48 h-32 border rounded-lg overflow-hidden">
       <div className="h-full overflow-y-auto p-3 text-sm text-gray-600">
         <p>Scrollable content area with custom scrollbar styling.</p>
@@ -535,14 +535,14 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-resizable': (
+  'resizable': (
     <div className="flex h-32 w-64 border rounded-lg overflow-hidden">
       <div className="flex-1 bg-gray-50 p-3 text-sm">Panel 1</div>
       <div className="w-px bg-gray-300 cursor-col-resize" />
       <div className="flex-1 bg-gray-100 p-3 text-sm">Panel 2</div>
     </div>
   ),
-  'fb-combobox': (
+  'combobox': (
     <div className="w-48">
       <button className="w-full flex items-center justify-between px-3 py-2 border-2 border-gray-300 rounded-md text-sm">
         Select item...
@@ -561,7 +561,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-slider': (
+  'slider': (
     <div className="w-64 space-y-4">
       <div className="relative">
         <div className="h-2 bg-gray-200 rounded-full">
@@ -574,7 +574,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-input-otp': (
+  'input-otp': (
     <div className="flex gap-2">
       {[1, 2, 3, 4, 5, 6].map((i) => (
         <input
@@ -587,7 +587,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       ))}
     </div>
   ),
-  'fb-form': (
+  'form': (
     <form className="w-64 space-y-4">
       <div>
         <label className="text-sm font-medium block mb-1">Email</label>
@@ -602,7 +602,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </button>
     </form>
   ),
-  'fb-field': (
+  'field': (
     <div className="w-64">
       <label className="text-sm font-medium block mb-1">Username</label>
       <input
@@ -613,7 +613,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       <p className="text-xs text-gray-500 mt-1">This is your public display name.</p>
     </div>
   ),
-  'fb-input-group': (
+  'input-group': (
     <div className="w-64">
       <div className="flex items-center border-2 border-gray-300 rounded-md overflow-hidden">
         <span className="px-3 bg-gray-100 text-sm text-gray-600">https://</span>
@@ -626,7 +626,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-button-group': (
+  'button-group': (
     <div className="inline-flex rounded-lg border border-gray-200 overflow-hidden">
       <button className="px-4 py-2 text-sm bg-[#002CED] text-white">Left</button>
       <button className="px-4 py-2 text-sm hover:bg-gray-100 border-l border-gray-200">
@@ -637,17 +637,17 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </button>
     </div>
   ),
-  'fb-split-button': (
+  'split-button': (
     <div className="inline-flex">
-      <button className="fb-button -appearance-solid -color-informative -size-m inline-flex items-center justify-center gap-2 rounded-l-md rounded-r-none text-sm font-medium h-9 px-4 bg-[#002CED] text-white hover:bg-[#0025c4]">
+      <button className="button -appearance-solid -color-informative -size-m inline-flex items-center justify-center gap-2 rounded-l-md rounded-r-none text-sm font-medium h-9 px-4 bg-[#002CED] text-white hover:bg-[#0025c4]">
         保存
       </button>
-      <button className="fb-button -appearance-solid -color-informative -size-m inline-flex items-center justify-center gap-2 rounded-r-md rounded-l-none text-sm font-medium h-9 px-2 bg-[#002CED] text-white hover:bg-[#0025c4] border-l border-white/20">
+      <button className="button -appearance-solid -color-informative -size-m inline-flex items-center justify-center gap-2 rounded-r-md rounded-l-none text-sm font-medium h-9 px-2 bg-[#002CED] text-white hover:bg-[#0025c4] border-l border-white/20">
         <ChevronDown className="h-4 w-4" />
       </button>
     </div>
   ),
-  'fb-data-table': (
+  'data-table': (
     <div className="w-80 border rounded-lg">
       <div className="p-3 border-b">
         <input
@@ -676,7 +676,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </table>
     </div>
   ),
-  'fb-date-picker': (
+  'date-picker': (
     <div className="relative">
       <button className="flex items-center gap-2 px-3 py-2 border-2 border-gray-300 rounded-md text-sm">
         <span>📅</span>
@@ -684,7 +684,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </button>
     </div>
   ),
-  'fb-carousel': (
+  'carousel': (
     <div className="w-64 relative">
       <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
         <span className="text-sm text-gray-500">Slide 1 of 3</span>
@@ -704,7 +704,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-chart': (
+  'chart': (
     <div className="w-80 h-48 border rounded-lg p-4">
       <div className="flex items-end justify-between h-full gap-2">
         <div className="flex-1 bg-[#002CED] rounded-t" style={{ height: '60%' }} />
@@ -715,7 +715,7 @@ export const componentPreviews: Record<string, React.ReactNode> = {
       </div>
     </div>
   ),
-  'fb-sidebar': (
+  'sidebar': (
     <div className="w-64 h-64 bg-white border-r border-gray-200 flex flex-col">
       <div className="p-4 border-b border-gray-200">
         <h3 className="font-semibold text-sm">Navigation</h3>

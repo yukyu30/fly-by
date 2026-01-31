@@ -7,9 +7,9 @@ import { useParams } from 'next/navigation';
 import { ArrowLeft, Copy, Check, Package, Terminal, Eye } from 'lucide-react';
 import { getComponent } from '@/lib/registry';
 import { componentPreviews, defaultPreview } from '@/lib/component-previews';
-import { FbButton } from '@/registry/fly-by/ui/fb-button';
-import { FbBadge } from '@/registry/fly-by/ui/fb-badge';
-import { FbCard } from '@/registry/fly-by/ui/fb-card';
+import { Button } from '@/registry/fly-by/ui/button';
+import { Badge } from '@/registry/fly-by/ui/badge';
+import { Card } from '@/registry/fly-by/ui/card';
 
 const BASE_URL = 'https://fly-by.design.yukyu.net/r';
 
@@ -23,7 +23,7 @@ function CopyButton({ text }: { text: string }) {
   };
 
   return (
-    <FbButton
+    <Button
       appearance="transparent"
       color="neutral"
       size="s"
@@ -35,7 +35,7 @@ function CopyButton({ text }: { text: string }) {
       ) : (
         <Copy className="h-4 w-4" />
       )}
-    </FbButton>
+    </Button>
   );
 }
 
@@ -63,10 +63,10 @@ export default function ComponentPage() {
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Component not found</h1>
           <Link href="/">
-            <FbButton appearance="outlined" color="informative">
+            <Button appearance="outlined" color="informative">
               <ArrowLeft className="h-4 w-4" />
               Back to Home
-            </FbButton>
+            </Button>
           </Link>
         </div>
       </div>
@@ -104,10 +104,10 @@ export default function ComponentPage() {
         {/* Back button */}
         <div className="mb-8">
           <Link href="/">
-            <FbButton appearance="transparent" color="neutral" size="s">
+            <Button appearance="transparent" color="neutral" size="s">
               <ArrowLeft className="h-4 w-4" />
               Back to all components
-            </FbButton>
+            </Button>
           </Link>
         </div>
 
@@ -115,9 +115,9 @@ export default function ComponentPage() {
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
             <h1 className="text-3xl font-bold font-mono text-[#002CED]">{name}</h1>
-            <FbBadge appearance="flat" color="informative" size="m">
+            <Badge appearance="flat" color="informative" size="m">
               {component.type.replace('registry:', '')}
-            </FbBadge>
+            </Badge>
           </div>
           {component.title && (
             <h2 className="text-xl text-gray-600 dark:text-gray-400 mb-2">
@@ -130,7 +130,7 @@ export default function ComponentPage() {
         </div>
 
         {/* Preview */}
-        <FbCard elevation={1} className="mb-8">
+        <Card elevation={1} className="mb-8">
           <div className="p-6">
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
               <Eye className="h-5 w-5" />
@@ -140,10 +140,10 @@ export default function ComponentPage() {
               {componentPreviews[name] || defaultPreview}
             </div>
           </div>
-        </FbCard>
+        </Card>
 
         {/* Installation */}
-        <FbCard elevation={1} className="mb-8">
+        <Card elevation={1} className="mb-8">
           <div className="p-6">
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
               <Terminal className="h-5 w-5" />
@@ -151,11 +151,11 @@ export default function ComponentPage() {
             </h3>
             <CodeBlock code={installCommand} />
           </div>
-        </FbCard>
+        </Card>
 
         {/* Dependencies */}
         {(component.dependencies || component.registryDependencies) && (
-          <FbCard elevation={1} className="mb-8">
+          <Card elevation={1} className="mb-8">
             <div className="p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <Package className="h-5 w-5" />
@@ -169,9 +169,9 @@ export default function ComponentPage() {
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {component.dependencies.map((dep) => (
-                      <FbBadge key={dep} appearance="outlined" color="neutral" size="s">
+                      <Badge key={dep} appearance="outlined" color="neutral" size="s">
                         {dep}
-                      </FbBadge>
+                      </Badge>
                     ))}
                   </div>
                 </div>
@@ -185,20 +185,20 @@ export default function ComponentPage() {
                   <div className="flex flex-wrap gap-2">
                     {component.registryDependencies.map((dep) => (
                       <Link key={dep} href={`/components/${dep}`}>
-                        <FbBadge appearance="flat" color="informative" size="s" className="cursor-pointer hover:opacity-80">
+                        <Badge appearance="flat" color="informative" size="s" className="cursor-pointer hover:opacity-80">
                           {dep}
-                        </FbBadge>
+                        </Badge>
                       </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
-          </FbCard>
+          </Card>
         )}
 
         {/* Usage Example */}
-        <FbCard elevation={1} className="mb-8">
+        <Card elevation={1} className="mb-8">
           <div className="p-6">
             <h3 className="text-lg font-semibold mb-4">使用例</h3>
             <CodeBlock
@@ -231,11 +231,11 @@ export default function ComponentPage() {
   .join('')}>`}
             />
           </div>
-        </FbCard>
+        </Card>
 
         {/* Files */}
         {component.files && component.files.length > 0 && (
-          <FbCard elevation={1}>
+          <Card elevation={1}>
             <div className="p-6">
               <h3 className="text-lg font-semibold mb-4">ファイル</h3>
               <div className="space-y-2">
@@ -245,14 +245,14 @@ export default function ComponentPage() {
                     className="flex items-center justify-between py-2 px-3 bg-gray-50 dark:bg-gray-800 rounded-md"
                   >
                     <code className="text-sm">{file.path}</code>
-                    <FbBadge appearance="outlined" color="neutral" size="s">
+                    <Badge appearance="outlined" color="neutral" size="s">
                       {file.type.replace('registry:', '')}
-                    </FbBadge>
+                    </Badge>
                   </div>
                 ))}
               </div>
             </div>
-          </FbCard>
+          </Card>
         )}
       </main>
     </div>

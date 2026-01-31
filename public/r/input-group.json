@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-group",
+  "title": "Input Group",
+  "description": "fly-byデザインシステムのInput Groupコンポーネント。プレフィックス/サフィックス付きInput。-size-s/m/lをサポート。",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/fly-by/ui/input-group.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * fly-by Input Group\n *\n * Input にプレフィックス/サフィックスを付けるラッパー。\n *\n * クラス構造: input-group, fb-input-group-prefix, fb-input-group-suffix\n *\n * @example\n * <InputGroup>\n *   <InputGroupPrefix>https://</FbInputGroupPrefix>\n *   <FbInput placeholder=\"example.com\" />\n * </InputGroup>\n *\n * @example\n * <InputGroup>\n *   <InputGroupPrefix>\n *     <Search className=\"h-4 w-4\" />\n *   </FbInputGroupPrefix>\n *   <FbInput placeholder=\"検索...\" />\n *   <InputGroupSuffix>\n *     <Kbd>⌘K</Kbd>\n *   </FbInputGroupSuffix>\n * </InputGroup>\n */\n\nconst inputGroupVariants = cva(\n  \"input-group flex items-stretch rounded-md border-2 border-gray-300 shadow-sm focus-within:ring-1 focus-within:ring-gray-400 dark:border-gray-600 dark:focus-within:ring-gray-500\",\n  {\n    variants: {\n      size: {\n        s: \"h-8 [&_input]:h-8 [&_input]:text-xs text-xs\",\n        m: \"h-9 [&_input]:h-9 [&_input]:text-sm text-sm\",\n        l: \"h-10 [&_input]:h-10 [&_input]:text-base text-base\",\n      },\n    },\n    defaultVariants: {\n      size: \"m\",\n    },\n  }\n)\n\ninterface InputGroupProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof inputGroupVariants> {}\n\nfunction InputGroup({ className, size, ...props }: InputGroupProps) {\n  return (\n    <div\n      data-slot=\"input-group\"\n      className={cn(\n        inputGroupVariants({ size }),\n        \"[&>input]:border-0 [&>input]:shadow-none [&>input]:focus-visible:ring-0\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction FbInputGroupPrefix({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div\n      data-slot=\"input-group-prefix\"\n      className={cn(\n        \"input-group-prefix flex items-center border-r border-gray-300 bg-gray-50 px-3 text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction FbInputGroupSuffix({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div\n      data-slot=\"input-group-suffix\"\n      className={cn(\n        \"input-group-suffix flex items-center border-l border-gray-300 bg-gray-50 px-3 text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport {\n  InputGroup,\n  FbInputGroupPrefix,\n  FbInputGroupSuffix,\n  inputGroupVariants,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
